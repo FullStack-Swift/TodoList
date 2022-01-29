@@ -3,11 +3,29 @@
     "pins": [
       {
         "package": "Alamofire",
-        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": null,
           "revision": "f82c23a8a7ef8dc1a49a8bfc6a96883e79121864",
           "version": "5.5.0"
+        }
+      },
+      {
+        "package": "Networking",
+        "repositoryURL": "https://github.com/FullStack-Swift/Networking",
+        "state": {
+          "branch": null,
+          "revision": "fdbb1c94caf8ead0a26c622e8c08cbd6f6ebb8ac",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "ReactiveSwift",
+        "repositoryURL": "https://github.com/ReactiveCocoa/ReactiveSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "efb2f0a6f6c8739cce8fb14148a5bd3c83f2f91d",
+          "version": "7.0.0"
         }
       },
       {
@@ -26,6 +44,15 @@
           "branch": null,
           "revision": "0343f86b0ae055df189ad0ae96853e7fe8c1a571",
           "version": "1.0.0"
+        }
+      },
+      {
+        "package": "Starscream",
+        "repositoryURL": "https://github.com/daltoniam/Starscream.git",
+        "state": {
+          "branch": null,
+          "revision": "df8d82047f6654d8e4b655d1b1525c64e1059d21",
+          "version": "4.0.4"
         }
       },
       {

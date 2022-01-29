@@ -31,11 +31,10 @@
 		872E5CC12708621D00460BFF /* ButtonReloadMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5CAD2708621C00460BFF /* ButtonReloadMainTableViewCell.swift */; };
 		872E5CC22708621D00460BFF /* CreateTitleMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5CAE2708621C00460BFF /* CreateTitleMainTableViewCell.swift */; };
 		872E5CC32708621D00460BFF /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5CAF2708621C00460BFF /* MainTableViewCell.swift */; };
+		87320B4E27A59B9E00360667 /* ReactiveSwiftRequest in Frameworks */ = {isa = PBXBuildFile; productRef = 87320B4D27A59B9E00360667 /* ReactiveSwiftRequest */; };
 		87A9F06027A55DCB00D40BD1 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 87A9F05F27A55DCB00D40BD1 /* ComposableArchitecture */; };
-		87A9F06327A55DDC00D40BD1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 87A9F06227A55DDC00D40BD1 /* Alamofire */; };
 		87A9F06C27A55E8F00D40BD1 /* ReactiveCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 87A9F06B27A55E8F00D40BD1 /* ReactiveCocoa */; };
 		87A9F06F27A55EAE00D40BD1 /* ConvertSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87A9F06E27A55EAE00D40BD1 /* ConvertSwift */; };
-		87C843C32708670700AD27CA /* Alamofire+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C843C22708670700AD27CA /* Alamofire+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +64,6 @@
 		872E5CAD2708621C00460BFF /* ButtonReloadMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonReloadMainTableViewCell.swift; sourceTree = "<group>"; };
 		872E5CAE2708621C00460BFF /* CreateTitleMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTitleMainTableViewCell.swift; sourceTree = "<group>"; };
 		872E5CAF2708621C00460BFF /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
-		87C843C22708670700AD27CA /* Alamofire+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +72,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A9F06027A55DCB00D40BD1 /* ComposableArchitecture in Frameworks */,
+				87320B4E27A59B9E00360667 /* ReactiveSwiftRequest in Frameworks */,
 				87A9F06C27A55E8F00D40BD1 /* ReactiveCocoa in Frameworks */,
 				87A9F06F27A55EAE00D40BD1 /* ConvertSwift in Frameworks */,
-				87A9F06327A55DDC00D40BD1 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +144,6 @@
 		872E5C9E2708621C00460BFF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				87C843C22708670700AD27CA /* Alamofire+.swift */,
 				872E5C9F2708621C00460BFF /* View+.swift */,
 			);
 			path = Extensions;
@@ -214,9 +211,9 @@
 			name = "Todo+ReactiveSwift+UIKit(iOS11)";
 			packageProductDependencies = (
 				87A9F05F27A55DCB00D40BD1 /* ComposableArchitecture */,
-				87A9F06227A55DDC00D40BD1 /* Alamofire */,
 				87A9F06B27A55E8F00D40BD1 /* ReactiveCocoa */,
 				87A9F06E27A55EAE00D40BD1 /* ConvertSwift */,
+				87320B4D27A59B9E00360667 /* ReactiveSwiftRequest */,
 			);
 			productName = "Todo+ReactiveSwift+UIKit(iOS11)";
 			productReference = 872E5C72270860F600460BFF /* Todo+ReactiveSwift+UIKit(iOS11).app */;
@@ -248,9 +245,9 @@
 			mainGroup = 872E5C69270860F600460BFF;
 			packageReferences = (
 				87A9F05E27A55DCB00D40BD1 /* XCRemoteSwiftPackageReference "reactiveswift-core-architecture" */,
-				87A9F06127A55DDC00D40BD1 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				87A9F06A27A55E8F00D40BD1 /* XCRemoteSwiftPackageReference "ReactiveCocoa" */,
 				87A9F06D27A55EAE00D40BD1 /* XCRemoteSwiftPackageReference "SwiftExtension" */,
+				87320B4C27A59B9E00360667 /* XCRemoteSwiftPackageReference "Networking" */,
 			);
 			productRefGroup = 872E5C73270860F600460BFF /* Products */;
 			projectDirPath = "";
@@ -289,7 +286,6 @@
 				872E5CC22708621D00460BFF /* CreateTitleMainTableViewCell.swift in Sources */,
 				872E5CB32708621D00460BFF /* MainState.swift in Sources */,
 				872E5C76270860F600460BFF /* AppDelegate.swift in Sources */,
-				87C843C32708670700AD27CA /* Alamofire+.swift in Sources */,
 				872E5C78270860F600460BFF /* SceneDelegate.swift in Sources */,
 				872E5CB02708621D00460BFF /* MainViewController.swift in Sources */,
 				872E5CB22708621D00460BFF /* MainEnvironment.swift in Sources */,
@@ -514,20 +510,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		87320B4C27A59B9E00360667 /* XCRemoteSwiftPackageReference "Networking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FullStack-Swift/Networking";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.0;
+			};
+		};
 		87A9F05E27A55DCB00D40BD1 /* XCRemoteSwiftPackageReference "reactiveswift-core-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FullStack-Swift/reactiveswift-core-architecture.git";
 			requirement = {
 				kind = exactVersion;
 				version = 1.0.0;
-			};
-		};
-		87A9F06127A55DDC00D40BD1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = exactVersion;
-				version = 5.5.0;
 			};
 		};
 		87A9F06A27A55E8F00D40BD1 /* XCRemoteSwiftPackageReference "ReactiveCocoa" */ = {
@@ -549,15 +545,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		87320B4D27A59B9E00360667 /* ReactiveSwiftRequest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87320B4C27A59B9E00360667 /* XCRemoteSwiftPackageReference "Networking" */;
+			productName = ReactiveSwiftRequest;
+		};
 		87A9F05F27A55DCB00D40BD1 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 87A9F05E27A55DCB00D40BD1 /* XCRemoteSwiftPackageReference "reactiveswift-core-architecture" */;
 			productName = ComposableArchitecture;
-		};
-		87A9F06227A55DDC00D40BD1 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 87A9F06127A55DDC00D40BD1 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
 		};
 		87A9F06B27A55E8F00D40BD1 /* ReactiveCocoa */ = {
 			isa = XCSwiftPackageProductDependency;

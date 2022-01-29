@@ -6,17 +6,8 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": null,
-          "revision": "d120af1e8638c7da36c8481fd61a66c0c08dc4fc",
-          "version": "5.4.4"
-        }
-      },
-      {
-        "package": "AnyRequest",
-        "repositoryURL": "https://github.com/FullStack-Swift/AnyRequest",
-        "state": {
-          "branch": "main",
-          "revision": "42a2e613f0d3f3e7390d9817262c28533804e97d",
-          "version": null
+          "revision": "f82c23a8a7ef8dc1a49a8bfc6a96883e79121864",
+          "version": "5.5.0"
         }
       },
       {
@@ -32,18 +23,45 @@
         "package": "CombineCocoa",
         "repositoryURL": "https://github.com/CombineCommunity/CombineCocoa",
         "state": {
-          "branch": "main",
-          "revision": "f35362b30713a0f717106e45cd7e1b71d024c37e",
-          "version": null
+          "branch": null,
+          "revision": "4e262c2f9fb1cee1cb3be5717f7e6b55eb823971",
+          "version": "0.4.0"
         }
       },
       {
-        "package": "Json",
-        "repositoryURL": "https://github.com/FullStack-Swift/Json",
+        "package": "Networking",
+        "repositoryURL": "https://github.com/FullStack-Swift/Networking",
         "state": {
-          "branch": "main",
-          "revision": "1b6b4508691d0341fc3a5ddd7a75845734bdf41d",
-          "version": null
+          "branch": null,
+          "revision": "fdbb1c94caf8ead0a26c622e8c08cbd6f6ebb8ac",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "ReactiveSwift",
+        "repositoryURL": "https://github.com/ReactiveCocoa/ReactiveSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "efb2f0a6f6c8739cce8fb14148a5bd3c83f2f91d",
+          "version": "7.0.0"
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "b4307ba0b6425c0ba4178e138799946c3da594f8",
+          "version": "6.5.0"
+        }
+      },
+      {
+        "package": "Starscream",
+        "repositoryURL": "https://github.com/daltoniam/Starscream.git",
+        "state": {
+          "branch": null,
+          "revision": "df8d82047f6654d8e4b655d1b1525c64e1059d21",
+          "version": "4.0.4"
         }
       },
       {
@@ -51,8 +69,8 @@
         "repositoryURL": "https://github.com/pointfreeco/swift-case-paths",
         "state": {
           "branch": null,
-          "revision": "d226d167bd4a68b51e352af5655c92bce8ee0463",
-          "version": "0.7.0"
+          "revision": "241301b67d8551c26d8f09bd2c0e52cc49f18007",
+          "version": "0.8.0"
         }
       },
       {
@@ -60,16 +78,16 @@
         "repositoryURL": "https://github.com/apple/swift-collections",
         "state": {
           "branch": null,
-          "revision": "2d33a0ea89c961dcb2b3da2157963d9c0370347e",
-          "version": "1.0.1"
+          "revision": "48254824bb4248676bf7ce56014ff57b142b77eb",
+          "version": "1.0.2"
         }
       },
       {
         "package": "swift-composable-architecture",
-        "repositoryURL": "https://github.com/NguyenPhongVN/swift-composable-architecture",
+        "repositoryURL": "https://github.com/FullStack-Swift/swift-composable-architecture",
         "state": {
           "branch": "develop",
-          "revision": "180cc158e185dc6b4c06cb670645cea269b576ab",
+          "revision": "b83ef9d86feb48b0f0f05d968f214d69186b5397",
           "version": null
         }
       },
@@ -78,8 +96,8 @@
         "repositoryURL": "https://github.com/pointfreeco/swift-custom-dump",
         "state": {
           "branch": null,
-          "revision": "c2dd2c64b753dda592f5619303e02f741cd3e862",
-          "version": "0.2.0"
+          "revision": "51698ece74ecf31959d3fa81733f0a5363ef1b4e",
+          "version": "0.3.0"
         }
       },
       {
@@ -87,17 +105,17 @@
         "repositoryURL": "https://github.com/pointfreeco/swift-identified-collections",
         "state": {
           "branch": null,
-          "revision": "c8e6a40209650ab619853cd4ce89a0aa51792754",
-          "version": "0.3.0"
+          "revision": "680bf440178a78a627b1c2c64c0855f6523ad5b9",
+          "version": "0.3.2"
         }
       },
       {
-        "package": "ConvertSwift",
-        "repositoryURL": "https://github.com/FullStack-Swift/SwiftConvert.git",
+        "package": "SwiftExtension",
+        "repositoryURL": "https://github.com/FullStack-Swift/SwiftExtension",
         "state": {
-          "branch": "main",
-          "revision": "46c1624cff8a1df05edb503a5b9940bf27beabce",
-          "version": null
+          "branch": null,
+          "revision": "cdbd56e6cf32fa0eb97a1fba445736cbe8b8e622",
+          "version": "1.0.0"
         }
       },
       {

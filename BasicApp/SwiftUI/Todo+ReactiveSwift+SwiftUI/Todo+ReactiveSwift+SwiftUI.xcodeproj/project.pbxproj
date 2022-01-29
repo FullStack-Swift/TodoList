@@ -189,11 +189,11 @@
 		87BB882427A588AE000B269B /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				87BB882527A588AE000B269B /* MainReducer.swift */,
-				87BB882627A588AE000B269B /* MainEnvironment.swift */,
-				87BB882727A588AE000B269B /* MainState.swift */,
 				87BB882827A588AE000B269B /* MainView.swift */,
+				87BB882727A588AE000B269B /* MainState.swift */,
 				87BB882927A588AE000B269B /* MainAction.swift */,
+				87BB882627A588AE000B269B /* MainEnvironment.swift */,
+				87BB882527A588AE000B269B /* MainReducer.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -201,11 +201,11 @@
 		87BB882A27A588AE000B269B /* CounterScreen */ = {
 			isa = PBXGroup;
 			children = (
-				87BB882B27A588AE000B269B /* CounterReducer.swift */,
-				87BB882C27A588AE000B269B /* CounterState.swift */,
 				87BB882D27A588AE000B269B /* CounterView.swift */,
-				87BB882E27A588AE000B269B /* CounterEnvironment.swift */,
+				87BB882C27A588AE000B269B /* CounterState.swift */,
 				87BB882F27A588AE000B269B /* CounterAction.swift */,
+				87BB882E27A588AE000B269B /* CounterEnvironment.swift */,
+				87BB882B27A588AE000B269B /* CounterReducer.swift */,
 			);
 			path = CounterScreen;
 			sourceTree = "<group>";
@@ -213,11 +213,11 @@
 		87BB883027A588AE000B269B /* AuthScreen */ = {
 			isa = PBXGroup;
 			children = (
-				87BB883127A588AE000B269B /* AuthState.swift */,
 				87BB883227A588AE000B269B /* AuthView.swift */,
-				87BB883327A588AE000B269B /* AuthReducer.swift */,
+				87BB883127A588AE000B269B /* AuthState.swift */,
 				87BB883427A588AE000B269B /* AuthAction.swift */,
 				87BB883527A588AE000B269B /* AuthEnvironment.swift */,
+				87BB883327A588AE000B269B /* AuthReducer.swift */,
 			);
 			path = AuthScreen;
 			sourceTree = "<group>";
@@ -225,10 +225,10 @@
 		87BB883627A588AE000B269B /* RootScreen */ = {
 			isa = PBXGroup;
 			children = (
-				87BB883727A588AE000B269B /* RootAction.swift */,
-				87BB883827A588AE000B269B /* RootEnvironment.swift */,
 				87BB883927A588AE000B269B /* RootView.swift */,
 				87BB883A27A588AE000B269B /* RootState.swift */,
+				87BB883727A588AE000B269B /* RootAction.swift */,
+				87BB883827A588AE000B269B /* RootEnvironment.swift */,
 				87BB883B27A588AE000B269B /* RootReducer.swift */,
 			);
 			path = RootScreen;

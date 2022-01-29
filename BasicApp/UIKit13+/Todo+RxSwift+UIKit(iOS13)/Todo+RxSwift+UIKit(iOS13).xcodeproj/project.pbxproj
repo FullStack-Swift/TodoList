@@ -7,199 +7,232 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		879A27802707A59000CCD1DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A277F2707A59000CCD1DD /* AppDelegate.swift */; };
-		879A27822707A59000CCD1DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A27812707A59000CCD1DD /* SceneDelegate.swift */; };
-		879A27872707A59000CCD1DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879A27852707A59000CCD1DD /* Main.storyboard */; };
-		879A27892707A59200CCD1DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879A27882707A59200CCD1DD /* Assets.xcassets */; };
-		879A278C2707A59200CCD1DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879A278A2707A59200CCD1DD /* LaunchScreen.storyboard */; };
-		879A27952707A5A600CCD1DD /* AnyRequest in Frameworks */ = {isa = PBXBuildFile; productRef = 879A27942707A5A600CCD1DD /* AnyRequest */; };
-		879A27982707A5B300CCD1DD /* Json in Frameworks */ = {isa = PBXBuildFile; productRef = 879A27972707A5B300CCD1DD /* Json */; };
-		879A279B2707A5C400CCD1DD /* ConvertSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 879A279A2707A5C400CCD1DD /* ConvertSwift */; };
-		879A279E2707A5DF00CCD1DD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 879A279D2707A5DF00CCD1DD /* ComposableArchitecture */; };
-		879A27A42707A63500CCD1DD /* RootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A279F2707A63500CCD1DD /* RootAction.swift */; };
-		879A27A52707A63500CCD1DD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A27A02707A63500CCD1DD /* RootViewController.swift */; };
-		879A27A62707A63500CCD1DD /* RootEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A27A12707A63500CCD1DD /* RootEnvironment.swift */; };
-		879A27A72707A63500CCD1DD /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A27A22707A63500CCD1DD /* RootReducer.swift */; };
-		879A27A82707A63500CCD1DD /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A27A32707A63500CCD1DD /* RootState.swift */; };
-		879A27B12707A79000CCD1DD /* MainAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A27AC2707A79000CCD1DD /* MainAction.swift */; };
-		879A27B22707A79000CCD1DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A27AD2707A79000CCD1DD /* MainViewController.swift */; };
-		879A27B32707A79000CCD1DD /* MainEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A27AE2707A79000CCD1DD /* MainEnvironment.swift */; };
-		879A27B42707A79000CCD1DD /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A27AF2707A79000CCD1DD /* MainReducer.swift */; };
-		879A27B52707A79000CCD1DD /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A27B02707A79000CCD1DD /* MainState.swift */; };
-		879A27BB2707A79F00CCD1DD /* AuthAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A27B62707A79F00CCD1DD /* AuthAction.swift */; };
-		879A27BC2707A79F00CCD1DD /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A27B72707A79F00CCD1DD /* AuthViewController.swift */; };
-		879A27BD2707A79F00CCD1DD /* AuthEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A27B82707A79F00CCD1DD /* AuthEnvironment.swift */; };
-		879A27BE2707A79F00CCD1DD /* AuthReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A27B92707A79F00CCD1DD /* AuthReducer.swift */; };
-		879A27BF2707A79F00CCD1DD /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A27BA2707A79F00CCD1DD /* AuthState.swift */; };
-		879A27C32707A95700CCD1DD /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879A27C22707A95700CCD1DD /* TodoModel.swift */; };
-		879A27C62707AA6000CCD1DD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 879A27C52707AA6000CCD1DD /* RxCocoa */; };
-		87AA304A2707EC7900B68B11 /* CreateTitleMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AA30492707EC7900B68B11 /* CreateTitleMainTableViewCell.swift */; };
-		87AA304D2707ECE400B68B11 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AA304C2707ECE400B68B11 /* View+.swift */; };
-		87AA304F2707ED0200B68B11 /* ButtonReloadMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AA304E2707ED0200B68B11 /* ButtonReloadMainTableViewCell.swift */; };
-		87AA30512707ED2F00B68B11 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AA30502707ED2F00B68B11 /* MainTableViewCell.swift */; };
+		87767A4727A5B237002659D6 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 87767A4627A5B237002659D6 /* ComposableArchitecture */; };
+		87767A4D27A5B27A002659D6 /* ConvertSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87767A4C27A5B27A002659D6 /* ConvertSwift */; };
+		87767A6E27A5B2E8002659D6 /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A4F27A5B2E8002659D6 /* TodoApp.swift */; };
+		87767A6F27A5B2E9002659D6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A5327A5B2E8002659D6 /* MainViewController.swift */; };
+		87767A7027A5B2E9002659D6 /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A5427A5B2E8002659D6 /* MainReducer.swift */; };
+		87767A7127A5B2E9002659D6 /* MainEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A5527A5B2E8002659D6 /* MainEnvironment.swift */; };
+		87767A7227A5B2E9002659D6 /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A5627A5B2E8002659D6 /* MainState.swift */; };
+		87767A7327A5B2E9002659D6 /* MainAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A5727A5B2E8002659D6 /* MainAction.swift */; };
+		87767A7427A5B2E9002659D6 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A5927A5B2E8002659D6 /* AuthViewController.swift */; };
+		87767A7527A5B2E9002659D6 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A5A27A5B2E8002659D6 /* AuthState.swift */; };
+		87767A7627A5B2E9002659D6 /* AuthReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A5B27A5B2E8002659D6 /* AuthReducer.swift */; };
+		87767A7727A5B2E9002659D6 /* AuthAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A5C27A5B2E8002659D6 /* AuthAction.swift */; };
+		87767A7827A5B2E9002659D6 /* AuthEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A5D27A5B2E8002659D6 /* AuthEnvironment.swift */; };
+		87767A7927A5B2E9002659D6 /* RootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A5F27A5B2E8002659D6 /* RootAction.swift */; };
+		87767A7A27A5B2E9002659D6 /* RootEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6027A5B2E8002659D6 /* RootEnvironment.swift */; };
+		87767A7B27A5B2E9002659D6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6127A5B2E8002659D6 /* RootViewController.swift */; };
+		87767A7C27A5B2E9002659D6 /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6227A5B2E8002659D6 /* RootState.swift */; };
+		87767A7D27A5B2E9002659D6 /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6327A5B2E8002659D6 /* RootReducer.swift */; };
+		87767A7E27A5B2E9002659D6 /* ViewTodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6627A5B2E8002659D6 /* ViewTodoModel.swift */; };
+		87767A7F27A5B2E9002659D6 /* ButtonReloadMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6827A5B2E8002659D6 /* ButtonReloadMainTableViewCell.swift */; };
+		87767A8027A5B2E9002659D6 /* CreateTitleMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6927A5B2E8002659D6 /* CreateTitleMainTableViewCell.swift */; };
+		87767A8127A5B2E9002659D6 /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6A27A5B2E8002659D6 /* ActivityIndicatorViewController.swift */; };
+		87767A8227A5B2E9002659D6 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6B27A5B2E8002659D6 /* MainTableViewCell.swift */; };
+		87767A8327A5B2E9002659D6 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6D27A5B2E8002659D6 /* View+.swift */; };
+		87767A8627A5B324002659D6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 87767A8527A5B324002659D6 /* RxCocoa */; };
+		87767A8927A5B34F002659D6 /* RxSwiftRequest in Frameworks */ = {isa = PBXBuildFile; productRef = 87767A8827A5B34F002659D6 /* RxSwiftRequest */; };
+		87BB893127A5949A000B269B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB893027A5949A000B269B /* Assets.xcassets */; };
+		87BB893427A5949A000B269B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB893327A5949A000B269B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		879A277C2707A59000CCD1DD /* Todo+RxSwift+UIKit(iOS13).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo+RxSwift+UIKit(iOS13).app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		879A277F2707A59000CCD1DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		879A27812707A59000CCD1DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		879A27862707A59000CCD1DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		879A27882707A59200CCD1DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		879A278B2707A59200CCD1DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		879A278D2707A59200CCD1DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		879A279F2707A63500CCD1DD /* RootAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAction.swift; sourceTree = "<group>"; };
-		879A27A02707A63500CCD1DD /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		879A27A12707A63500CCD1DD /* RootEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootEnvironment.swift; sourceTree = "<group>"; };
-		879A27A22707A63500CCD1DD /* RootReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootReducer.swift; sourceTree = "<group>"; };
-		879A27A32707A63500CCD1DD /* RootState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootState.swift; sourceTree = "<group>"; };
-		879A27AC2707A79000CCD1DD /* MainAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAction.swift; sourceTree = "<group>"; };
-		879A27AD2707A79000CCD1DD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		879A27AE2707A79000CCD1DD /* MainEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEnvironment.swift; sourceTree = "<group>"; };
-		879A27AF2707A79000CCD1DD /* MainReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainReducer.swift; sourceTree = "<group>"; };
-		879A27B02707A79000CCD1DD /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
-		879A27B62707A79F00CCD1DD /* AuthAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAction.swift; sourceTree = "<group>"; };
-		879A27B72707A79F00CCD1DD /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		879A27B82707A79F00CCD1DD /* AuthEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEnvironment.swift; sourceTree = "<group>"; };
-		879A27B92707A79F00CCD1DD /* AuthReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthReducer.swift; sourceTree = "<group>"; };
-		879A27BA2707A79F00CCD1DD /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
-		879A27C22707A95700CCD1DD /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
-		87AA30492707EC7900B68B11 /* CreateTitleMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTitleMainTableViewCell.swift; sourceTree = "<group>"; };
-		87AA304C2707ECE400B68B11 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
-		87AA304E2707ED0200B68B11 /* ButtonReloadMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonReloadMainTableViewCell.swift; sourceTree = "<group>"; };
-		87AA30502707ED2F00B68B11 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		87767A4F27A5B2E8002659D6 /* TodoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoApp.swift; sourceTree = "<group>"; };
+		87767A5327A5B2E8002659D6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		87767A5427A5B2E8002659D6 /* MainReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainReducer.swift; sourceTree = "<group>"; };
+		87767A5527A5B2E8002659D6 /* MainEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainEnvironment.swift; sourceTree = "<group>"; };
+		87767A5627A5B2E8002659D6 /* MainState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
+		87767A5727A5B2E8002659D6 /* MainAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAction.swift; sourceTree = "<group>"; };
+		87767A5927A5B2E8002659D6 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		87767A5A27A5B2E8002659D6 /* AuthState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		87767A5B27A5B2E8002659D6 /* AuthReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthReducer.swift; sourceTree = "<group>"; };
+		87767A5C27A5B2E8002659D6 /* AuthAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAction.swift; sourceTree = "<group>"; };
+		87767A5D27A5B2E8002659D6 /* AuthEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthEnvironment.swift; sourceTree = "<group>"; };
+		87767A5F27A5B2E8002659D6 /* RootAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootAction.swift; sourceTree = "<group>"; };
+		87767A6027A5B2E8002659D6 /* RootEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootEnvironment.swift; sourceTree = "<group>"; };
+		87767A6127A5B2E8002659D6 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		87767A6227A5B2E8002659D6 /* RootState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootState.swift; sourceTree = "<group>"; };
+		87767A6327A5B2E8002659D6 /* RootReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootReducer.swift; sourceTree = "<group>"; };
+		87767A6627A5B2E8002659D6 /* ViewTodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTodoModel.swift; sourceTree = "<group>"; };
+		87767A6827A5B2E8002659D6 /* ButtonReloadMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonReloadMainTableViewCell.swift; sourceTree = "<group>"; };
+		87767A6927A5B2E8002659D6 /* CreateTitleMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTitleMainTableViewCell.swift; sourceTree = "<group>"; };
+		87767A6A27A5B2E8002659D6 /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
+		87767A6B27A5B2E8002659D6 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		87767A6D27A5B2E8002659D6 /* View+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		87BB892927A59499000B269B /* Todo+RxSwift+UIKit(iOS13).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo+RxSwift+UIKit(iOS13).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87BB893027A5949A000B269B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87BB893327A5949A000B269B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		879A27792707A59000CCD1DD /* Frameworks */ = {
+		87BB892627A59499000B269B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				879A27982707A5B300CCD1DD /* Json in Frameworks */,
-				879A27952707A5A600CCD1DD /* AnyRequest in Frameworks */,
-				879A27C62707AA6000CCD1DD /* RxCocoa in Frameworks */,
-				879A279E2707A5DF00CCD1DD /* ComposableArchitecture in Frameworks */,
-				879A279B2707A5C400CCD1DD /* ConvertSwift in Frameworks */,
+				87767A4727A5B237002659D6 /* ComposableArchitecture in Frameworks */,
+				87767A8627A5B324002659D6 /* RxCocoa in Frameworks */,
+				87767A8927A5B34F002659D6 /* RxSwiftRequest in Frameworks */,
+				87767A4D27A5B27A002659D6 /* ConvertSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		879A27732707A59000CCD1DD = {
+		87767A4E27A5B2E8002659D6 /* CoreApp */ = {
 			isa = PBXGroup;
 			children = (
-				879A277E2707A59000CCD1DD /* Todo+RxSwift+UIKit(iOS13) */,
-				879A277D2707A59000CCD1DD /* Products */,
+				87767A4F27A5B2E8002659D6 /* TodoApp.swift */,
+				87767A5027A5B2E8002659D6 /* TodoApp */,
 			);
+			path = CoreApp;
 			sourceTree = "<group>";
 		};
-		879A277D2707A59000CCD1DD /* Products */ = {
+		87767A5027A5B2E8002659D6 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
-				879A277C2707A59000CCD1DD /* Todo+RxSwift+UIKit(iOS13).app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		879A277E2707A59000CCD1DD /* Todo+RxSwift+UIKit(iOS13) */ = {
-			isa = PBXGroup;
-			children = (
-				879A27C02707A93A00CCD1DD /* TodoApp */,
-				879A277F2707A59000CCD1DD /* AppDelegate.swift */,
-				879A27812707A59000CCD1DD /* SceneDelegate.swift */,
-				879A27852707A59000CCD1DD /* Main.storyboard */,
-				879A27882707A59200CCD1DD /* Assets.xcassets */,
-				879A278A2707A59200CCD1DD /* LaunchScreen.storyboard */,
-				879A278D2707A59200CCD1DD /* Info.plist */,
-			);
-			path = "Todo+RxSwift+UIKit(iOS13)";
-			sourceTree = "<group>";
-		};
-		879A27A92707A64F00CCD1DD /* RootScreen */ = {
-			isa = PBXGroup;
-			children = (
-				879A27A02707A63500CCD1DD /* RootViewController.swift */,
-				879A27A32707A63500CCD1DD /* RootState.swift */,
-				879A279F2707A63500CCD1DD /* RootAction.swift */,
-				879A27A12707A63500CCD1DD /* RootEnvironment.swift */,
-				879A27A22707A63500CCD1DD /* RootReducer.swift */,
-			);
-			path = RootScreen;
-			sourceTree = "<group>";
-		};
-		879A27AA2707A76B00CCD1DD /* AuthScreen */ = {
-			isa = PBXGroup;
-			children = (
-				879A27B72707A79F00CCD1DD /* AuthViewController.swift */,
-				879A27BA2707A79F00CCD1DD /* AuthState.swift */,
-				879A27B62707A79F00CCD1DD /* AuthAction.swift */,
-				879A27B82707A79F00CCD1DD /* AuthEnvironment.swift */,
-				879A27B92707A79F00CCD1DD /* AuthReducer.swift */,
-			);
-			path = AuthScreen;
-			sourceTree = "<group>";
-		};
-		879A27AB2707A77E00CCD1DD /* MainScreen */ = {
-			isa = PBXGroup;
-			children = (
-				879A27AD2707A79000CCD1DD /* MainViewController.swift */,
-				879A27B02707A79000CCD1DD /* MainState.swift */,
-				879A27AC2707A79000CCD1DD /* MainAction.swift */,
-				879A27AE2707A79000CCD1DD /* MainEnvironment.swift */,
-				879A27AF2707A79000CCD1DD /* MainReducer.swift */,
-			);
-			path = MainScreen;
-			sourceTree = "<group>";
-		};
-		879A27C02707A93A00CCD1DD /* TodoApp */ = {
-			isa = PBXGroup;
-			children = (
-				87AA304B2707ECD100B68B11 /* Extensions */,
-				87AA30482707EC6300B68B11 /* Views */,
-				879A27C12707A94200CCD1DD /* Models */,
-				879A27A92707A64F00CCD1DD /* RootScreen */,
-				879A27AB2707A77E00CCD1DD /* MainScreen */,
-				879A27AA2707A76B00CCD1DD /* AuthScreen */,
+				87767A5127A5B2E8002659D6 /* AppScreens */,
+				87767A6427A5B2E8002659D6 /* Models */,
+				87767A6727A5B2E8002659D6 /* Views */,
+				87767A6C27A5B2E8002659D6 /* View+ */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
 		};
-		879A27C12707A94200CCD1DD /* Models */ = {
+		87767A5127A5B2E8002659D6 /* AppScreens */ = {
 			isa = PBXGroup;
 			children = (
-				879A27C22707A95700CCD1DD /* TodoModel.swift */,
+				87767A5227A5B2E8002659D6 /* MainScreen */,
+				87767A5827A5B2E8002659D6 /* AuthScreen */,
+				87767A5E27A5B2E8002659D6 /* RootScreen */,
+			);
+			path = AppScreens;
+			sourceTree = "<group>";
+		};
+		87767A5227A5B2E8002659D6 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				87767A5327A5B2E8002659D6 /* MainViewController.swift */,
+				87767A5627A5B2E8002659D6 /* MainState.swift */,
+				87767A5727A5B2E8002659D6 /* MainAction.swift */,
+				87767A5527A5B2E8002659D6 /* MainEnvironment.swift */,
+				87767A5427A5B2E8002659D6 /* MainReducer.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		87767A5827A5B2E8002659D6 /* AuthScreen */ = {
+			isa = PBXGroup;
+			children = (
+				87767A5927A5B2E8002659D6 /* AuthViewController.swift */,
+				87767A5A27A5B2E8002659D6 /* AuthState.swift */,
+				87767A5C27A5B2E8002659D6 /* AuthAction.swift */,
+				87767A5D27A5B2E8002659D6 /* AuthEnvironment.swift */,
+				87767A5B27A5B2E8002659D6 /* AuthReducer.swift */,
+			);
+			path = AuthScreen;
+			sourceTree = "<group>";
+		};
+		87767A5E27A5B2E8002659D6 /* RootScreen */ = {
+			isa = PBXGroup;
+			children = (
+				87767A6127A5B2E8002659D6 /* RootViewController.swift */,
+				87767A6227A5B2E8002659D6 /* RootState.swift */,
+				87767A5F27A5B2E8002659D6 /* RootAction.swift */,
+				87767A6027A5B2E8002659D6 /* RootEnvironment.swift */,
+				87767A6327A5B2E8002659D6 /* RootReducer.swift */,
+			);
+			path = RootScreen;
+			sourceTree = "<group>";
+		};
+		87767A6427A5B2E8002659D6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				87767A6527A5B2E8002659D6 /* ViewModels */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		87AA30482707EC6300B68B11 /* Views */ = {
+		87767A6527A5B2E8002659D6 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				87AA30492707EC7900B68B11 /* CreateTitleMainTableViewCell.swift */,
-				87AA304E2707ED0200B68B11 /* ButtonReloadMainTableViewCell.swift */,
-				87AA30502707ED2F00B68B11 /* MainTableViewCell.swift */,
+				87767A6627A5B2E8002659D6 /* ViewTodoModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		87767A6727A5B2E8002659D6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				87767A6827A5B2E8002659D6 /* ButtonReloadMainTableViewCell.swift */,
+				87767A6927A5B2E8002659D6 /* CreateTitleMainTableViewCell.swift */,
+				87767A6A27A5B2E8002659D6 /* ActivityIndicatorViewController.swift */,
+				87767A6B27A5B2E8002659D6 /* MainTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		87AA304B2707ECD100B68B11 /* Extensions */ = {
+		87767A6C27A5B2E8002659D6 /* View+ */ = {
 			isa = PBXGroup;
 			children = (
-				87AA304C2707ECE400B68B11 /* View+.swift */,
+				87767A6D27A5B2E8002659D6 /* View+.swift */,
 			);
-			path = Extensions;
+			path = "View+";
+			sourceTree = "<group>";
+		};
+		87767A8727A5B34F002659D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87BB892027A59499000B269B = {
+			isa = PBXGroup;
+			children = (
+				87BB892B27A59499000B269B /* Todo+RxSwift+UIKit(iOS13) */,
+				87BB892A27A59499000B269B /* Products */,
+				87767A8727A5B34F002659D6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		87BB892A27A59499000B269B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87BB892927A59499000B269B /* Todo+RxSwift+UIKit(iOS13).app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87BB892B27A59499000B269B /* Todo+RxSwift+UIKit(iOS13) */ = {
+			isa = PBXGroup;
+			children = (
+				87767A4E27A5B2E8002659D6 /* CoreApp */,
+				87BB893027A5949A000B269B /* Assets.xcassets */,
+				87BB893227A5949A000B269B /* Preview Content */,
+			);
+			path = "Todo+RxSwift+UIKit(iOS13)";
+			sourceTree = "<group>";
+		};
+		87BB893227A5949A000B269B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				87BB893327A5949A000B269B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		879A277B2707A59000CCD1DD /* Todo+RxSwift+UIKit(iOS13) */ = {
+		87BB892827A59499000B269B /* Todo+RxSwift+UIKit(iOS13) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 879A27902707A59200CCD1DD /* Build configuration list for PBXNativeTarget "Todo+RxSwift+UIKit(iOS13)" */;
+			buildConfigurationList = 87BB893727A5949A000B269B /* Build configuration list for PBXNativeTarget "Todo+RxSwift+UIKit(iOS13)" */;
 			buildPhases = (
-				879A27782707A59000CCD1DD /* Sources */,
-				879A27792707A59000CCD1DD /* Frameworks */,
-				879A277A2707A59000CCD1DD /* Resources */,
+				87BB892527A59499000B269B /* Sources */,
+				87BB892627A59499000B269B /* Frameworks */,
+				87BB892727A59499000B269B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -207,32 +240,31 @@
 			);
 			name = "Todo+RxSwift+UIKit(iOS13)";
 			packageProductDependencies = (
-				879A27942707A5A600CCD1DD /* AnyRequest */,
-				879A27972707A5B300CCD1DD /* Json */,
-				879A279A2707A5C400CCD1DD /* ConvertSwift */,
-				879A279D2707A5DF00CCD1DD /* ComposableArchitecture */,
-				879A27C52707AA6000CCD1DD /* RxCocoa */,
+				87767A4627A5B237002659D6 /* ComposableArchitecture */,
+				87767A4C27A5B27A002659D6 /* ConvertSwift */,
+				87767A8527A5B324002659D6 /* RxCocoa */,
+				87767A8827A5B34F002659D6 /* RxSwiftRequest */,
 			);
 			productName = "Todo+RxSwift+UIKit(iOS13)";
-			productReference = 879A277C2707A59000CCD1DD /* Todo+RxSwift+UIKit(iOS13).app */;
+			productReference = 87BB892927A59499000B269B /* Todo+RxSwift+UIKit(iOS13).app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		879A27742707A59000CCD1DD /* Project object */ = {
+		87BB892127A59499000B269B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					879A277B2707A59000CCD1DD = {
-						CreatedOnToolsVersion = 13.0;
+					87BB892827A59499000B269B = {
+						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 879A27772707A59000CCD1DD /* Build configuration list for PBXProject "Todo+RxSwift+UIKit(iOS13)" */;
+			buildConfigurationList = 87BB892427A59499000B269B /* Build configuration list for PBXProject "Todo+RxSwift+UIKit(iOS13)" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -240,89 +272,68 @@
 				en,
 				Base,
 			);
-			mainGroup = 879A27732707A59000CCD1DD;
+			mainGroup = 87BB892027A59499000B269B;
 			packageReferences = (
-				879A27932707A5A600CCD1DD /* XCRemoteSwiftPackageReference "AnyRequest" */,
-				879A27962707A5B300CCD1DD /* XCRemoteSwiftPackageReference "Json" */,
-				879A27992707A5C400CCD1DD /* XCRemoteSwiftPackageReference "SwiftConvert" */,
-				879A279C2707A5DF00CCD1DD /* XCRemoteSwiftPackageReference "rxswift-composable-architecture" */,
-				879A27C42707AA6000CCD1DD /* XCRemoteSwiftPackageReference "RxSwift" */,
+				87767A4527A5B237002659D6 /* XCRemoteSwiftPackageReference "rxswift-composable-architecture" */,
+				87767A4827A5B263002659D6 /* XCRemoteSwiftPackageReference "Networking" */,
+				87767A4B27A5B279002659D6 /* XCRemoteSwiftPackageReference "SwiftExtension" */,
+				87767A8427A5B324002659D6 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
-			productRefGroup = 879A277D2707A59000CCD1DD /* Products */;
+			productRefGroup = 87BB892A27A59499000B269B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				879A277B2707A59000CCD1DD /* Todo+RxSwift+UIKit(iOS13) */,
+				87BB892827A59499000B269B /* Todo+RxSwift+UIKit(iOS13) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		879A277A2707A59000CCD1DD /* Resources */ = {
+		87BB892727A59499000B269B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				879A278C2707A59200CCD1DD /* LaunchScreen.storyboard in Resources */,
-				879A27892707A59200CCD1DD /* Assets.xcassets in Resources */,
-				879A27872707A59000CCD1DD /* Main.storyboard in Resources */,
+				87BB893427A5949A000B269B /* Preview Assets.xcassets in Resources */,
+				87BB893127A5949A000B269B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		879A27782707A59000CCD1DD /* Sources */ = {
+		87BB892527A59499000B269B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87AA30512707ED2F00B68B11 /* MainTableViewCell.swift in Sources */,
-				879A27A52707A63500CCD1DD /* RootViewController.swift in Sources */,
-				879A27A62707A63500CCD1DD /* RootEnvironment.swift in Sources */,
-				879A27BD2707A79F00CCD1DD /* AuthEnvironment.swift in Sources */,
-				87AA304A2707EC7900B68B11 /* CreateTitleMainTableViewCell.swift in Sources */,
-				879A27BF2707A79F00CCD1DD /* AuthState.swift in Sources */,
-				879A27B42707A79000CCD1DD /* MainReducer.swift in Sources */,
-				879A27A42707A63500CCD1DD /* RootAction.swift in Sources */,
-				879A27B52707A79000CCD1DD /* MainState.swift in Sources */,
-				87AA304D2707ECE400B68B11 /* View+.swift in Sources */,
-				879A27802707A59000CCD1DD /* AppDelegate.swift in Sources */,
-				879A27BB2707A79F00CCD1DD /* AuthAction.swift in Sources */,
-				879A27C32707A95700CCD1DD /* TodoModel.swift in Sources */,
-				879A27BE2707A79F00CCD1DD /* AuthReducer.swift in Sources */,
-				879A27B32707A79000CCD1DD /* MainEnvironment.swift in Sources */,
-				879A27822707A59000CCD1DD /* SceneDelegate.swift in Sources */,
-				879A27A72707A63500CCD1DD /* RootReducer.swift in Sources */,
-				879A27BC2707A79F00CCD1DD /* AuthViewController.swift in Sources */,
-				879A27B22707A79000CCD1DD /* MainViewController.swift in Sources */,
-				87AA304F2707ED0200B68B11 /* ButtonReloadMainTableViewCell.swift in Sources */,
-				879A27B12707A79000CCD1DD /* MainAction.swift in Sources */,
-				879A27A82707A63500CCD1DD /* RootState.swift in Sources */,
+				87767A6E27A5B2E8002659D6 /* TodoApp.swift in Sources */,
+				87767A7927A5B2E9002659D6 /* RootAction.swift in Sources */,
+				87767A7A27A5B2E9002659D6 /* RootEnvironment.swift in Sources */,
+				87767A8027A5B2E9002659D6 /* CreateTitleMainTableViewCell.swift in Sources */,
+				87767A7F27A5B2E9002659D6 /* ButtonReloadMainTableViewCell.swift in Sources */,
+				87767A7227A5B2E9002659D6 /* MainState.swift in Sources */,
+				87767A7327A5B2E9002659D6 /* MainAction.swift in Sources */,
+				87767A7627A5B2E9002659D6 /* AuthReducer.swift in Sources */,
+				87767A7E27A5B2E9002659D6 /* ViewTodoModel.swift in Sources */,
+				87767A7427A5B2E9002659D6 /* AuthViewController.swift in Sources */,
+				87767A8227A5B2E9002659D6 /* MainTableViewCell.swift in Sources */,
+				87767A7027A5B2E9002659D6 /* MainReducer.swift in Sources */,
+				87767A7527A5B2E9002659D6 /* AuthState.swift in Sources */,
+				87767A7127A5B2E9002659D6 /* MainEnvironment.swift in Sources */,
+				87767A8127A5B2E9002659D6 /* ActivityIndicatorViewController.swift in Sources */,
+				87767A7D27A5B2E9002659D6 /* RootReducer.swift in Sources */,
+				87767A8327A5B2E9002659D6 /* View+.swift in Sources */,
+				87767A7C27A5B2E9002659D6 /* RootState.swift in Sources */,
+				87767A7B27A5B2E9002659D6 /* RootViewController.swift in Sources */,
+				87767A6F27A5B2E9002659D6 /* MainViewController.swift in Sources */,
+				87767A7827A5B2E9002659D6 /* AuthEnvironment.swift in Sources */,
+				87767A7727A5B2E9002659D6 /* AuthAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		879A27852707A59000CCD1DD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				879A27862707A59000CCD1DD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		879A278A2707A59200CCD1DD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				879A278B2707A59200CCD1DD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		879A278E2707A59200CCD1DD /* Debug */ = {
+		87BB893527A5949A000B269B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -373,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -383,7 +394,7 @@
 			};
 			name = Debug;
 		};
-		879A278F2707A59200CCD1DD /* Release */ = {
+		87BB893627A5949A000B269B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -428,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -438,22 +449,23 @@
 			};
 			name = Release;
 		};
-		879A27912707A59200CCD1DD /* Debug */ = {
+		87BB893827A5949A000B269B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Todo+RxSwift+UIKit(iOS13)/Preview Content\"";
 				DEVELOPMENT_TEAM = 2H5PN3F9B6;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Todo+RxSwift+UIKit(iOS13)/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,22 +479,23 @@
 			};
 			name = Debug;
 		};
-		879A27922707A59200CCD1DD /* Release */ = {
+		87BB893927A5949A000B269B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Todo+RxSwift+UIKit(iOS13)/Preview Content\"";
 				DEVELOPMENT_TEAM = 2H5PN3F9B6;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Todo+RxSwift+UIKit(iOS13)/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,20 +512,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		879A27772707A59000CCD1DD /* Build configuration list for PBXProject "Todo+RxSwift+UIKit(iOS13)" */ = {
+		87BB892427A59499000B269B /* Build configuration list for PBXProject "Todo+RxSwift+UIKit(iOS13)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				879A278E2707A59200CCD1DD /* Debug */,
-				879A278F2707A59200CCD1DD /* Release */,
+				87BB893527A5949A000B269B /* Debug */,
+				87BB893627A5949A000B269B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		879A27902707A59200CCD1DD /* Build configuration list for PBXNativeTarget "Todo+RxSwift+UIKit(iOS13)" */ = {
+		87BB893727A5949A000B269B /* Build configuration list for PBXNativeTarget "Todo+RxSwift+UIKit(iOS13)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				879A27912707A59200CCD1DD /* Debug */,
-				879A27922707A59200CCD1DD /* Release */,
+				87BB893827A5949A000B269B /* Debug */,
+				87BB893927A5949A000B269B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -520,75 +533,62 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		879A27932707A5A600CCD1DD /* XCRemoteSwiftPackageReference "AnyRequest" */ = {
+		87767A4527A5B237002659D6 /* XCRemoteSwiftPackageReference "rxswift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/FullStack-Swift/AnyRequest";
+			repositoryURL = "https://github.com/FullStack-Swift/rxswift-composable-architecture";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.0.0;
 			};
 		};
-		879A27962707A5B300CCD1DD /* XCRemoteSwiftPackageReference "Json" */ = {
+		87767A4827A5B263002659D6 /* XCRemoteSwiftPackageReference "Networking" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/FullStack-Swift/Json";
+			repositoryURL = "https://github.com/FullStack-Swift/Networking";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.0.0;
 			};
 		};
-		879A27992707A5C400CCD1DD /* XCRemoteSwiftPackageReference "SwiftConvert" */ = {
+		87767A4B27A5B279002659D6 /* XCRemoteSwiftPackageReference "SwiftExtension" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/FullStack-Swift/SwiftConvert.git";
+			repositoryURL = "https://github.com/FullStack-Swift/SwiftExtension";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.0.0;
 			};
 		};
-		879A279C2707A5DF00CCD1DD /* XCRemoteSwiftPackageReference "rxswift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/FullStack-Swift/rxswift-composable-architecture.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		879A27C42707AA6000CCD1DD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		87767A8427A5B324002659D6 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
+				kind = exactVersion;
+				version = 6.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		879A27942707A5A600CCD1DD /* AnyRequest */ = {
+		87767A4627A5B237002659D6 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 879A27932707A5A600CCD1DD /* XCRemoteSwiftPackageReference "AnyRequest" */;
-			productName = AnyRequest;
-		};
-		879A27972707A5B300CCD1DD /* Json */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 879A27962707A5B300CCD1DD /* XCRemoteSwiftPackageReference "Json" */;
-			productName = Json;
-		};
-		879A279A2707A5C400CCD1DD /* ConvertSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 879A27992707A5C400CCD1DD /* XCRemoteSwiftPackageReference "SwiftConvert" */;
-			productName = ConvertSwift;
-		};
-		879A279D2707A5DF00CCD1DD /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 879A279C2707A5DF00CCD1DD /* XCRemoteSwiftPackageReference "rxswift-composable-architecture" */;
+			package = 87767A4527A5B237002659D6 /* XCRemoteSwiftPackageReference "rxswift-composable-architecture" */;
 			productName = ComposableArchitecture;
 		};
-		879A27C52707AA6000CCD1DD /* RxCocoa */ = {
+		87767A4C27A5B27A002659D6 /* ConvertSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 879A27C42707AA6000CCD1DD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 87767A4B27A5B279002659D6 /* XCRemoteSwiftPackageReference "SwiftExtension" */;
+			productName = ConvertSwift;
+		};
+		87767A8527A5B324002659D6 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87767A8427A5B324002659D6 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
+		};
+		87767A8827A5B34F002659D6 /* RxSwiftRequest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87767A4827A5B263002659D6 /* XCRemoteSwiftPackageReference "Networking" */;
+			productName = RxSwiftRequest;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 879A27742707A59000CCD1DD /* Project object */;
+	rootObject = 87BB892127A59499000B269B /* Project object */;
 }

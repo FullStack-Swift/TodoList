@@ -1,12 +1,11 @@
 import ComposableArchitecture
 import Foundation
 import ConvertSwift
-import Alamofire
+import ReactiveSwiftRequest
 
 let MainReducer = Reducer<MainState, MainAction, MainEnvironment>.combine(
   
   Reducer { state, action, environment in
-    let urlString = "https://todolistappproj.herokuapp.com/todos"
     switch action {
       /// view action
     case .viewDidLoad:
@@ -29,11 +28,15 @@ let MainReducer = Reducer<MainState, MainAction, MainEnvironment>.combine(
       }
       state.isLoading = true
       state.todos.removeAll()
-      return AF.request(urlString, method: .get).reactive
-        .response(queue: .main)
-        .delay(2, on: QueueScheduler.main)
-        .compactMap{$0.data}
+      let request = MRequest {
+        RMethod(.get)
+        RUrl(urlString: environment.urlString)
+      }
+      return request
+        .producer
+        .compactMap {$0.data}
         .map(MainAction.responseTodo)
+        .eraseToEffect()
     case .responseTodo(let json):
       state.isLoading = false
       if let todos = json.toModel([Todo].self) {
@@ -48,19 +51,34 @@ let MainReducer = Reducer<MainState, MainAction, MainEnvironment>.combine(
       var title = state.title
       state.title = ""
       let todo = Todo(id: nil, title: title, isCompleted: false)
-      return AF.request(urlString, method: .post, parameters: todo)
-        .reactive.response(queue: .main)
-        .compactMap{$0.data}
+      let request = MRequest {
+        RUrl(urlString: environment.urlString)
+        REncoding(.json)
+        RMethod(.post)
+        Rbody(todo.toData())
+      }
+      return request
+        .producer
+        .compactMap {$0.data}
         .map(MainAction.responseCreateTodo)
+        .eraseToEffect()
     case .responseCreateTodo(let data):
       if let todo = data.toModel(Todo.self) {
         state.todos.append(todo)
       }
     case .updateTodo(let todo):
-      return AF.request(urlString + "/\(todo.id!)", method: .post, parameters: todo, encoder: JSONParameterEncoder.default)
-        .reactive.response(queue: .main)
-        .compactMap{$0.data}
+      let request = MRequest {
+        REncoding(.json)
+        RUrl(urlString: environment.urlString)
+          .withPath(todo.id.toString())
+        RMethod(.post)
+        Rbody(todo.toData())
+      }
+      return request
+        .producer
+        .compactMap {$0.data}
         .map(MainAction.responseUpdateTodo)
+        .eraseToEffect()
     case .responseUpdateTodo(let data):
       if let todo = data.toModel(Todo.self) {
         if let index = state.todos.firstIndex(where: { item in
@@ -70,10 +88,16 @@ let MainReducer = Reducer<MainState, MainAction, MainEnvironment>.combine(
         }
       }
     case .deleteTodo(let todo):
-      return AF.request(urlString + "/\(todo.id!)", method: .delete)
-        .reactive.response(queue: .main)
-        .compactMap{$0.data}
+      let request = MRequest {
+        RUrl(urlString: environment.urlString)
+          .withPath(todo.id.toString())
+        RMethod(.delete)
+      }
+      return request
+        .producer
+        .compactMap {$0.data}
         .map(MainAction.reponseDeleteTodo)
+        .eraseToEffect()
     case .reponseDeleteTodo(let data):
       if let todo = data.toModel(Todo.self) {
         state.todos.removeAll {

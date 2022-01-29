@@ -7,199 +7,219 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		872E5BE62707EFBE00460BFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5BE52707EFBE00460BFF /* AppDelegate.swift */; };
-		872E5BE82707EFBE00460BFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5BE72707EFBE00460BFF /* SceneDelegate.swift */; };
-		872E5BED2707EFBE00460BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 872E5BEB2707EFBE00460BFF /* Main.storyboard */; };
-		872E5BEF2707EFBF00460BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 872E5BEE2707EFBF00460BFF /* Assets.xcassets */; };
-		872E5BF22707EFBF00460BFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 872E5BF02707EFBF00460BFF /* LaunchScreen.storyboard */; };
-		872E5BFB2707F00400460BFF /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 872E5BFA2707F00400460BFF /* ComposableArchitecture */; };
-		872E5BFE2707F02E00460BFF /* AnyRequest in Frameworks */ = {isa = PBXBuildFile; productRef = 872E5BFD2707F02E00460BFF /* AnyRequest */; };
-		872E5C012707F03B00460BFF /* Json in Frameworks */ = {isa = PBXBuildFile; productRef = 872E5C002707F03B00460BFF /* Json */; };
-		872E5C042707F06000460BFF /* ConvertSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 872E5C032707F06000460BFF /* ConvertSwift */; };
-		872E5C522707F87600460BFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C392707F87600460BFF /* MainViewController.swift */; };
-		872E5C532707F87600460BFF /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C3A2707F87600460BFF /* MainReducer.swift */; };
-		872E5C542707F87600460BFF /* MainEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C3B2707F87600460BFF /* MainEnvironment.swift */; };
-		872E5C552707F87600460BFF /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C3C2707F87600460BFF /* MainState.swift */; };
-		872E5C562707F87600460BFF /* MainAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C3D2707F87600460BFF /* MainAction.swift */; };
-		872E5C572707F87600460BFF /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C3F2707F87600460BFF /* TodoModel.swift */; };
-		872E5C582707F87600460BFF /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C412707F87600460BFF /* View+.swift */; };
-		872E5C592707F87600460BFF /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C432707F87600460BFF /* AuthViewController.swift */; };
-		872E5C5A2707F87600460BFF /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C442707F87600460BFF /* AuthState.swift */; };
-		872E5C5B2707F87600460BFF /* AuthReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C452707F87600460BFF /* AuthReducer.swift */; };
-		872E5C5C2707F87600460BFF /* AuthAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C462707F87600460BFF /* AuthAction.swift */; };
-		872E5C5D2707F87600460BFF /* AuthEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C472707F87600460BFF /* AuthEnvironment.swift */; };
-		872E5C5E2707F87600460BFF /* RootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C492707F87600460BFF /* RootAction.swift */; };
-		872E5C5F2707F87600460BFF /* RootEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C4A2707F87600460BFF /* RootEnvironment.swift */; };
-		872E5C602707F87600460BFF /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C4B2707F87600460BFF /* RootViewController.swift */; };
-		872E5C612707F87600460BFF /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C4C2707F87600460BFF /* RootState.swift */; };
-		872E5C622707F87600460BFF /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C4D2707F87600460BFF /* RootReducer.swift */; };
-		872E5C632707F87600460BFF /* ButtonReloadMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C4F2707F87600460BFF /* ButtonReloadMainTableViewCell.swift */; };
-		872E5C642707F87600460BFF /* CreateTitleMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C502707F87600460BFF /* CreateTitleMainTableViewCell.swift */; };
-		872E5C652707F87600460BFF /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C512707F87600460BFF /* MainTableViewCell.swift */; };
-		872E5C682707F9E300460BFF /* ReactiveCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 872E5C672707F9E300460BFF /* ReactiveCocoa */; };
+		87320BDA27A5AD2100360667 /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BBB27A5AD2100360667 /* TodoApp.swift */; };
+		87320BDB27A5AD2100360667 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BBF27A5AD2100360667 /* MainViewController.swift */; };
+		87320BDC27A5AD2100360667 /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC027A5AD2100360667 /* MainReducer.swift */; };
+		87320BDD27A5AD2100360667 /* MainEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC127A5AD2100360667 /* MainEnvironment.swift */; };
+		87320BDE27A5AD2100360667 /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC227A5AD2100360667 /* MainState.swift */; };
+		87320BDF27A5AD2100360667 /* MainAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC327A5AD2100360667 /* MainAction.swift */; };
+		87320BE027A5AD2100360667 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC527A5AD2100360667 /* AuthViewController.swift */; };
+		87320BE127A5AD2100360667 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC627A5AD2100360667 /* AuthState.swift */; };
+		87320BE227A5AD2100360667 /* AuthReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC727A5AD2100360667 /* AuthReducer.swift */; };
+		87320BE327A5AD2100360667 /* AuthAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC827A5AD2100360667 /* AuthAction.swift */; };
+		87320BE427A5AD2100360667 /* AuthEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC927A5AD2100360667 /* AuthEnvironment.swift */; };
+		87320BE527A5AD2100360667 /* RootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BCB27A5AD2100360667 /* RootAction.swift */; };
+		87320BE627A5AD2100360667 /* RootEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BCC27A5AD2100360667 /* RootEnvironment.swift */; };
+		87320BE727A5AD2100360667 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BCD27A5AD2100360667 /* RootViewController.swift */; };
+		87320BE827A5AD2100360667 /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BCE27A5AD2100360667 /* RootState.swift */; };
+		87320BE927A5AD2100360667 /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BCF27A5AD2100360667 /* RootReducer.swift */; };
+		87320BEA27A5AD2100360667 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BD227A5AD2100360667 /* TodoModel.swift */; };
+		87320BEB27A5AD2100360667 /* ButtonReloadMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BD427A5AD2100360667 /* ButtonReloadMainTableViewCell.swift */; };
+		87320BEC27A5AD2100360667 /* CreateTitleMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BD527A5AD2100360667 /* CreateTitleMainTableViewCell.swift */; };
+		87320BEE27A5AD2100360667 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BD727A5AD2100360667 /* MainTableViewCell.swift */; };
+		87320BEF27A5AD2100360667 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BD927A5AD2100360667 /* View+.swift */; };
+		87320BF227A5AD6800360667 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 87320BF127A5AD6800360667 /* ComposableArchitecture */; };
+		87320BF527A5AD8500360667 /* ReactiveSwiftRequest in Frameworks */ = {isa = PBXBuildFile; productRef = 87320BF427A5AD8500360667 /* ReactiveSwiftRequest */; };
+		87320BF827A5ADA200360667 /* ConvertSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87320BF727A5ADA200360667 /* ConvertSwift */; };
+		87320BFB27A5ADE100360667 /* ReactiveCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 87320BFA27A5ADE100360667 /* ReactiveCocoa */; };
+		876AF6CE27A5DCE6009A0148 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876AF6CD27A5DCE6009A0148 /* BaseViewController.swift */; };
+		876AF6D027A5DD1B009A0148 /* BaseMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876AF6CF27A5DD1B009A0148 /* BaseMainTableViewCell.swift */; };
+		87BB88FD27A59475000B269B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB88FC27A59475000B269B /* Assets.xcassets */; };
+		87BB890027A59475000B269B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB88FF27A59475000B269B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		872E5BE22707EFBE00460BFF /* Todo+ReactiveSwift+UIKit(iOS13).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo+ReactiveSwift+UIKit(iOS13).app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		872E5BE52707EFBE00460BFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		872E5BE72707EFBE00460BFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		872E5BEC2707EFBE00460BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		872E5BEE2707EFBF00460BFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		872E5BF12707EFBF00460BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		872E5BF32707EFBF00460BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		872E5C392707F87600460BFF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		872E5C3A2707F87600460BFF /* MainReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainReducer.swift; sourceTree = "<group>"; };
-		872E5C3B2707F87600460BFF /* MainEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainEnvironment.swift; sourceTree = "<group>"; };
-		872E5C3C2707F87600460BFF /* MainState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
-		872E5C3D2707F87600460BFF /* MainAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAction.swift; sourceTree = "<group>"; };
-		872E5C3F2707F87600460BFF /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
-		872E5C412707F87600460BFF /* View+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
-		872E5C432707F87600460BFF /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		872E5C442707F87600460BFF /* AuthState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
-		872E5C452707F87600460BFF /* AuthReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthReducer.swift; sourceTree = "<group>"; };
-		872E5C462707F87600460BFF /* AuthAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAction.swift; sourceTree = "<group>"; };
-		872E5C472707F87600460BFF /* AuthEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthEnvironment.swift; sourceTree = "<group>"; };
-		872E5C492707F87600460BFF /* RootAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootAction.swift; sourceTree = "<group>"; };
-		872E5C4A2707F87600460BFF /* RootEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootEnvironment.swift; sourceTree = "<group>"; };
-		872E5C4B2707F87600460BFF /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		872E5C4C2707F87600460BFF /* RootState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootState.swift; sourceTree = "<group>"; };
-		872E5C4D2707F87600460BFF /* RootReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootReducer.swift; sourceTree = "<group>"; };
-		872E5C4F2707F87600460BFF /* ButtonReloadMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonReloadMainTableViewCell.swift; sourceTree = "<group>"; };
-		872E5C502707F87600460BFF /* CreateTitleMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTitleMainTableViewCell.swift; sourceTree = "<group>"; };
-		872E5C512707F87600460BFF /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		87320BBB27A5AD2100360667 /* TodoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoApp.swift; sourceTree = "<group>"; };
+		87320BBF27A5AD2100360667 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		87320BC027A5AD2100360667 /* MainReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainReducer.swift; sourceTree = "<group>"; };
+		87320BC127A5AD2100360667 /* MainEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainEnvironment.swift; sourceTree = "<group>"; };
+		87320BC227A5AD2100360667 /* MainState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
+		87320BC327A5AD2100360667 /* MainAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAction.swift; sourceTree = "<group>"; };
+		87320BC527A5AD2100360667 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		87320BC627A5AD2100360667 /* AuthState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		87320BC727A5AD2100360667 /* AuthReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthReducer.swift; sourceTree = "<group>"; };
+		87320BC827A5AD2100360667 /* AuthAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAction.swift; sourceTree = "<group>"; };
+		87320BC927A5AD2100360667 /* AuthEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthEnvironment.swift; sourceTree = "<group>"; };
+		87320BCB27A5AD2100360667 /* RootAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootAction.swift; sourceTree = "<group>"; };
+		87320BCC27A5AD2100360667 /* RootEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootEnvironment.swift; sourceTree = "<group>"; };
+		87320BCD27A5AD2100360667 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		87320BCE27A5AD2100360667 /* RootState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootState.swift; sourceTree = "<group>"; };
+		87320BCF27A5AD2100360667 /* RootReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootReducer.swift; sourceTree = "<group>"; };
+		87320BD227A5AD2100360667 /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
+		87320BD427A5AD2100360667 /* ButtonReloadMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonReloadMainTableViewCell.swift; sourceTree = "<group>"; };
+		87320BD527A5AD2100360667 /* CreateTitleMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTitleMainTableViewCell.swift; sourceTree = "<group>"; };
+		87320BD727A5AD2100360667 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		87320BD927A5AD2100360667 /* View+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		876AF6CD27A5DCE6009A0148 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		876AF6CF27A5DD1B009A0148 /* BaseMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMainTableViewCell.swift; sourceTree = "<group>"; };
+		87BB88F527A59474000B269B /* Todo+ReactiveSwift+UIKit(iOS13).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo+ReactiveSwift+UIKit(iOS13).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87BB88FC27A59475000B269B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87BB88FF27A59475000B269B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		872E5BDF2707EFBE00460BFF /* Frameworks */ = {
+		87BB88F227A59474000B269B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				872E5BFB2707F00400460BFF /* ComposableArchitecture in Frameworks */,
-				872E5C682707F9E300460BFF /* ReactiveCocoa in Frameworks */,
-				872E5BFE2707F02E00460BFF /* AnyRequest in Frameworks */,
-				872E5C042707F06000460BFF /* ConvertSwift in Frameworks */,
-				872E5C012707F03B00460BFF /* Json in Frameworks */,
+				87320BF227A5AD6800360667 /* ComposableArchitecture in Frameworks */,
+				87320BFB27A5ADE100360667 /* ReactiveCocoa in Frameworks */,
+				87320BF527A5AD8500360667 /* ReactiveSwiftRequest in Frameworks */,
+				87320BF827A5ADA200360667 /* ConvertSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		872E5BD92707EFBE00460BFF = {
+		87320BBA27A5AD2100360667 /* CoreApp */ = {
 			isa = PBXGroup;
 			children = (
-				872E5BE42707EFBE00460BFF /* Todo+ReactiveSwift+UIKit(iOS13) */,
-				872E5BE32707EFBE00460BFF /* Products */,
+				87320BBB27A5AD2100360667 /* TodoApp.swift */,
+				87320BBC27A5AD2100360667 /* TodoApp */,
 			);
+			path = CoreApp;
 			sourceTree = "<group>";
 		};
-		872E5BE32707EFBE00460BFF /* Products */ = {
+		87320BBC27A5AD2100360667 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
-				872E5BE22707EFBE00460BFF /* Todo+ReactiveSwift+UIKit(iOS13).app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		872E5BE42707EFBE00460BFF /* Todo+ReactiveSwift+UIKit(iOS13) */ = {
-			isa = PBXGroup;
-			children = (
-				872E5C372707F87600460BFF /* TodoApp */,
-				872E5BE52707EFBE00460BFF /* AppDelegate.swift */,
-				872E5BE72707EFBE00460BFF /* SceneDelegate.swift */,
-				872E5BEB2707EFBE00460BFF /* Main.storyboard */,
-				872E5BEE2707EFBF00460BFF /* Assets.xcassets */,
-				872E5BF02707EFBF00460BFF /* LaunchScreen.storyboard */,
-				872E5BF32707EFBF00460BFF /* Info.plist */,
-			);
-			path = "Todo+ReactiveSwift+UIKit(iOS13)";
-			sourceTree = "<group>";
-		};
-		872E5C372707F87600460BFF /* TodoApp */ = {
-			isa = PBXGroup;
-			children = (
-				872E5C402707F87600460BFF /* Extensions */,
-				872E5C3E2707F87600460BFF /* Models */,
-				872E5C4E2707F87600460BFF /* Views */,
-				872E5C382707F87600460BFF /* MainScreen */,
-				872E5C422707F87600460BFF /* AuthScreen */,
-				872E5C482707F87600460BFF /* RootScreen */,
+				87320BBD27A5AD2100360667 /* AppScreens */,
+				87320BD027A5AD2100360667 /* Models */,
+				87320BD327A5AD2100360667 /* Views */,
+				87320BD827A5AD2100360667 /* View+ */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
 		};
-		872E5C382707F87600460BFF /* MainScreen */ = {
+		87320BBD27A5AD2100360667 /* AppScreens */ = {
 			isa = PBXGroup;
 			children = (
-				872E5C392707F87600460BFF /* MainViewController.swift */,
-				872E5C3C2707F87600460BFF /* MainState.swift */,
-				872E5C3D2707F87600460BFF /* MainAction.swift */,
-				872E5C3B2707F87600460BFF /* MainEnvironment.swift */,
-				872E5C3A2707F87600460BFF /* MainReducer.swift */,
+				87320BBE27A5AD2100360667 /* MainScreen */,
+				87320BC427A5AD2100360667 /* AuthScreen */,
+				87320BCA27A5AD2100360667 /* RootScreen */,
+			);
+			path = AppScreens;
+			sourceTree = "<group>";
+		};
+		87320BBE27A5AD2100360667 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				87320BBF27A5AD2100360667 /* MainViewController.swift */,
+				87320BC227A5AD2100360667 /* MainState.swift */,
+				87320BC327A5AD2100360667 /* MainAction.swift */,
+				87320BC127A5AD2100360667 /* MainEnvironment.swift */,
+				87320BC027A5AD2100360667 /* MainReducer.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
 		};
-		872E5C3E2707F87600460BFF /* Models */ = {
+		87320BC427A5AD2100360667 /* AuthScreen */ = {
 			isa = PBXGroup;
 			children = (
-				872E5C3F2707F87600460BFF /* TodoModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		872E5C402707F87600460BFF /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				872E5C412707F87600460BFF /* View+.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		872E5C422707F87600460BFF /* AuthScreen */ = {
-			isa = PBXGroup;
-			children = (
-				872E5C432707F87600460BFF /* AuthViewController.swift */,
-				872E5C442707F87600460BFF /* AuthState.swift */,
-				872E5C462707F87600460BFF /* AuthAction.swift */,
-				872E5C472707F87600460BFF /* AuthEnvironment.swift */,
-				872E5C452707F87600460BFF /* AuthReducer.swift */,
+				87320BC527A5AD2100360667 /* AuthViewController.swift */,
+				87320BC627A5AD2100360667 /* AuthState.swift */,
+				87320BC827A5AD2100360667 /* AuthAction.swift */,
+				87320BC927A5AD2100360667 /* AuthEnvironment.swift */,
+				87320BC727A5AD2100360667 /* AuthReducer.swift */,
 			);
 			path = AuthScreen;
 			sourceTree = "<group>";
 		};
-		872E5C482707F87600460BFF /* RootScreen */ = {
+		87320BCA27A5AD2100360667 /* RootScreen */ = {
 			isa = PBXGroup;
 			children = (
-				872E5C4B2707F87600460BFF /* RootViewController.swift */,
-				872E5C4C2707F87600460BFF /* RootState.swift */,
-				872E5C492707F87600460BFF /* RootAction.swift */,
-				872E5C4A2707F87600460BFF /* RootEnvironment.swift */,
-				872E5C4D2707F87600460BFF /* RootReducer.swift */,
+				87320BCD27A5AD2100360667 /* RootViewController.swift */,
+				87320BCE27A5AD2100360667 /* RootState.swift */,
+				87320BCB27A5AD2100360667 /* RootAction.swift */,
+				87320BCC27A5AD2100360667 /* RootEnvironment.swift */,
+				87320BCF27A5AD2100360667 /* RootReducer.swift */,
 			);
 			path = RootScreen;
 			sourceTree = "<group>";
 		};
-		872E5C4E2707F87600460BFF /* Views */ = {
+		87320BD027A5AD2100360667 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				872E5C4F2707F87600460BFF /* ButtonReloadMainTableViewCell.swift */,
-				872E5C502707F87600460BFF /* CreateTitleMainTableViewCell.swift */,
-				872E5C512707F87600460BFF /* MainTableViewCell.swift */,
+				87320BD227A5AD2100360667 /* TodoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		87320BD327A5AD2100360667 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				87320BD427A5AD2100360667 /* ButtonReloadMainTableViewCell.swift */,
+				87320BD527A5AD2100360667 /* CreateTitleMainTableViewCell.swift */,
+				87320BD727A5AD2100360667 /* MainTableViewCell.swift */,
+				876AF6CD27A5DCE6009A0148 /* BaseViewController.swift */,
+				876AF6CF27A5DD1B009A0148 /* BaseMainTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		87320BD827A5AD2100360667 /* View+ */ = {
+			isa = PBXGroup;
+			children = (
+				87320BD927A5AD2100360667 /* View+.swift */,
+			);
+			path = "View+";
+			sourceTree = "<group>";
+		};
+		87BB88EC27A59474000B269B = {
+			isa = PBXGroup;
+			children = (
+				87BB88F727A59474000B269B /* Todo+ReactiveSwift+UIKit(iOS13) */,
+				87BB88F627A59474000B269B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87BB88F627A59474000B269B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87BB88F527A59474000B269B /* Todo+ReactiveSwift+UIKit(iOS13).app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87BB88F727A59474000B269B /* Todo+ReactiveSwift+UIKit(iOS13) */ = {
+			isa = PBXGroup;
+			children = (
+				87320BBA27A5AD2100360667 /* CoreApp */,
+				87BB88FC27A59475000B269B /* Assets.xcassets */,
+				87BB88FE27A59475000B269B /* Preview Content */,
+			);
+			path = "Todo+ReactiveSwift+UIKit(iOS13)";
+			sourceTree = "<group>";
+		};
+		87BB88FE27A59475000B269B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				87BB88FF27A59475000B269B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		872E5BE12707EFBE00460BFF /* Todo+ReactiveSwift+UIKit(iOS13) */ = {
+		87BB88F427A59474000B269B /* Todo+ReactiveSwift+UIKit(iOS13) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 872E5BF62707EFBF00460BFF /* Build configuration list for PBXNativeTarget "Todo+ReactiveSwift+UIKit(iOS13)" */;
+			buildConfigurationList = 87BB890327A59475000B269B /* Build configuration list for PBXNativeTarget "Todo+ReactiveSwift+UIKit(iOS13)" */;
 			buildPhases = (
-				872E5BDE2707EFBE00460BFF /* Sources */,
-				872E5BDF2707EFBE00460BFF /* Frameworks */,
-				872E5BE02707EFBE00460BFF /* Resources */,
+				87BB88F127A59474000B269B /* Sources */,
+				87BB88F227A59474000B269B /* Frameworks */,
+				87BB88F327A59474000B269B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -207,32 +227,31 @@
 			);
 			name = "Todo+ReactiveSwift+UIKit(iOS13)";
 			packageProductDependencies = (
-				872E5BFA2707F00400460BFF /* ComposableArchitecture */,
-				872E5BFD2707F02E00460BFF /* AnyRequest */,
-				872E5C002707F03B00460BFF /* Json */,
-				872E5C032707F06000460BFF /* ConvertSwift */,
-				872E5C672707F9E300460BFF /* ReactiveCocoa */,
+				87320BF127A5AD6800360667 /* ComposableArchitecture */,
+				87320BF427A5AD8500360667 /* ReactiveSwiftRequest */,
+				87320BF727A5ADA200360667 /* ConvertSwift */,
+				87320BFA27A5ADE100360667 /* ReactiveCocoa */,
 			);
 			productName = "Todo+ReactiveSwift+UIKit(iOS13)";
-			productReference = 872E5BE22707EFBE00460BFF /* Todo+ReactiveSwift+UIKit(iOS13).app */;
+			productReference = 87BB88F527A59474000B269B /* Todo+ReactiveSwift+UIKit(iOS13).app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		872E5BDA2707EFBE00460BFF /* Project object */ = {
+		87BB88ED27A59474000B269B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					872E5BE12707EFBE00460BFF = {
-						CreatedOnToolsVersion = 13.0;
+					87BB88F427A59474000B269B = {
+						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 872E5BDD2707EFBE00460BFF /* Build configuration list for PBXProject "Todo+ReactiveSwift+UIKit(iOS13)" */;
+			buildConfigurationList = 87BB88F027A59474000B269B /* Build configuration list for PBXProject "Todo+ReactiveSwift+UIKit(iOS13)" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -240,89 +259,69 @@
 				en,
 				Base,
 			);
-			mainGroup = 872E5BD92707EFBE00460BFF;
+			mainGroup = 87BB88EC27A59474000B269B;
 			packageReferences = (
-				872E5BF92707F00400460BFF /* XCRemoteSwiftPackageReference "reactiveswift-composable-architecture" */,
-				872E5BFC2707F02D00460BFF /* XCRemoteSwiftPackageReference "AnyRequest" */,
-				872E5BFF2707F03B00460BFF /* XCRemoteSwiftPackageReference "Json" */,
-				872E5C022707F06000460BFF /* XCRemoteSwiftPackageReference "SwiftConvert" */,
-				872E5C662707F9E300460BFF /* XCRemoteSwiftPackageReference "ReactiveCocoa" */,
+				87320BF027A5AD6800360667 /* XCRemoteSwiftPackageReference "reactiveswift-composable-architecture" */,
+				87320BF327A5AD8500360667 /* XCRemoteSwiftPackageReference "Networking" */,
+				87320BF627A5ADA200360667 /* XCRemoteSwiftPackageReference "SwiftExtension" */,
+				87320BF927A5ADE100360667 /* XCRemoteSwiftPackageReference "ReactiveCocoa" */,
 			);
-			productRefGroup = 872E5BE32707EFBE00460BFF /* Products */;
+			productRefGroup = 87BB88F627A59474000B269B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				872E5BE12707EFBE00460BFF /* Todo+ReactiveSwift+UIKit(iOS13) */,
+				87BB88F427A59474000B269B /* Todo+ReactiveSwift+UIKit(iOS13) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		872E5BE02707EFBE00460BFF /* Resources */ = {
+		87BB88F327A59474000B269B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				872E5BF22707EFBF00460BFF /* LaunchScreen.storyboard in Resources */,
-				872E5BEF2707EFBF00460BFF /* Assets.xcassets in Resources */,
-				872E5BED2707EFBE00460BFF /* Main.storyboard in Resources */,
+				87BB890027A59475000B269B /* Preview Assets.xcassets in Resources */,
+				87BB88FD27A59475000B269B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		872E5BDE2707EFBE00460BFF /* Sources */ = {
+		87BB88F127A59474000B269B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				872E5C592707F87600460BFF /* AuthViewController.swift in Sources */,
-				872E5C5C2707F87600460BFF /* AuthAction.swift in Sources */,
-				872E5C622707F87600460BFF /* RootReducer.swift in Sources */,
-				872E5C602707F87600460BFF /* RootViewController.swift in Sources */,
-				872E5C5D2707F87600460BFF /* AuthEnvironment.swift in Sources */,
-				872E5C5A2707F87600460BFF /* AuthState.swift in Sources */,
-				872E5C572707F87600460BFF /* TodoModel.swift in Sources */,
-				872E5C652707F87600460BFF /* MainTableViewCell.swift in Sources */,
-				872E5C642707F87600460BFF /* CreateTitleMainTableViewCell.swift in Sources */,
-				872E5C552707F87600460BFF /* MainState.swift in Sources */,
-				872E5BE62707EFBE00460BFF /* AppDelegate.swift in Sources */,
-				872E5BE82707EFBE00460BFF /* SceneDelegate.swift in Sources */,
-				872E5C522707F87600460BFF /* MainViewController.swift in Sources */,
-				872E5C542707F87600460BFF /* MainEnvironment.swift in Sources */,
-				872E5C562707F87600460BFF /* MainAction.swift in Sources */,
-				872E5C582707F87600460BFF /* View+.swift in Sources */,
-				872E5C5E2707F87600460BFF /* RootAction.swift in Sources */,
-				872E5C5B2707F87600460BFF /* AuthReducer.swift in Sources */,
-				872E5C532707F87600460BFF /* MainReducer.swift in Sources */,
-				872E5C632707F87600460BFF /* ButtonReloadMainTableViewCell.swift in Sources */,
-				872E5C612707F87600460BFF /* RootState.swift in Sources */,
-				872E5C5F2707F87600460BFF /* RootEnvironment.swift in Sources */,
+				87320BDA27A5AD2100360667 /* TodoApp.swift in Sources */,
+				87320BE527A5AD2100360667 /* RootAction.swift in Sources */,
+				87320BE627A5AD2100360667 /* RootEnvironment.swift in Sources */,
+				876AF6CE27A5DCE6009A0148 /* BaseViewController.swift in Sources */,
+				87320BEC27A5AD2100360667 /* CreateTitleMainTableViewCell.swift in Sources */,
+				87320BEB27A5AD2100360667 /* ButtonReloadMainTableViewCell.swift in Sources */,
+				87320BDE27A5AD2100360667 /* MainState.swift in Sources */,
+				87320BDF27A5AD2100360667 /* MainAction.swift in Sources */,
+				87320BE227A5AD2100360667 /* AuthReducer.swift in Sources */,
+				876AF6D027A5DD1B009A0148 /* BaseMainTableViewCell.swift in Sources */,
+				87320BEA27A5AD2100360667 /* TodoModel.swift in Sources */,
+				87320BE027A5AD2100360667 /* AuthViewController.swift in Sources */,
+				87320BEE27A5AD2100360667 /* MainTableViewCell.swift in Sources */,
+				87320BDC27A5AD2100360667 /* MainReducer.swift in Sources */,
+				87320BE127A5AD2100360667 /* AuthState.swift in Sources */,
+				87320BDD27A5AD2100360667 /* MainEnvironment.swift in Sources */,
+				87320BE927A5AD2100360667 /* RootReducer.swift in Sources */,
+				87320BEF27A5AD2100360667 /* View+.swift in Sources */,
+				87320BE827A5AD2100360667 /* RootState.swift in Sources */,
+				87320BE727A5AD2100360667 /* RootViewController.swift in Sources */,
+				87320BDB27A5AD2100360667 /* MainViewController.swift in Sources */,
+				87320BE427A5AD2100360667 /* AuthEnvironment.swift in Sources */,
+				87320BE327A5AD2100360667 /* AuthAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		872E5BEB2707EFBE00460BFF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				872E5BEC2707EFBE00460BFF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		872E5BF02707EFBF00460BFF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				872E5BF12707EFBF00460BFF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		872E5BF42707EFBF00460BFF /* Debug */ = {
+		87BB890127A59475000B269B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -373,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -383,7 +382,7 @@
 			};
 			name = Debug;
 		};
-		872E5BF52707EFBF00460BFF /* Release */ = {
+		87BB890227A59475000B269B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -428,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -438,22 +437,22 @@
 			};
 			name = Release;
 		};
-		872E5BF72707EFBF00460BFF /* Debug */ = {
+		87BB890427A59475000B269B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Todo+ReactiveSwift+UIKit(iOS13)/Preview Content\"";
 				DEVELOPMENT_TEAM = 2H5PN3F9B6;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Todo+ReactiveSwift+UIKit(iOS13)/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,22 +466,22 @@
 			};
 			name = Debug;
 		};
-		872E5BF82707EFBF00460BFF /* Release */ = {
+		87BB890527A59475000B269B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Todo+ReactiveSwift+UIKit(iOS13)/Preview Content\"";
 				DEVELOPMENT_TEAM = 2H5PN3F9B6;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Todo+ReactiveSwift+UIKit(iOS13)/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,20 +498,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		872E5BDD2707EFBE00460BFF /* Build configuration list for PBXProject "Todo+ReactiveSwift+UIKit(iOS13)" */ = {
+		87BB88F027A59474000B269B /* Build configuration list for PBXProject "Todo+ReactiveSwift+UIKit(iOS13)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				872E5BF42707EFBF00460BFF /* Debug */,
-				872E5BF52707EFBF00460BFF /* Release */,
+				87BB890127A59475000B269B /* Debug */,
+				87BB890227A59475000B269B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		872E5BF62707EFBF00460BFF /* Build configuration list for PBXNativeTarget "Todo+ReactiveSwift+UIKit(iOS13)" */ = {
+		87BB890327A59475000B269B /* Build configuration list for PBXNativeTarget "Todo+ReactiveSwift+UIKit(iOS13)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				872E5BF72707EFBF00460BFF /* Debug */,
-				872E5BF82707EFBF00460BFF /* Release */,
+				87BB890427A59475000B269B /* Debug */,
+				87BB890527A59475000B269B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -520,75 +519,62 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		872E5BF92707F00400460BFF /* XCRemoteSwiftPackageReference "reactiveswift-composable-architecture" */ = {
+		87320BF027A5AD6800360667 /* XCRemoteSwiftPackageReference "reactiveswift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/FullStack-Swift/reactiveswift-composable-architecture.git";
+			repositoryURL = "https://github.com/FullStack-Swift/reactiveswift-composable-architecture";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.0.0;
 			};
 		};
-		872E5BFC2707F02D00460BFF /* XCRemoteSwiftPackageReference "AnyRequest" */ = {
+		87320BF327A5AD8500360667 /* XCRemoteSwiftPackageReference "Networking" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/FullStack-Swift/AnyRequest";
+			repositoryURL = "https://github.com/FullStack-Swift/Networking";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.0.0;
 			};
 		};
-		872E5BFF2707F03B00460BFF /* XCRemoteSwiftPackageReference "Json" */ = {
+		87320BF627A5ADA200360667 /* XCRemoteSwiftPackageReference "SwiftExtension" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/FullStack-Swift/Json";
+			repositoryURL = "https://github.com/FullStack-Swift/SwiftExtension";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.0.0;
 			};
 		};
-		872E5C022707F06000460BFF /* XCRemoteSwiftPackageReference "SwiftConvert" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/FullStack-Swift/SwiftConvert.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		872E5C662707F9E300460BFF /* XCRemoteSwiftPackageReference "ReactiveCocoa" */ = {
+		87320BF927A5ADE100360667 /* XCRemoteSwiftPackageReference "ReactiveCocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveCocoa/ReactiveCocoa";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 12.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		872E5BFA2707F00400460BFF /* ComposableArchitecture */ = {
+		87320BF127A5AD6800360667 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 872E5BF92707F00400460BFF /* XCRemoteSwiftPackageReference "reactiveswift-composable-architecture" */;
+			package = 87320BF027A5AD6800360667 /* XCRemoteSwiftPackageReference "reactiveswift-composable-architecture" */;
 			productName = ComposableArchitecture;
 		};
-		872E5BFD2707F02E00460BFF /* AnyRequest */ = {
+		87320BF427A5AD8500360667 /* ReactiveSwiftRequest */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 872E5BFC2707F02D00460BFF /* XCRemoteSwiftPackageReference "AnyRequest" */;
-			productName = AnyRequest;
+			package = 87320BF327A5AD8500360667 /* XCRemoteSwiftPackageReference "Networking" */;
+			productName = ReactiveSwiftRequest;
 		};
-		872E5C002707F03B00460BFF /* Json */ = {
+		87320BF727A5ADA200360667 /* ConvertSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 872E5BFF2707F03B00460BFF /* XCRemoteSwiftPackageReference "Json" */;
-			productName = Json;
-		};
-		872E5C032707F06000460BFF /* ConvertSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 872E5C022707F06000460BFF /* XCRemoteSwiftPackageReference "SwiftConvert" */;
+			package = 87320BF627A5ADA200360667 /* XCRemoteSwiftPackageReference "SwiftExtension" */;
 			productName = ConvertSwift;
 		};
-		872E5C672707F9E300460BFF /* ReactiveCocoa */ = {
+		87320BFA27A5ADE100360667 /* ReactiveCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 872E5C662707F9E300460BFF /* XCRemoteSwiftPackageReference "ReactiveCocoa" */;
+			package = 87320BF927A5ADE100360667 /* XCRemoteSwiftPackageReference "ReactiveCocoa" */;
 			productName = ReactiveCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 872E5BDA2707EFBE00460BFF /* Project object */;
+	rootObject = 87BB88ED27A59474000B269B /* Project object */;
 }
