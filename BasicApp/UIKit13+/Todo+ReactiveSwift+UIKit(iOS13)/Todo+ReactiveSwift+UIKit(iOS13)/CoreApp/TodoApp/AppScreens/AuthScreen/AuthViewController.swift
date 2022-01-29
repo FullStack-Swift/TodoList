@@ -49,3 +49,10 @@ final class AuthViewController: BaseViewController {
     viewStore.send(.viewWillDisappear)
   }
 }
+
+struct AuthViewController_Previews: PreviewProvider {
+  static var previews: some View {
+    let vc = AuthViewController()
+    UIViewRepresented(makeUIView: { _ in vc.view })
+  }
+}

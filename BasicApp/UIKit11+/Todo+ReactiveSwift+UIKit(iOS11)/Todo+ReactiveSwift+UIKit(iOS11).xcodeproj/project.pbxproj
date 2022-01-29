@@ -16,7 +16,7 @@
 		872E5CB22708621D00460BFF /* MainEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C992708621C00460BFF /* MainEnvironment.swift */; };
 		872E5CB32708621D00460BFF /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C9A2708621C00460BFF /* MainState.swift */; };
 		872E5CB42708621D00460BFF /* MainAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C9B2708621C00460BFF /* MainAction.swift */; };
-		872E5CB52708621D00460BFF /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C9D2708621C00460BFF /* Todo.swift */; };
+		872E5CB52708621D00460BFF /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C9D2708621C00460BFF /* TodoModel.swift */; };
 		872E5CB62708621D00460BFF /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5C9F2708621C00460BFF /* View+.swift */; };
 		872E5CB72708621D00460BFF /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5CA12708621C00460BFF /* AuthViewController.swift */; };
 		872E5CB82708621D00460BFF /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E5CA22708621C00460BFF /* AuthState.swift */; };
@@ -35,6 +35,8 @@
 		87A9F06027A55DCB00D40BD1 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 87A9F05F27A55DCB00D40BD1 /* ComposableArchitecture */; };
 		87A9F06C27A55E8F00D40BD1 /* ReactiveCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 87A9F06B27A55E8F00D40BD1 /* ReactiveCocoa */; };
 		87A9F06F27A55EAE00D40BD1 /* ConvertSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87A9F06E27A55EAE00D40BD1 /* ConvertSwift */; };
+		87C4B73D27A5EC76008B6287 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C4B73C27A5EC76008B6287 /* BaseViewController.swift */; };
+		87C4B73F27A5EC88008B6287 /* BaseMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C4B73E27A5EC88008B6287 /* BaseMainTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +51,7 @@
 		872E5C992708621C00460BFF /* MainEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainEnvironment.swift; sourceTree = "<group>"; };
 		872E5C9A2708621C00460BFF /* MainState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
 		872E5C9B2708621C00460BFF /* MainAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAction.swift; sourceTree = "<group>"; };
-		872E5C9D2708621C00460BFF /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		872E5C9D2708621C00460BFF /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		872E5C9F2708621C00460BFF /* View+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		872E5CA12708621C00460BFF /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		872E5CA22708621C00460BFF /* AuthState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
@@ -64,6 +66,8 @@
 		872E5CAD2708621C00460BFF /* ButtonReloadMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonReloadMainTableViewCell.swift; sourceTree = "<group>"; };
 		872E5CAE2708621C00460BFF /* CreateTitleMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTitleMainTableViewCell.swift; sourceTree = "<group>"; };
 		872E5CAF2708621C00460BFF /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		87C4B73C27A5EC76008B6287 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		87C4B73E27A5EC88008B6287 /* BaseMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMainTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,9 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				872E5C972708621C00460BFF /* MainViewController.swift */,
-				872E5C992708621C00460BFF /* MainEnvironment.swift */,
 				872E5C9A2708621C00460BFF /* MainState.swift */,
 				872E5C9B2708621C00460BFF /* MainAction.swift */,
+				872E5C992708621C00460BFF /* MainEnvironment.swift */,
 				872E5C982708621C00460BFF /* MainReducer.swift */,
 			);
 			path = MainScreen;
@@ -136,7 +140,7 @@
 		872E5C9C2708621C00460BFF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				872E5C9D2708621C00460BFF /* Todo.swift */,
+				872E5C9D2708621C00460BFF /* TodoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +183,8 @@
 				872E5CAD2708621C00460BFF /* ButtonReloadMainTableViewCell.swift */,
 				872E5CAE2708621C00460BFF /* CreateTitleMainTableViewCell.swift */,
 				872E5CAF2708621C00460BFF /* MainTableViewCell.swift */,
+				87C4B73C27A5EC76008B6287 /* BaseViewController.swift */,
+				87C4B73E27A5EC88008B6287 /* BaseMainTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,9 +192,9 @@
 		87D3336B27A570350061D16B /* AppScreens */ = {
 			isa = PBXGroup;
 			children = (
-				872E5CA62708621C00460BFF /* RootScreen */,
-				872E5CA02708621C00460BFF /* AuthScreen */,
 				872E5C962708621C00460BFF /* MainScreen */,
+				872E5CA02708621C00460BFF /* AuthScreen */,
+				872E5CA62708621C00460BFF /* RootScreen */,
 			);
 			path = AppScreens;
 			sourceTree = "<group>";
@@ -278,11 +284,13 @@
 				872E5CB72708621D00460BFF /* AuthViewController.swift in Sources */,
 				872E5CBA2708621D00460BFF /* AuthAction.swift in Sources */,
 				872E5CC02708621D00460BFF /* RootReducer.swift in Sources */,
+				87C4B73D27A5EC76008B6287 /* BaseViewController.swift in Sources */,
 				872E5CBE2708621D00460BFF /* RootViewController.swift in Sources */,
 				872E5CBB2708621D00460BFF /* AuthEnvironment.swift in Sources */,
 				872E5CB82708621D00460BFF /* AuthState.swift in Sources */,
-				872E5CB52708621D00460BFF /* Todo.swift in Sources */,
+				872E5CB52708621D00460BFF /* TodoModel.swift in Sources */,
 				872E5CC32708621D00460BFF /* MainTableViewCell.swift in Sources */,
+				87C4B73F27A5EC88008B6287 /* BaseMainTableViewCell.swift in Sources */,
 				872E5CC22708621D00460BFF /* CreateTitleMainTableViewCell.swift in Sources */,
 				872E5CB32708621D00460BFF /* MainState.swift in Sources */,
 				872E5C76270860F600460BFF /* AppDelegate.swift in Sources */,

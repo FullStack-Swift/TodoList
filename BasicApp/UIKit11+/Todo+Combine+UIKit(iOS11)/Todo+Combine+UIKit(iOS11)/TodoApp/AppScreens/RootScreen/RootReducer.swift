@@ -3,17 +3,18 @@ import Foundation
 
 let RootReducer = Reducer<RootState, RootAction, RootEnvironment>.combine(
   AuthReducer.pullback(state: \.authState, action: /RootAction.authAction, environment: { _ in
-          .init()
+      .init()
   }),
   MainReducer.pullback(state: \.mainState, action: /RootAction.mainAction, environment: { _ in
-          .init()
+      .init()
   }),
   Reducer { state, action, environment in
     switch action {
     case .authAction(.changeRootScreen(let screen)):
-        state.rootScreen = screen
+      state.rootScreen = screen
     case .mainAction(.changeRootScreen(let screen)):
-        state.rootScreen = screen
+      state = RootState()
+      state.rootScreen = screen
     case .viewDidLoad:
       break
     case .viewWillAppear:
@@ -27,3 +28,4 @@ let RootReducer = Reducer<RootState, RootAction, RootEnvironment>.combine(
   }
 )
   .debug()
+

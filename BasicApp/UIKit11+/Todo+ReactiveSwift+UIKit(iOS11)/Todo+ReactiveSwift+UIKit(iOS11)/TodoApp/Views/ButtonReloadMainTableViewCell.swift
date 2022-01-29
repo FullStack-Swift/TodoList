@@ -1,30 +1,30 @@
 import UIKit
-import ReactiveSwift
 
-class ButtonReloadMainTableViewCell: UITableViewCell {
+class ButtonReloadMainTableViewCell: BaseMainTableViewCell {
   
   let buttonReload = UIButton(type: .system)
-  private(set) var disposables = CompositeDisposable()
-  
-  override func prepareForReuse() {
-    super.prepareForReuse()
-    disposables.dispose()
-    disposables = CompositeDisposable()
-  }
+  let activityIndicator = UIActivityIndicatorView()
   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
+    // setup view
     contentView.isUserInteractionEnabled = false
+    // buttonReload
     buttonReload.setTitle("Reload", for: .normal)
     buttonReload.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
     buttonReload.setTitleColor(.black, for: .normal)
     buttonReload.translatesAutoresizingMaskIntoConstraints = false
     addSubview(buttonReload)
+    // activityIndicator
+    activityIndicator.hidesWhenStopped = true
+    activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+    addSubview(activityIndicator)
+    // constraint
     NSLayoutConstraint.activate([
-      buttonReload.topAnchor.constraint(equalTo: topAnchor),
-      buttonReload.bottomAnchor.constraint(equalTo: bottomAnchor),
-      buttonReload.leadingAnchor.constraint(equalTo: leadingAnchor),
-      buttonReload.trailingAnchor.constraint(equalTo: trailingAnchor),
+      activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
+      activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor),
+      buttonReload.centerXAnchor.constraint(equalTo: centerXAnchor),
+      buttonReload.centerYAnchor.constraint(equalTo: centerYAnchor),
     ])
   }
   
@@ -32,3 +32,4 @@ class ButtonReloadMainTableViewCell: UITableViewCell {
     fatalError("init(coder:) has not been implemented")
   }
 }
+

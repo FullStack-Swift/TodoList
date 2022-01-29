@@ -1,72 +1,104 @@
 import ComposableArchitecture
-import Foundation
 import Alamofire
 import ConvertSwift
 import OpenCombine
+import Foundation
 
 let MainReducer = Reducer<MainState, MainAction, MainEnvironment>.combine(
-  
   Reducer { state, action, environment in
-    let urlString = "https://todolistappproj.herokuapp.com/todos"
     switch action {
         /// view action
     case .viewDidLoad:
-      return Effect(value: MainAction.getTodo)
+      return Effect<MainAction, Never>(value: MainAction.viewReloadTodo)
+    case .viewWillAppear:
+      break
     case .viewWillDisappear:
-      state = MainState()
-    case .changeText(let value):
-      state.title = value
-    case .toggleTodo(let todo):
-      if var todo = state.todos.filter({$0 == todo}).first {
-        todo.isCompleted.toggle()
-        return Effect(value: MainAction.updateTodo(todo))
-      }
+      break
+    case .viewDeinit:
+      break
+        ///  navigation view
     case .logout:
       return Effect(value: MainAction.changeRootScreen(.auth))
-      /// networking
-    case .getTodo:
-      if state.isLoading {
-        return .none
-      }
-      state.isLoading = true
-      state.todos.removeAll()
-      return AF.request(urlString, method: .get)
-        .publisher()
-        .compactMap{$0}
-        .delay(for: .seconds(2), scheduler: ImmediateScheduler.shared)
-        .map(MainAction.responseTodo)
-        .eraseToEffect()
-    case .responseTodo(let json):
-      state.isLoading = false
-      if let todos = json.toModel([Todo].self) {
-        for todo in todos {
-          state.todos.append(todo)
-        }
-      }
-    case .createTodo:
+    case .changeText(let text):
+      state.title = text
+    case .resetText:
+      state.title = ""
+        /// event network
+    case .viewCreateTodo:
       if state.title.isEmpty {
         return .none
       }
       var title = state.title
-      state.title = ""
-      let todo = Todo(id: nil, title: title, isCompleted: false)
-      return AF.request(urlString, method: .post, parameters: todo)
-        .publisher()
-        .compactMap{$0}
-        .map(MainAction.responseCreateTodo)
+      let id = UUID()
+      let todo = TodoModel(id: id, title: title, isCompleted: false)
+      let resetTitleEffect = Effect<MainAction, Never>(value: MainAction.resetText)
+        .delay(for: 0.3, scheduler: ImmediateScheduler.shared)
         .eraseToEffect()
-    case .responseCreateTodo(let data):
-      if let todo = data.toModel(Todo.self) {
-        state.todos.append(todo)
+      return Effect.merge(
+        resetTitleEffect,
+        Effect(value: MainAction.createOrUpdateTodo(todo))
+      )
+    case .viewReloadTodo:
+      if state.isLoading {
+        return .none
       }
+      state.todos.removeAll()
+      state.isLoading = true
+      return Effect(value: MainAction.getTodo)
+        .delay(for: 0.3, scheduler: ImmediateScheduler.shared)
+        .eraseToEffect()
+    case .viewToggleTodo(let todo):
+      var todo = todo
+      todo.isCompleted.toggle()
+      return Effect(value:  MainAction.updateTodo(todo))
+    case .viewDeleteTodo(let todo):
+      return Effect(value: MainAction.deleteTodo(todo))
+        /// network action
+    case .getTodo:
+      let request = MRequest {
+        RMethod(.get)
+        RUrl(urlString: environment.urlString)
+      }
+      return request
+        .compactMap {$0.data}
+        .map(MainAction.responseGetTodo)
+        .eraseToEffect()
+    case .responseGetTodo(let data):
+      state.isLoading = false
+      guard let todos = data.toModel([TodoModel].self) else {
+        return .none
+      }
+      state.todos.append(contentsOf: todos)
+    case .createOrUpdateTodo(let todo):
+      let request = MRequest {
+        RUrl(urlString: environment.urlString)
+        REncoding(.json)
+        RMethod(.post)
+        Rbody(todo.toData())
+      }
+      return request
+        .compactMap {$0.data}
+        .map(MainAction.responseCreateOrUpdateTodo)
+        .eraseToEffect()
+    case .responseCreateOrUpdateTodo(let data):
+      guard let todo = data.toModel(TodoModel.self) else {
+        return .none
+      }
+      state.todos.append(todo)
     case .updateTodo(let todo):
-      return AF.request(urlString + "/\(todo.id!)", method: .post, parameters: todo, encoder: JSONParameterEncoder.default)
-        .publisher()
-        .compactMap{$0}
+      let request = MRequest {
+        REncoding(.json)
+        RUrl(urlString: environment.urlString)
+          .withPath(todo.id.toString())
+        RMethod(.post)
+        Rbody(todo.toData())
+      }
+      return request
+        .compactMap {$0.data}
         .map(MainAction.responseUpdateTodo)
         .eraseToEffect()
     case .responseUpdateTodo(let data):
-      if let todo = data.toModel(Todo.self) {
+      if let todo = data.toModel(TodoModel.self) {
         if let index = state.todos.firstIndex(where: { item in
           item.id == todo.id
         }) {
@@ -74,17 +106,22 @@ let MainReducer = Reducer<MainState, MainAction, MainEnvironment>.combine(
         }
       }
     case .deleteTodo(let todo):
-      return AF.request(urlString + "/\(todo.id!)", method: .delete)
-        .publisher()
-        .compactMap{$0}
+      let request = MRequest {
+        RUrl(urlString: environment.urlString)
+          .withPath(todo.id.toString())
+        RMethod(.delete)
+      }
+      return request
+        .compactMap {$0.data}
         .map(MainAction.reponseDeleteTodo)
         .eraseToEffect()
     case .reponseDeleteTodo(let data):
-      if let todo = data.toModel(Todo.self) {
+      if let todo = data.toModel(TodoModel.self) {
         state.todos.removeAll {
           $0.id == todo.id
         }
       }
+      break
     default:
       break
     }
@@ -92,3 +129,4 @@ let MainReducer = Reducer<MainState, MainAction, MainEnvironment>.combine(
   }
 )
   .debug()
+

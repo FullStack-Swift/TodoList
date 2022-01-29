@@ -1,19 +1,15 @@
 import ComposableArchitecture
-import SwiftUI
 import UIKit
 import ConvertSwift
+import OpenCombine
 
-final class MainViewController: UIViewController {
+final class MainViewController: BaseViewController {
   
   private let store: Store<MainState, MainAction>
   
   private let viewStore: ViewStore<MainState, MainAction>
   
-  private var cancellables: Set<AnyCancellable> = []
-  
   private let tableView: UITableView = UITableView()
-  
-  private var todos: [Todo] = []
   
   init(store: Store<MainState, MainAction>? = nil) {
     let unwrapStore = store ?? Store(initialState: MainState(), reducer: MainReducer, environment: MainEnvironment())
@@ -29,13 +25,16 @@ final class MainViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     viewStore.send(.viewDidLoad)
-    //navigation
-    navigationController?.navigationBar.prefersLargeTitles = true
+    // navigationView
     let buttonLogout = UIButton(type: .system)
     buttonLogout.setTitle("Logout", for: .normal)
+    buttonLogout.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+    buttonLogout.setTitleColor(UIColor.blue, for: .normal)
     let rightBarButtonItem = UIBarButtonItem(customView: buttonLogout)
+    navigationController?.navigationBar.prefersLargeTitles = true
+    navigationItem.largeTitleDisplayMode = .always
     navigationItem.rightBarButtonItem = rightBarButtonItem
-    //table
+    // tableView
     view.addSubview(tableView)
     tableView.register(MainTableViewCell.self)
     tableView.register(ButtonReloadMainTableViewCell.self)
@@ -45,8 +44,15 @@ final class MainViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
     tableView.translatesAutoresizingMaskIntoConstraints = false
-    tableView.frame = view.frame.insetBy(dx: 10, dy: 10)
-    
+    tableView.isUserInteractionEnabled = true
+    // contraint
+    NSLayoutConstraint.activate([
+      tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+      tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+      tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
+      tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -10)
+    ])
+
     //bind view to viewstore
     buttonLogout.tapPublisher
       .map{MainAction.logout}
@@ -55,19 +61,22 @@ final class MainViewController: UIViewController {
     
     //bind viewstore to view
     viewStore.publisher.todos
-      .sink { [weak self] todos in
+      .sink { [weak self] _ in
         guard let self = self else {
           return
         }
-        self.todos = todos
         self.tableView.reloadData()
       }
       .store(in: &cancellables)
-    viewStore.publisher.todos.count()
-      .map {$0.toString() + " Todos"}
-      .assign(to: \.title, on: self)
-      .store(in: &cancellables)
     
+    viewStore.publisher.todos
+      .map {$0.count.toString() + " Todos"}
+      .assign(to: \.navigationItem.title, on: self)
+      .store(in: &cancellables)
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -80,12 +89,17 @@ final class MainViewController: UIViewController {
     viewStore.send(.viewWillDisappear)
   }
   
+  deinit {
+    viewStore.send(.viewDeinit)
+  }
 }
 
+// MARK: - UITableViewDataSource
 extension MainViewController: UITableViewDataSource {
   func numberOfSections(in tableView: UITableView) -> Int {
     return 3
   }
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     switch section {
     case 0:
@@ -93,7 +107,7 @@ extension MainViewController: UITableViewDataSource {
     case 1:
       return 1
     case 2:
-      return todos.count
+      return viewStore.todos.count
     default:
       return 0
     }
@@ -103,13 +117,20 @@ extension MainViewController: UITableViewDataSource {
     switch indexPath.section {
     case 0:
       let cell = tableView.dequeueReusableCell(ButtonReloadMainTableViewCell.self, for: indexPath)
+      cell.selectionStyle = .none
       viewStore.publisher.isLoading
         .sink(receiveValue: { value in
-          cell.buttonReload.setTitle(value ? "Loading" : "Reload", for: .normal)
+          cell.buttonReload.isHidden = value
+          if value {
+            cell.activityIndicator.startAnimating()
+          } else {
+            cell.activityIndicator.stopAnimating()
+          }
         })
-        .store(in: &cancellables)
-      cell.buttonReload.tapPublisher
-        .map{MainAction.getTodo}
+        .store(in: &cell.cancellables)
+      cell.buttonReload
+        .tapPublisher
+        .map{MainAction.viewReloadTodo}
         .subscribe(viewStore.action)
         .store(in: &cell.cancellables)
       return cell
@@ -117,30 +138,37 @@ extension MainViewController: UITableViewDataSource {
       let cell = tableView.dequeueReusableCell(CreateTitleMainTableViewCell.self, for: indexPath)
       viewStore.publisher.title
         .map {$0}
-        .assign(to: \.text, on: cell.textFieldTitle)
+        .assign(to: \.text, on: cell.titleTextField)
         .store(in: &cell.cancellables)
       viewStore.publisher.title.isEmpty
-        .assign(to: \.isHidden, on: cell.buttonCreate)
+        .sink(receiveValue: { value in
+          cell.createButton.setTitleColor(value ? UIColor.gray : UIColor.green, for: .normal)
+        })
         .store(in: &cell.cancellables)
-      cell.buttonCreate.tapPublisher
-        .map {MainAction.createTodo}
+      cell.createButton
+        .tapPublisher
+        .map {MainAction.viewCreateTodo}
         .subscribe(viewStore.action)
         .store(in: &cell.cancellables)
-      cell.textFieldTitle.textPublisher
-        .map{MainAction.changeText($0 ?? "")}
+      cell.titleTextField
+        .textPublisher
+        .compactMap{$0}
+        .map{MainAction.changeText($0)}
         .subscribe(viewStore.action)
         .store(in: &cell.cancellables)
       return cell
     case 2:
       let cell = tableView.dequeueReusableCell(MainTableViewCell.self, for: indexPath)
-      let todo = todos[indexPath.row]
+      let todo = viewStore.todos[indexPath.row]
       cell.bind(todo)
-      cell.deleteButton.tapPublisher
-        .map{MainAction.deleteTodo(todo)}
+      cell.deleteButton
+        .tapPublisher
+        .map{MainAction.viewDeleteTodo(todo)}
         .subscribe(viewStore.action)
         .store(in: &cell.cancellables)
-      cell.tapGesture.tapPublisher
-        .map {_ in MainAction.toggleTodo(todo)}
+      cell.tapGesture
+        .tapPublisher
+        .map {_ in MainAction.viewToggleTodo(todo)}
         .subscribe(viewStore.action)
         .store(in: &cell.cancellables)
       return cell
@@ -151,6 +179,7 @@ extension MainViewController: UITableViewDataSource {
   }
 }
 
+  // MARK: - UITableViewDelegate
 extension MainViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 60

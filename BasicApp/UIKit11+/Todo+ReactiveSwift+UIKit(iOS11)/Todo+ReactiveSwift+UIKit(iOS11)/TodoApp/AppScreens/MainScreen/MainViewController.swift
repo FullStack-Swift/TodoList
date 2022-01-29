@@ -4,17 +4,13 @@ import UIKit
 import ConvertSwift
 import ReactiveCocoa
 
-final class MainViewController: UIViewController {
+final class MainViewController: BaseViewController {
   
   private let store: Store<MainState, MainAction>
   
   private let viewStore: ViewStore<MainState, MainAction>
   
   private let tableView: UITableView = UITableView()
-  
-  private var todos: [Todo] = []
-  
-  private var disposables = CompositeDisposable()
   
   init(store: Store<MainState, MainAction>? = nil) {
     let unwrapStore = store ?? Store(initialState: MainState(), reducer: MainReducer, environment: MainEnvironment())
@@ -30,13 +26,16 @@ final class MainViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     viewStore.send(.viewDidLoad)
-    //navigation
-    navigationController?.navigationBar.prefersLargeTitles = true
+    // navigationView
     let buttonLogout = UIButton(type: .system)
     buttonLogout.setTitle("Logout", for: .normal)
+    buttonLogout.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+    buttonLogout.setTitleColor(UIColor.blue, for: .normal)
     let rightBarButtonItem = UIBarButtonItem(customView: buttonLogout)
+    navigationController?.navigationBar.prefersLargeTitles = true
+    navigationItem.largeTitleDisplayMode = .always
     navigationItem.rightBarButtonItem = rightBarButtonItem
-    //table
+    // tableView
     view.addSubview(tableView)
     tableView.register(MainTableViewCell.self)
     tableView.register(ButtonReloadMainTableViewCell.self)
@@ -46,18 +45,29 @@ final class MainViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
     tableView.translatesAutoresizingMaskIntoConstraints = false
-    tableView.frame = view.frame.insetBy(dx: 10, dy: 10)
-    
+    tableView.isUserInteractionEnabled = true
+      // contraint
+      NSLayoutConstraint.activate([
+        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+        tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
+        tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -10)
+      ])
+
     //bind view to viewstore
     disposables += viewStore.action <~ buttonLogout.reactive.controlEvents(.touchUpInside).map {_ in MainAction.logout}
+    
     //bind viewstore to view
     disposables += viewStore.publisher.todos.producer
-      .startWithValues({ [weak self] todos in
+      .startWithValues({ [weak self] _ in
         guard let self = self else {return}
-        self.todos = todos
         self.tableView.reloadData()
       })
     disposables += reactive.title <~ viewStore.publisher.todos.count.producer.map {$0.toString() + " Todos"}
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -70,6 +80,9 @@ final class MainViewController: UIViewController {
     viewStore.send(.viewWillDisappear)
   }
   
+  deinit {
+    viewStore.send(.viewDeinit)
+  }
 }
 
 extension MainViewController: UITableViewDataSource {
@@ -83,7 +96,7 @@ extension MainViewController: UITableViewDataSource {
     case 1:
       return 1
     case 2:
-      return todos.count
+      return viewStore.todos.count
     default:
       return 0
     }
@@ -93,24 +106,32 @@ extension MainViewController: UITableViewDataSource {
     switch indexPath.section {
     case 0:
       let cell = tableView.dequeueReusableCell(ButtonReloadMainTableViewCell.self, for: indexPath)
+      cell.selectionStyle = .none
       cell.disposables += viewStore.publisher.isLoading.producer.startWithValues({ value in
-        cell.buttonReload.setTitle(value ? "Loading" : "Reload" , for: .normal)
+        cell.buttonReload.isHidden = value
+        if value {
+          cell.activityIndicator.startAnimating()
+        } else {
+          cell.activityIndicator.stopAnimating()
+        }
       })
-      cell.disposables += viewStore.action <~ cell.buttonReload.reactive.controlEvents(.touchUpInside).map {_ in MainAction.getTodo}
+      cell.disposables += viewStore.action <~ cell.buttonReload.reactive.controlEvents(.touchUpInside).map {_ in MainAction.viewReloadTodo}
       return cell
     case 1:
       let cell = tableView.dequeueReusableCell(CreateTitleMainTableViewCell.self, for: indexPath)
-      cell.disposables += cell.textFieldTitle.reactive.text <~ viewStore.publisher.title.producer
-      cell.disposables += cell.buttonCreate.reactive.isHidden <~ viewStore.publisher.title.isEmpty.producer
-      cell.disposables += viewStore.action <~ cell.buttonCreate.reactive.controlEvents(.touchUpInside).map {_ in MainAction.createTodo}
-      cell.disposables += viewStore.action <~ cell.textFieldTitle.reactive.continuousTextValues.map {MainAction.changeText($0)}
+      cell.disposables += cell.titleTextField.reactive.text <~ viewStore.publisher.title.producer
+      cell.disposables += viewStore.publisher.title.isEmpty.producer.startWithValues { value in
+        cell.createButton.setTitleColor(value ? UIColor.gray : UIColor.green, for: .normal)
+      }
+      cell.disposables += viewStore.action <~ cell.createButton.reactive.controlEvents(.touchUpInside).map {_ in MainAction.viewCreateTodo}
+      cell.disposables += viewStore.action <~ cell.titleTextField.reactive.continuousTextValues.map {MainAction.changeText($0)}
       return cell
     case 2:
       let cell = tableView.dequeueReusableCell(MainTableViewCell.self, for: indexPath)
-      let todo = todos[indexPath.row]
+      let todo = viewStore.todos[indexPath.row]
       cell.bind(todo)
-      cell.disposables += viewStore.action <~ cell.deleteButton.reactive.controlEvents(.touchUpInside).map {_ in MainAction.deleteTodo(todo)}
-      cell.disposables += viewStore.action <~ cell.tapGesture.reactive.stateChanged.map{_ in MainAction.toggleTodo(todo)}
+      cell.disposables += viewStore.action <~ cell.deleteButton.reactive.controlEvents(.touchUpInside).map { _ in MainAction.viewDeleteTodo(todo)}
+      cell.disposables += viewStore.action <~ cell.tapGesture.reactive.stateChanged.map { _ in MainAction.viewToggleTodo(todo)}
       return cell
     default:
       let cell = tableView.dequeueReusableCell(MainTableViewCell.self, for: indexPath)

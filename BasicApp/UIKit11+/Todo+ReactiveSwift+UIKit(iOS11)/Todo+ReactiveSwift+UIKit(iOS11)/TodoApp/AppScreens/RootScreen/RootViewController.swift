@@ -2,15 +2,12 @@ import ComposableArchitecture
 import SwiftUI
 import UIKit
 
-
-final class RootViewController: UIViewController {
+final class RootViewController: BaseViewController {
   
   private let store: Store<RootState, RootAction>
   
   private let viewStore: ViewStore<RootState, RootAction>
-  
-  private var disposables = CompositeDisposable()
-  
+
   private var viewController = UIViewController() {
     willSet {
       viewController.willMove(toParent: nil)
@@ -36,8 +33,9 @@ final class RootViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .white
     viewStore.send(.viewDidLoad)
+    view.backgroundColor = .white
+      //bind view to viewstore
     disposables += viewStore.publisher.rootScreen.producer.startWithValues { [weak self] screen in
       guard let self = self else {return}
       switch screen {

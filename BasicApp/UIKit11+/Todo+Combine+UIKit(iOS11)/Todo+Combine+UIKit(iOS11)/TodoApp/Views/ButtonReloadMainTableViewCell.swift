@@ -1,32 +1,30 @@
 import UIKit
-import OpenCombine
 
-class ButtonReloadMainTableViewCell: UITableViewCell {
+class ButtonReloadMainTableViewCell: BaseMainTableViewCell {
   
   let buttonReload = UIButton(type: .system)
-  
-  var cancellables: Set<AnyCancellable> = []
-  
-  override func prepareForReuse() {
-    super.prepareForReuse()
-    cancellables = []
-  }
+  let activityIndicator = UIActivityIndicatorView()
   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
-      /// setup
+    // setup view
     contentView.isUserInteractionEnabled = false
+    // buttonReload
     buttonReload.setTitle("Reload", for: .normal)
     buttonReload.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
     buttonReload.setTitleColor(.black, for: .normal)
     buttonReload.translatesAutoresizingMaskIntoConstraints = false
     addSubview(buttonReload)
-      /// constraint
+    // activityIndicator
+    activityIndicator.hidesWhenStopped = true
+    activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+    addSubview(activityIndicator)
+    // constraint
     NSLayoutConstraint.activate([
-      buttonReload.topAnchor.constraint(equalTo: topAnchor),
-      buttonReload.bottomAnchor.constraint(equalTo: bottomAnchor),
-      buttonReload.leadingAnchor.constraint(equalTo: leadingAnchor),
-      buttonReload.trailingAnchor.constraint(equalTo: trailingAnchor),
+      activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
+      activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor),
+      buttonReload.centerXAnchor.constraint(equalTo: centerXAnchor),
+      buttonReload.centerYAnchor.constraint(equalTo: centerYAnchor),
     ])
   }
   

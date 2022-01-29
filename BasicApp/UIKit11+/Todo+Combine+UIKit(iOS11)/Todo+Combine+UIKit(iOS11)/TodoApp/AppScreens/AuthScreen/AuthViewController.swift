@@ -1,14 +1,12 @@
 import ComposableArchitecture
-import SwiftUI
 import UIKit
+import OpenCombine
 
-final class AuthViewController: UIViewController {
+final class AuthViewController: BaseViewController {
   
   private let store: Store<AuthState, AuthAction>
   
   private let viewStore: ViewStore<AuthState, AuthAction>
-  
-  private var cancellables: Set<AnyCancellable> = []
   
   init(store: Store<AuthState, AuthAction>? = nil) {
     let unwrapStore = store ?? Store(initialState: AuthState(), reducer: AuthReducer, environment: AuthEnvironment())
@@ -24,18 +22,22 @@ final class AuthViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     viewStore.send(.viewDidLoad)
+    // buttonLogin
     let buttonLogin = UIButton(type: .system)
     buttonLogin.setTitle("Login", for: .normal)
     buttonLogin.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(buttonLogin)
+    // contraint
     NSLayoutConstraint.activate([
       buttonLogin.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
       buttonLogin.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
     ])
+    
+      //bind view to viewstore
     buttonLogin.tapPublisher
-      .map{AuthAction.login}
+      .map { AuthAction.login }
       .subscribe(viewStore.action)
-      .store(in: &cancellables)
+      .store(in: &self.cancellables)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -48,3 +50,4 @@ final class AuthViewController: UIViewController {
     viewStore.send(.viewWillDisappear)
   }
 }
+

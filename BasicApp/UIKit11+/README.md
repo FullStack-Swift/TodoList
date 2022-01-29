@@ -1,29 +1,38 @@
-# TodoList
 
-Examples App TodoList for Composable Architecture
+# UIKit with ComposableArchitecture (iOS11+)
 
-## Local Server
 
-https://github.com/FullStack-Swift/TodoList/tree/main/TodoListServer
+## Todo Combine UIKit
 
-## Online Server
+SPM:
 
-https://github.com/FullStack-Swift/TodoListServer
+- combine-core-architecture 
+https://github.com/FullStack-Swift/combine-core-architecture
+- ConvertSwift 
+https://github.com/FullStack-Swift/SwiftExtension
 
-##  TodoList SwiftUI
+## Todo ReactiveSwift UIKit
 
-https://github.com/FullStack-Swift/TodoList/tree/main/TodoListApp/SwiftUI
+SPM:
 
-##  TodoList UIKit
+- reactiveswift-core-architecture
+https://github.com/FullStack-Swift/reactiveswift-core-architecture
+- ReactiveSwiftRequest 
+https://github.com/FullStack-Swift/Networking
+- ReactiveCocoa 
+https://github.com/ReactiveCocoa/ReactiveCocoa
+- ConvertSwift
+ https://github.com/FullStack-Swift/SwiftExtension
 
-IOS11+: https://github.com/FullStack-Swift/TodoList/tree/main/TodoListApp/UIKit11%2B
+## Todo RxSwift UIKit
 
-IOS13+: https://github.com/FullStack-Swift/TodoList/tree/main/TodoListApp/UIKit13%2B
+SPM:
 
-# Overview
-
-##  MacOS
-<img src="https://github.com/FullStack-Swift/TodoList/blob/main/Screenshots/Screenshot%202022-01-27%20at%203.08.25%20PM.png" width="700" height="500">
-
-##  IOS
-<img src="https://github.com/FullStack-Swift/TodoList/blob/main/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20Max%20-%202022-01-27%20at%2014.50.24.png" width="428" height="926">
+- rxswift-core-architecture
+https://github.com/FullStack-Swift/rxswift-core-architecture
+- RxSwiftRequest 
+https://github.com/FullStack-Swift/Networking
+- RxCocoa 
+https://github.com/ReactiveX/RxSwift
+- ConvertSwift 
+https://github.com/FullStack-Swift/SwiftExtension

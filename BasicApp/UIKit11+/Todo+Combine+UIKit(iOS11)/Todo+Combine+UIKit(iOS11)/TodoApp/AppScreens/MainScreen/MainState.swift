@@ -3,6 +3,6 @@ import Foundation
 
 struct MainState: Equatable {
   var title: String = ""
-  var todos: [Todo] = []
+  var todos: [TodoModel] = []
   var isLoading: Bool = false
 }

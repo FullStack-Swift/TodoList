@@ -1,14 +1,12 @@
 import ComposableArchitecture
-import SwiftUI
 import UIKit
+import Combine
 
-final class RootViewController: UIViewController {
+final class RootViewController: BaseViewController {
   
   private let store: Store<RootState, RootAction>
   
   private let viewStore: ViewStore<RootState, RootAction>
-  
-  private var cancellables: Set<AnyCancellable> = []
 
   private var viewController = UIViewController() {
     willSet {
@@ -35,8 +33,9 @@ final class RootViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .white
     viewStore.send(.viewDidLoad)
+    view.backgroundColor = .white
+      //bind view to viewstore
     viewStore.publisher.rootScreen.sink { [weak self] screen in
       guard let self = self else {return}
       switch screen {
@@ -46,7 +45,8 @@ final class RootViewController: UIViewController {
         self.viewController = nav
       case .auth:
         let vc = AuthViewController(store: self.store.scope(state: \.authState, action: RootAction.authAction))
-        self.viewController = vc
+        let nav = UINavigationController(rootViewController: vc)
+        self.viewController = nav
       }
     }
     .store(in: &cancellables)

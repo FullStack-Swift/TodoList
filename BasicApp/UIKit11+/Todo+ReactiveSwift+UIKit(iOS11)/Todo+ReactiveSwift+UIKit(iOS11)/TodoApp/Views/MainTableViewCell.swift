@@ -1,35 +1,30 @@
 import UIKit
-import ReactiveSwift
 
-class MainTableViewCell: UITableViewCell {
+class MainTableViewCell: BaseMainTableViewCell {
   
-  let icon = UIImageView(image: nil)
+  let image = UIImageView(image: nil)
   let titleView = UILabel()
   let deleteButton = UIButton(type: .system)
   let tapGesture = UITapGestureRecognizer()
-  private(set) var disposables = CompositeDisposable()
-  
-  override func prepareForReuse() {
-    super.prepareForReuse()
-    disposables.dispose()
-    disposables = CompositeDisposable()
-  }
   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
-      /// setup
     contentView.isUserInteractionEnabled = false
     addGestureRecognizer(tapGesture)
+      // deleteButton
     deleteButton.setTitle("Delete", for: .normal)
     deleteButton.setTitleColor(.gray, for: .normal)
+      // image
+    image.tintColor = .black
+    image.translatesAutoresizingMaskIntoConstraints = false
+    image.heightAnchor.constraint(equalToConstant: 20).isActive = true
+    image.widthAnchor.constraint(equalToConstant: 20).isActive = true
+      // containerView
     let rootStackView = UIStackView(arrangedSubviews: [
-      icon,
+      image,
       titleView,
       deleteButton,
     ])
-      /// constraint
-    icon.heightAnchor.constraint(equalToConstant: 30).isActive = true
-    icon.widthAnchor.constraint(equalToConstant: 30).isActive = true
     rootStackView.alignment = .center
     rootStackView.spacing = 10
     rootStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -40,7 +35,6 @@ class MainTableViewCell: UITableViewCell {
       rootStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
       rootStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
     ])
-    
   }
   
   required init?(coder: NSCoder) {
@@ -48,12 +42,10 @@ class MainTableViewCell: UITableViewCell {
   }
   
   func bind(_ data: Any) {
-    guard let data = data as? Todo else {
+    guard let data = data as? TodoModel else {
       return
     }
-    icon.image = data.isCompleted ? UIImage(named: "check") : UIImage(named: "uncheck")
+    image.image = data.isCompleted ? UIImage(named: "check") : UIImage(named: "uncheck")
     titleView.text = data.title
-    
   }
-  
 }
