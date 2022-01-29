@@ -1,0 +1,1026 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		870541A227A496B4009B334C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 870541A127A496B4009B334C /* ComposableArchitecture */; };
+		870541A527A496DA009B334C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 870541A427A496DA009B334C /* Realm */; };
+		870541A727A496DA009B334C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 870541A627A496DA009B334C /* RealmSwift */; };
+		872629B227A4979D00C435E2 /* RxSwiftRequest in Frameworks */ = {isa = PBXBuildFile; productRef = 872629B127A4979D00C435E2 /* RxSwiftRequest */; };
+		872629B427A4979D00C435E2 /* RxSwiftWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 872629B327A4979D00C435E2 /* RxSwiftWebSocket */; };
+		872629B727A497B700C435E2 /* Json in Frameworks */ = {isa = PBXBuildFile; productRef = 872629B627A497B700C435E2 /* Json */; };
+		872629BA27A497CE00C435E2 /* ConvertSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 872629B927A497CE00C435E2 /* ConvertSwift */; };
+		872629BC27A497E000C435E2 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 872629BB27A497E000C435E2 /* ComposableArchitecture */; };
+		872629BE27A497E000C435E2 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 872629BD27A497E000C435E2 /* Realm */; };
+		872629C027A497E000C435E2 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 872629BF27A497E000C435E2 /* RealmSwift */; };
+		872629C227A497E000C435E2 /* RxSwiftRequest in Frameworks */ = {isa = PBXBuildFile; productRef = 872629C127A497E000C435E2 /* RxSwiftRequest */; };
+		872629C427A497E000C435E2 /* RxSwiftWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 872629C327A497E000C435E2 /* RxSwiftWebSocket */; };
+		872629C627A497E000C435E2 /* Json in Frameworks */ = {isa = PBXBuildFile; productRef = 872629C527A497E000C435E2 /* Json */; };
+		872629C827A497E000C435E2 /* ConvertSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 872629C727A497E000C435E2 /* ConvertSwift */; };
+		879A25F127079C3600CCD1DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879A25DF27079C3600CCD1DD /* Assets.xcassets */; };
+		879A25F227079C3600CCD1DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879A25DF27079C3600CCD1DD /* Assets.xcassets */; };
+		87DAFA2A27A3F7CD00B901BF /* NSTextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9EE27A3F7CD00B901BF /* NSTextField+.swift */; };
+		87DAFA2B27A3F7CD00B901BF /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9EF27A3F7CD00B901BF /* TodoApp.swift */; };
+		87DAFA2C27A3F7CD00B901BF /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9EF27A3F7CD00B901BF /* TodoApp.swift */; };
+		87DAFA2D27A3F7CD00B901BF /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9F327A3F7CD00B901BF /* MainReducer.swift */; };
+		87DAFA2E27A3F7CD00B901BF /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9F327A3F7CD00B901BF /* MainReducer.swift */; };
+		87DAFA2F27A3F7CD00B901BF /* MainEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9F427A3F7CD00B901BF /* MainEnvironment.swift */; };
+		87DAFA3027A3F7CD00B901BF /* MainEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9F427A3F7CD00B901BF /* MainEnvironment.swift */; };
+		87DAFA3127A3F7CD00B901BF /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9F527A3F7CD00B901BF /* MainState.swift */; };
+		87DAFA3227A3F7CD00B901BF /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9F527A3F7CD00B901BF /* MainState.swift */; };
+		87DAFA3327A3F7CD00B901BF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9F627A3F7CD00B901BF /* MainView.swift */; };
+		87DAFA3427A3F7CD00B901BF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9F627A3F7CD00B901BF /* MainView.swift */; };
+		87DAFA3527A3F7CD00B901BF /* MainAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9F727A3F7CD00B901BF /* MainAction.swift */; };
+		87DAFA3627A3F7CD00B901BF /* MainAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9F727A3F7CD00B901BF /* MainAction.swift */; };
+		87DAFA3727A3F7CD00B901BF /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9F927A3F7CD00B901BF /* CounterReducer.swift */; };
+		87DAFA3827A3F7CD00B901BF /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9F927A3F7CD00B901BF /* CounterReducer.swift */; };
+		87DAFA3927A3F7CD00B901BF /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9FA27A3F7CD00B901BF /* CounterState.swift */; };
+		87DAFA3A27A3F7CD00B901BF /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9FA27A3F7CD00B901BF /* CounterState.swift */; };
+		87DAFA3B27A3F7CD00B901BF /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9FB27A3F7CD00B901BF /* CounterView.swift */; };
+		87DAFA3C27A3F7CD00B901BF /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9FB27A3F7CD00B901BF /* CounterView.swift */; };
+		87DAFA3D27A3F7CD00B901BF /* CounterEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9FC27A3F7CD00B901BF /* CounterEnvironment.swift */; };
+		87DAFA3E27A3F7CD00B901BF /* CounterEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9FC27A3F7CD00B901BF /* CounterEnvironment.swift */; };
+		87DAFA3F27A3F7CD00B901BF /* CounterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9FD27A3F7CD00B901BF /* CounterAction.swift */; };
+		87DAFA4027A3F7CD00B901BF /* CounterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9FD27A3F7CD00B901BF /* CounterAction.swift */; };
+		87DAFA4127A3F7CD00B901BF /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9FF27A3F7CD00B901BF /* AuthState.swift */; };
+		87DAFA4227A3F7CD00B901BF /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAF9FF27A3F7CD00B901BF /* AuthState.swift */; };
+		87DAFA4327A3F7CD00B901BF /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0027A3F7CD00B901BF /* AuthView.swift */; };
+		87DAFA4427A3F7CD00B901BF /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0027A3F7CD00B901BF /* AuthView.swift */; };
+		87DAFA4527A3F7CD00B901BF /* RegisterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0227A3F7CD00B901BF /* RegisterAction.swift */; };
+		87DAFA4627A3F7CD00B901BF /* RegisterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0227A3F7CD00B901BF /* RegisterAction.swift */; };
+		87DAFA4727A3F7CD00B901BF /* RegisterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0327A3F7CD00B901BF /* RegisterReducer.swift */; };
+		87DAFA4827A3F7CD00B901BF /* RegisterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0327A3F7CD00B901BF /* RegisterReducer.swift */; };
+		87DAFA4927A3F7CD00B901BF /* RegisterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0427A3F7CD00B901BF /* RegisterState.swift */; };
+		87DAFA4A27A3F7CD00B901BF /* RegisterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0427A3F7CD00B901BF /* RegisterState.swift */; };
+		87DAFA4B27A3F7CD00B901BF /* RegisterEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0527A3F7CD00B901BF /* RegisterEnvironment.swift */; };
+		87DAFA4C27A3F7CD00B901BF /* RegisterEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0527A3F7CD00B901BF /* RegisterEnvironment.swift */; };
+		87DAFA4D27A3F7CD00B901BF /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0627A3F7CD00B901BF /* RegisterView.swift */; };
+		87DAFA4E27A3F7CD00B901BF /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0627A3F7CD00B901BF /* RegisterView.swift */; };
+		87DAFA4F27A3F7CD00B901BF /* AuthReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0727A3F7CD00B901BF /* AuthReducer.swift */; };
+		87DAFA5027A3F7CD00B901BF /* AuthReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0727A3F7CD00B901BF /* AuthReducer.swift */; };
+		87DAFA5127A3F7CD00B901BF /* AuthAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0827A3F7CD00B901BF /* AuthAction.swift */; };
+		87DAFA5227A3F7CD00B901BF /* AuthAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0827A3F7CD00B901BF /* AuthAction.swift */; };
+		87DAFA5327A3F7CD00B901BF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0A27A3F7CD00B901BF /* LoginView.swift */; };
+		87DAFA5427A3F7CD00B901BF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0A27A3F7CD00B901BF /* LoginView.swift */; };
+		87DAFA5527A3F7CD00B901BF /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0B27A3F7CD00B901BF /* LoginState.swift */; };
+		87DAFA5627A3F7CD00B901BF /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0B27A3F7CD00B901BF /* LoginState.swift */; };
+		87DAFA5727A3F7CD00B901BF /* LoginEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0C27A3F7CD00B901BF /* LoginEnvironment.swift */; };
+		87DAFA5827A3F7CD00B901BF /* LoginEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0C27A3F7CD00B901BF /* LoginEnvironment.swift */; };
+		87DAFA5927A3F7CD00B901BF /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0D27A3F7CD00B901BF /* LoginReducer.swift */; };
+		87DAFA5A27A3F7CD00B901BF /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0D27A3F7CD00B901BF /* LoginReducer.swift */; };
+		87DAFA5B27A3F7CD00B901BF /* LoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0E27A3F7CD00B901BF /* LoginAction.swift */; };
+		87DAFA5C27A3F7CD00B901BF /* LoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0E27A3F7CD00B901BF /* LoginAction.swift */; };
+		87DAFA5D27A3F7CD00B901BF /* AuthEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0F27A3F7CD00B901BF /* AuthEnvironment.swift */; };
+		87DAFA5E27A3F7CD00B901BF /* AuthEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA0F27A3F7CD00B901BF /* AuthEnvironment.swift */; };
+		87DAFA5F27A3F7CD00B901BF /* RootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1127A3F7CD00B901BF /* RootAction.swift */; };
+		87DAFA6027A3F7CD00B901BF /* RootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1127A3F7CD00B901BF /* RootAction.swift */; };
+		87DAFA6127A3F7CD00B901BF /* RootEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1227A3F7CD00B901BF /* RootEnvironment.swift */; };
+		87DAFA6227A3F7CD00B901BF /* RootEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1227A3F7CD00B901BF /* RootEnvironment.swift */; };
+		87DAFA6327A3F7CD00B901BF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1327A3F7CD00B901BF /* RootView.swift */; };
+		87DAFA6427A3F7CD00B901BF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1327A3F7CD00B901BF /* RootView.swift */; };
+		87DAFA6527A3F7CD00B901BF /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1427A3F7CD00B901BF /* RootState.swift */; };
+		87DAFA6627A3F7CD00B901BF /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1427A3F7CD00B901BF /* RootState.swift */; };
+		87DAFA6727A3F7CD00B901BF /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1527A3F7CD00B901BF /* RootReducer.swift */; };
+		87DAFA6827A3F7CD00B901BF /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1527A3F7CD00B901BF /* RootReducer.swift */; };
+		87DAFA6927A3F7CD00B901BF /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1727A3F7CD00B901BF /* Realm+.swift */; };
+		87DAFA6A27A3F7CD00B901BF /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1727A3F7CD00B901BF /* Realm+.swift */; };
+		87DAFA6B27A3F7CD00B901BF /* ViewTodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1A27A3F7CD00B901BF /* ViewTodoModel.swift */; };
+		87DAFA6C27A3F7CD00B901BF /* ViewTodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1A27A3F7CD00B901BF /* ViewTodoModel.swift */; };
+		87DAFA6D27A3F7CD00B901BF /* RealmTodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1C27A3F7CD00B901BF /* RealmTodoModel.swift */; };
+		87DAFA6E27A3F7CD00B901BF /* RealmTodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1C27A3F7CD00B901BF /* RealmTodoModel.swift */; };
+		87DAFA6F27A3F7CD00B901BF /* SocketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1E27A3F7CD00B901BF /* SocketModel.swift */; };
+		87DAFA7027A3F7CD00B901BF /* SocketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA1E27A3F7CD00B901BF /* SocketModel.swift */; };
+		87DAFA7127A3F7CD00B901BF /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA2027A3F7CD00B901BF /* String+.swift */; };
+		87DAFA7227A3F7CD00B901BF /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA2027A3F7CD00B901BF /* String+.swift */; };
+		87DAFA7327A3F7CD00B901BF /* Application+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA2227A3F7CD00B901BF /* Application+.swift */; };
+		87DAFA7427A3F7CD00B901BF /* Application+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA2227A3F7CD00B901BF /* Application+.swift */; };
+		87DAFA7527A3F7CD00B901BF /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA2327A3F7CD00B901BF /* Application.swift */; };
+		87DAFA7627A3F7CD00B901BF /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA2327A3F7CD00B901BF /* Application.swift */; };
+		87DAFA7727A3F7CD00B901BF /* Alamofire+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA2527A3F7CD00B901BF /* Alamofire+.swift */; };
+		87DAFA7827A3F7CD00B901BF /* Alamofire+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA2527A3F7CD00B901BF /* Alamofire+.swift */; };
+		87DAFA7927A3F7CD00B901BF /* Socket+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA2627A3F7CD00B901BF /* Socket+.swift */; };
+		87DAFA7A27A3F7CD00B901BF /* Socket+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA2627A3F7CD00B901BF /* Socket+.swift */; };
+		87DAFA7B27A3F7CD00B901BF /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA2827A3F7CD00B901BF /* View+.swift */; };
+		87DAFA7C27A3F7CD00B901BF /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAFA2827A3F7CD00B901BF /* View+.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		879A25DF27079C3600CCD1DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		879A25E427079C3600CCD1DD /* Todo+RxSwift+SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo+RxSwift+SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		879A25EA27079C3600CCD1DD /* Todo+RxSwift+SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo+RxSwift+SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		879A25EC27079C3600CCD1DD /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		87DAF9EE27A3F7CD00B901BF /* NSTextField+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextField+.swift"; sourceTree = "<group>"; };
+		87DAF9EF27A3F7CD00B901BF /* TodoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoApp.swift; sourceTree = "<group>"; };
+		87DAF9F327A3F7CD00B901BF /* MainReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainReducer.swift; sourceTree = "<group>"; };
+		87DAF9F427A3F7CD00B901BF /* MainEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainEnvironment.swift; sourceTree = "<group>"; };
+		87DAF9F527A3F7CD00B901BF /* MainState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
+		87DAF9F627A3F7CD00B901BF /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		87DAF9F727A3F7CD00B901BF /* MainAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAction.swift; sourceTree = "<group>"; };
+		87DAF9F927A3F7CD00B901BF /* CounterReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
+		87DAF9FA27A3F7CD00B901BF /* CounterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
+		87DAF9FB27A3F7CD00B901BF /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		87DAF9FC27A3F7CD00B901BF /* CounterEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterEnvironment.swift; sourceTree = "<group>"; };
+		87DAF9FD27A3F7CD00B901BF /* CounterAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterAction.swift; sourceTree = "<group>"; };
+		87DAF9FF27A3F7CD00B901BF /* AuthState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		87DAFA0027A3F7CD00B901BF /* AuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		87DAFA0227A3F7CD00B901BF /* RegisterAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAction.swift; sourceTree = "<group>"; };
+		87DAFA0327A3F7CD00B901BF /* RegisterReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterReducer.swift; sourceTree = "<group>"; };
+		87DAFA0427A3F7CD00B901BF /* RegisterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterState.swift; sourceTree = "<group>"; };
+		87DAFA0527A3F7CD00B901BF /* RegisterEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterEnvironment.swift; sourceTree = "<group>"; };
+		87DAFA0627A3F7CD00B901BF /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		87DAFA0727A3F7CD00B901BF /* AuthReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthReducer.swift; sourceTree = "<group>"; };
+		87DAFA0827A3F7CD00B901BF /* AuthAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAction.swift; sourceTree = "<group>"; };
+		87DAFA0A27A3F7CD00B901BF /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		87DAFA0B27A3F7CD00B901BF /* LoginState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
+		87DAFA0C27A3F7CD00B901BF /* LoginEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEnvironment.swift; sourceTree = "<group>"; };
+		87DAFA0D27A3F7CD00B901BF /* LoginReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginReducer.swift; sourceTree = "<group>"; };
+		87DAFA0E27A3F7CD00B901BF /* LoginAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAction.swift; sourceTree = "<group>"; };
+		87DAFA0F27A3F7CD00B901BF /* AuthEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthEnvironment.swift; sourceTree = "<group>"; };
+		87DAFA1127A3F7CD00B901BF /* RootAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootAction.swift; sourceTree = "<group>"; };
+		87DAFA1227A3F7CD00B901BF /* RootEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootEnvironment.swift; sourceTree = "<group>"; };
+		87DAFA1327A3F7CD00B901BF /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		87DAFA1427A3F7CD00B901BF /* RootState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootState.swift; sourceTree = "<group>"; };
+		87DAFA1527A3F7CD00B901BF /* RootReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootReducer.swift; sourceTree = "<group>"; };
+		87DAFA1727A3F7CD00B901BF /* Realm+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
+		87DAFA1A27A3F7CD00B901BF /* ViewTodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTodoModel.swift; sourceTree = "<group>"; };
+		87DAFA1C27A3F7CD00B901BF /* RealmTodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmTodoModel.swift; sourceTree = "<group>"; };
+		87DAFA1E27A3F7CD00B901BF /* SocketModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketModel.swift; sourceTree = "<group>"; };
+		87DAFA2027A3F7CD00B901BF /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		87DAFA2227A3F7CD00B901BF /* Application+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Application+.swift"; sourceTree = "<group>"; };
+		87DAFA2327A3F7CD00B901BF /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		87DAFA2527A3F7CD00B901BF /* Alamofire+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire\U0010+.swift"; sourceTree = "<group>"; };
+		87DAFA2627A3F7CD00B901BF /* Socket+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Socket+.swift"; sourceTree = "<group>"; };
+		87DAFA2827A3F7CD00B901BF /* View+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		879A25E127079C3600CCD1DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				870541A727A496DA009B334C /* RealmSwift in Frameworks */,
+				872629B427A4979D00C435E2 /* RxSwiftWebSocket in Frameworks */,
+				872629BA27A497CE00C435E2 /* ConvertSwift in Frameworks */,
+				872629B727A497B700C435E2 /* Json in Frameworks */,
+				870541A527A496DA009B334C /* Realm in Frameworks */,
+				872629B227A4979D00C435E2 /* RxSwiftRequest in Frameworks */,
+				870541A227A496B4009B334C /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879A25E727079C3600CCD1DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				872629C027A497E000C435E2 /* RealmSwift in Frameworks */,
+				872629C427A497E000C435E2 /* RxSwiftWebSocket in Frameworks */,
+				872629C827A497E000C435E2 /* ConvertSwift in Frameworks */,
+				872629C627A497E000C435E2 /* Json in Frameworks */,
+				872629BE27A497E000C435E2 /* Realm in Frameworks */,
+				872629C227A497E000C435E2 /* RxSwiftRequest in Frameworks */,
+				872629BC27A497E000C435E2 /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		879A25D727079C3500CCD1DD = {
+			isa = PBXGroup;
+			children = (
+				879A25DC27079C3500CCD1DD /* Shared */,
+				879A25EB27079C3600CCD1DD /* macOS */,
+				879A25E527079C3600CCD1DD /* Products */,
+				879A260127079CA400CCD1DD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		879A25DC27079C3500CCD1DD /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				87DAF9EC27A3F7CD00B901BF /* CoreApp */,
+				879A25DF27079C3600CCD1DD /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		879A25E527079C3600CCD1DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				879A25E427079C3600CCD1DD /* Todo+RxSwift+SwiftUI.app */,
+				879A25EA27079C3600CCD1DD /* Todo+RxSwift+SwiftUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		879A25EB27079C3600CCD1DD /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				879A25EC27079C3600CCD1DD /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		879A260127079CA400CCD1DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87DAF9EC27A3F7CD00B901BF /* CoreApp */ = {
+			isa = PBXGroup;
+			children = (
+				87DAF9EF27A3F7CD00B901BF /* TodoApp.swift */,
+				87DAF9ED27A3F7CD00B901BF /* MacOS+ */,
+				87DAF9F027A3F7CD00B901BF /* TodoApp */,
+			);
+			path = CoreApp;
+			sourceTree = "<group>";
+		};
+		87DAF9ED27A3F7CD00B901BF /* MacOS+ */ = {
+			isa = PBXGroup;
+			children = (
+				87DAF9EE27A3F7CD00B901BF /* NSTextField+.swift */,
+			);
+			path = "MacOS+";
+			sourceTree = "<group>";
+		};
+		87DAF9F027A3F7CD00B901BF /* TodoApp */ = {
+			isa = PBXGroup;
+			children = (
+				87DAF9F127A3F7CD00B901BF /* AppScreens */,
+				87DAFA1627A3F7CD00B901BF /* Realm+ */,
+				87DAFA1827A3F7CD00B901BF /* Models */,
+				87DAFA1F27A3F7CD00B901BF /* Extension+ */,
+				87DAFA2127A3F7CD00B901BF /* Application */,
+				87DAFA2427A3F7CD00B901BF /* Networking+ */,
+				87DAFA2727A3F7CD00B901BF /* View+ */,
+			);
+			path = TodoApp;
+			sourceTree = "<group>";
+		};
+		87DAF9F127A3F7CD00B901BF /* AppScreens */ = {
+			isa = PBXGroup;
+			children = (
+				87DAF9F227A3F7CD00B901BF /* MainScreen */,
+				87DAF9F827A3F7CD00B901BF /* CounterScreen */,
+				87DAF9FE27A3F7CD00B901BF /* AuthScreen */,
+				87DAFA1027A3F7CD00B901BF /* RootScreen */,
+			);
+			path = AppScreens;
+			sourceTree = "<group>";
+		};
+		87DAF9F227A3F7CD00B901BF /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				87DAF9F627A3F7CD00B901BF /* MainView.swift */,
+				87DAF9F527A3F7CD00B901BF /* MainState.swift */,
+				87DAF9F727A3F7CD00B901BF /* MainAction.swift */,
+				87DAF9F327A3F7CD00B901BF /* MainReducer.swift */,
+				87DAF9F427A3F7CD00B901BF /* MainEnvironment.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		87DAF9F827A3F7CD00B901BF /* CounterScreen */ = {
+			isa = PBXGroup;
+			children = (
+				87DAF9FA27A3F7CD00B901BF /* CounterState.swift */,
+				87DAF9FB27A3F7CD00B901BF /* CounterView.swift */,
+				87DAF9FD27A3F7CD00B901BF /* CounterAction.swift */,
+				87DAF9FC27A3F7CD00B901BF /* CounterEnvironment.swift */,
+				87DAF9F927A3F7CD00B901BF /* CounterReducer.swift */,
+			);
+			path = CounterScreen;
+			sourceTree = "<group>";
+		};
+		87DAF9FE27A3F7CD00B901BF /* AuthScreen */ = {
+			isa = PBXGroup;
+			children = (
+				87DAFA0927A3F7CD00B901BF /* LoginScreen */,
+				87DAFA0127A3F7CD00B901BF /* RegisterScreen */,
+				87DAFA0027A3F7CD00B901BF /* AuthView.swift */,
+				87DAF9FF27A3F7CD00B901BF /* AuthState.swift */,
+				87DAFA0827A3F7CD00B901BF /* AuthAction.swift */,
+				87DAFA0F27A3F7CD00B901BF /* AuthEnvironment.swift */,
+				87DAFA0727A3F7CD00B901BF /* AuthReducer.swift */,
+			);
+			path = AuthScreen;
+			sourceTree = "<group>";
+		};
+		87DAFA0127A3F7CD00B901BF /* RegisterScreen */ = {
+			isa = PBXGroup;
+			children = (
+				87DAFA0627A3F7CD00B901BF /* RegisterView.swift */,
+				87DAFA0427A3F7CD00B901BF /* RegisterState.swift */,
+				87DAFA0227A3F7CD00B901BF /* RegisterAction.swift */,
+				87DAFA0527A3F7CD00B901BF /* RegisterEnvironment.swift */,
+				87DAFA0327A3F7CD00B901BF /* RegisterReducer.swift */,
+			);
+			path = RegisterScreen;
+			sourceTree = "<group>";
+		};
+		87DAFA0927A3F7CD00B901BF /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				87DAFA0A27A3F7CD00B901BF /* LoginView.swift */,
+				87DAFA0B27A3F7CD00B901BF /* LoginState.swift */,
+				87DAFA0C27A3F7CD00B901BF /* LoginEnvironment.swift */,
+				87DAFA0E27A3F7CD00B901BF /* LoginAction.swift */,
+				87DAFA0D27A3F7CD00B901BF /* LoginReducer.swift */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		87DAFA1027A3F7CD00B901BF /* RootScreen */ = {
+			isa = PBXGroup;
+			children = (
+				87DAFA1327A3F7CD00B901BF /* RootView.swift */,
+				87DAFA1427A3F7CD00B901BF /* RootState.swift */,
+				87DAFA1127A3F7CD00B901BF /* RootAction.swift */,
+				87DAFA1227A3F7CD00B901BF /* RootEnvironment.swift */,
+				87DAFA1527A3F7CD00B901BF /* RootReducer.swift */,
+			);
+			path = RootScreen;
+			sourceTree = "<group>";
+		};
+		87DAFA1627A3F7CD00B901BF /* Realm+ */ = {
+			isa = PBXGroup;
+			children = (
+				87DAFA1727A3F7CD00B901BF /* Realm+.swift */,
+			);
+			path = "Realm+";
+			sourceTree = "<group>";
+		};
+		87DAFA1827A3F7CD00B901BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				87DAFA1927A3F7CD00B901BF /* ViewModels */,
+				87DAFA1B27A3F7CD00B901BF /* DatabaseModels */,
+				87DAFA1D27A3F7CD00B901BF /* SocketModels */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		87DAFA1927A3F7CD00B901BF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				87DAFA1A27A3F7CD00B901BF /* ViewTodoModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		87DAFA1B27A3F7CD00B901BF /* DatabaseModels */ = {
+			isa = PBXGroup;
+			children = (
+				87DAFA1C27A3F7CD00B901BF /* RealmTodoModel.swift */,
+			);
+			path = DatabaseModels;
+			sourceTree = "<group>";
+		};
+		87DAFA1D27A3F7CD00B901BF /* SocketModels */ = {
+			isa = PBXGroup;
+			children = (
+				87DAFA1E27A3F7CD00B901BF /* SocketModel.swift */,
+			);
+			path = SocketModels;
+			sourceTree = "<group>";
+		};
+		87DAFA1F27A3F7CD00B901BF /* Extension+ */ = {
+			isa = PBXGroup;
+			children = (
+				87DAFA2027A3F7CD00B901BF /* String+.swift */,
+			);
+			path = "Extension+";
+			sourceTree = "<group>";
+		};
+		87DAFA2127A3F7CD00B901BF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				87DAFA2227A3F7CD00B901BF /* Application+.swift */,
+				87DAFA2327A3F7CD00B901BF /* Application.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		87DAFA2427A3F7CD00B901BF /* Networking+ */ = {
+			isa = PBXGroup;
+			children = (
+				87DAFA2527A3F7CD00B901BF /* Alamofire+.swift */,
+				87DAFA2627A3F7CD00B901BF /* Socket+.swift */,
+			);
+			path = "Networking+";
+			sourceTree = "<group>";
+		};
+		87DAFA2727A3F7CD00B901BF /* View+ */ = {
+			isa = PBXGroup;
+			children = (
+				87DAFA2827A3F7CD00B901BF /* View+.swift */,
+			);
+			path = "View+";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		879A25E327079C3600CCD1DD /* Todo+RxSwift+SwiftUI (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 879A25F527079C3600CCD1DD /* Build configuration list for PBXNativeTarget "Todo+RxSwift+SwiftUI (iOS)" */;
+			buildPhases = (
+				879A25E027079C3600CCD1DD /* Sources */,
+				879A25E127079C3600CCD1DD /* Frameworks */,
+				879A25E227079C3600CCD1DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Todo+RxSwift+SwiftUI (iOS)";
+			packageProductDependencies = (
+				870541A127A496B4009B334C /* ComposableArchitecture */,
+				870541A427A496DA009B334C /* Realm */,
+				870541A627A496DA009B334C /* RealmSwift */,
+				872629B127A4979D00C435E2 /* RxSwiftRequest */,
+				872629B327A4979D00C435E2 /* RxSwiftWebSocket */,
+				872629B627A497B700C435E2 /* Json */,
+				872629B927A497CE00C435E2 /* ConvertSwift */,
+			);
+			productName = "Todo+RxSwift+SwiftUI (iOS)";
+			productReference = 879A25E427079C3600CCD1DD /* Todo+RxSwift+SwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		879A25E927079C3600CCD1DD /* Todo+RxSwift+SwiftUI (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 879A25F827079C3600CCD1DD /* Build configuration list for PBXNativeTarget "Todo+RxSwift+SwiftUI (macOS)" */;
+			buildPhases = (
+				879A25E627079C3600CCD1DD /* Sources */,
+				879A25E727079C3600CCD1DD /* Frameworks */,
+				879A25E827079C3600CCD1DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Todo+RxSwift+SwiftUI (macOS)";
+			packageProductDependencies = (
+				872629BB27A497E000C435E2 /* ComposableArchitecture */,
+				872629BD27A497E000C435E2 /* Realm */,
+				872629BF27A497E000C435E2 /* RealmSwift */,
+				872629C127A497E000C435E2 /* RxSwiftRequest */,
+				872629C327A497E000C435E2 /* RxSwiftWebSocket */,
+				872629C527A497E000C435E2 /* Json */,
+				872629C727A497E000C435E2 /* ConvertSwift */,
+			);
+			productName = "Todo+RxSwift+SwiftUI (macOS)";
+			productReference = 879A25EA27079C3600CCD1DD /* Todo+RxSwift+SwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		879A25D827079C3500CCD1DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					879A25E327079C3600CCD1DD = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					879A25E927079C3600CCD1DD = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 879A25DB27079C3500CCD1DD /* Build configuration list for PBXProject "Todo+RxSwift+SwiftUI" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 879A25D727079C3500CCD1DD;
+			packageReferences = (
+				870541A027A496B4009B334C /* XCRemoteSwiftPackageReference "rxswift-composable-architecture" */,
+				870541A327A496DA009B334C /* XCRemoteSwiftPackageReference "realm-swift" */,
+				872629B027A4979D00C435E2 /* XCRemoteSwiftPackageReference "Networking" */,
+				872629B527A497B700C435E2 /* XCRemoteSwiftPackageReference "Json" */,
+				872629B827A497CE00C435E2 /* XCRemoteSwiftPackageReference "SwiftExtension" */,
+			);
+			productRefGroup = 879A25E527079C3600CCD1DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				879A25E327079C3600CCD1DD /* Todo+RxSwift+SwiftUI (iOS) */,
+				879A25E927079C3600CCD1DD /* Todo+RxSwift+SwiftUI (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		879A25E227079C3600CCD1DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				879A25F127079C3600CCD1DD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879A25E827079C3600CCD1DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				879A25F227079C3600CCD1DD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		879A25E027079C3600CCD1DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87DAFA4327A3F7CD00B901BF /* AuthView.swift in Sources */,
+				87DAFA7927A3F7CD00B901BF /* Socket+.swift in Sources */,
+				87DAFA5B27A3F7CD00B901BF /* LoginAction.swift in Sources */,
+				87DAFA6927A3F7CD00B901BF /* Realm+.swift in Sources */,
+				87DAFA7B27A3F7CD00B901BF /* View+.swift in Sources */,
+				87DAFA5127A3F7CD00B901BF /* AuthAction.swift in Sources */,
+				87DAFA3F27A3F7CD00B901BF /* CounterAction.swift in Sources */,
+				87DAFA7127A3F7CD00B901BF /* String+.swift in Sources */,
+				87DAFA3927A3F7CD00B901BF /* CounterState.swift in Sources */,
+				87DAFA6B27A3F7CD00B901BF /* ViewTodoModel.swift in Sources */,
+				87DAFA5F27A3F7CD00B901BF /* RootAction.swift in Sources */,
+				87DAFA4927A3F7CD00B901BF /* RegisterState.swift in Sources */,
+				87DAFA3D27A3F7CD00B901BF /* CounterEnvironment.swift in Sources */,
+				87DAFA3727A3F7CD00B901BF /* CounterReducer.swift in Sources */,
+				87DAFA5327A3F7CD00B901BF /* LoginView.swift in Sources */,
+				87DAFA3327A3F7CD00B901BF /* MainView.swift in Sources */,
+				87DAFA4D27A3F7CD00B901BF /* RegisterView.swift in Sources */,
+				87DAFA3527A3F7CD00B901BF /* MainAction.swift in Sources */,
+				87DAFA6D27A3F7CD00B901BF /* RealmTodoModel.swift in Sources */,
+				87DAFA6327A3F7CD00B901BF /* RootView.swift in Sources */,
+				87DAFA3127A3F7CD00B901BF /* MainState.swift in Sources */,
+				87DAFA7327A3F7CD00B901BF /* Application+.swift in Sources */,
+				87DAFA4527A3F7CD00B901BF /* RegisterAction.swift in Sources */,
+				87DAFA6127A3F7CD00B901BF /* RootEnvironment.swift in Sources */,
+				87DAFA7727A3F7CD00B901BF /* Alamofire+.swift in Sources */,
+				87DAFA5927A3F7CD00B901BF /* LoginReducer.swift in Sources */,
+				87DAFA7527A3F7CD00B901BF /* Application.swift in Sources */,
+				87DAFA2D27A3F7CD00B901BF /* MainReducer.swift in Sources */,
+				87DAFA5D27A3F7CD00B901BF /* AuthEnvironment.swift in Sources */,
+				87DAFA4B27A3F7CD00B901BF /* RegisterEnvironment.swift in Sources */,
+				87DAFA2F27A3F7CD00B901BF /* MainEnvironment.swift in Sources */,
+				87DAFA4127A3F7CD00B901BF /* AuthState.swift in Sources */,
+				87DAFA4F27A3F7CD00B901BF /* AuthReducer.swift in Sources */,
+				87DAFA6527A3F7CD00B901BF /* RootState.swift in Sources */,
+				87DAFA6727A3F7CD00B901BF /* RootReducer.swift in Sources */,
+				87DAFA2B27A3F7CD00B901BF /* TodoApp.swift in Sources */,
+				87DAFA3B27A3F7CD00B901BF /* CounterView.swift in Sources */,
+				87DAFA4727A3F7CD00B901BF /* RegisterReducer.swift in Sources */,
+				87DAFA5527A3F7CD00B901BF /* LoginState.swift in Sources */,
+				87DAFA6F27A3F7CD00B901BF /* SocketModel.swift in Sources */,
+				87DAFA5727A3F7CD00B901BF /* LoginEnvironment.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879A25E627079C3600CCD1DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87DAFA4427A3F7CD00B901BF /* AuthView.swift in Sources */,
+				87DAFA7A27A3F7CD00B901BF /* Socket+.swift in Sources */,
+				87DAFA5C27A3F7CD00B901BF /* LoginAction.swift in Sources */,
+				87DAFA6A27A3F7CD00B901BF /* Realm+.swift in Sources */,
+				87DAFA7C27A3F7CD00B901BF /* View+.swift in Sources */,
+				87DAFA5227A3F7CD00B901BF /* AuthAction.swift in Sources */,
+				87DAFA4027A3F7CD00B901BF /* CounterAction.swift in Sources */,
+				87DAFA7227A3F7CD00B901BF /* String+.swift in Sources */,
+				87DAFA3A27A3F7CD00B901BF /* CounterState.swift in Sources */,
+				87DAFA6C27A3F7CD00B901BF /* ViewTodoModel.swift in Sources */,
+				87DAFA6027A3F7CD00B901BF /* RootAction.swift in Sources */,
+				87DAFA4A27A3F7CD00B901BF /* RegisterState.swift in Sources */,
+				87DAFA3E27A3F7CD00B901BF /* CounterEnvironment.swift in Sources */,
+				87DAFA2A27A3F7CD00B901BF /* NSTextField+.swift in Sources */,
+				87DAFA3827A3F7CD00B901BF /* CounterReducer.swift in Sources */,
+				87DAFA5427A3F7CD00B901BF /* LoginView.swift in Sources */,
+				87DAFA3427A3F7CD00B901BF /* MainView.swift in Sources */,
+				87DAFA4E27A3F7CD00B901BF /* RegisterView.swift in Sources */,
+				87DAFA3627A3F7CD00B901BF /* MainAction.swift in Sources */,
+				87DAFA6E27A3F7CD00B901BF /* RealmTodoModel.swift in Sources */,
+				87DAFA6427A3F7CD00B901BF /* RootView.swift in Sources */,
+				87DAFA3227A3F7CD00B901BF /* MainState.swift in Sources */,
+				87DAFA7427A3F7CD00B901BF /* Application+.swift in Sources */,
+				87DAFA4627A3F7CD00B901BF /* RegisterAction.swift in Sources */,
+				87DAFA6227A3F7CD00B901BF /* RootEnvironment.swift in Sources */,
+				87DAFA7827A3F7CD00B901BF /* Alamofire+.swift in Sources */,
+				87DAFA5A27A3F7CD00B901BF /* LoginReducer.swift in Sources */,
+				87DAFA7627A3F7CD00B901BF /* Application.swift in Sources */,
+				87DAFA2E27A3F7CD00B901BF /* MainReducer.swift in Sources */,
+				87DAFA5E27A3F7CD00B901BF /* AuthEnvironment.swift in Sources */,
+				87DAFA4C27A3F7CD00B901BF /* RegisterEnvironment.swift in Sources */,
+				87DAFA3027A3F7CD00B901BF /* MainEnvironment.swift in Sources */,
+				87DAFA4227A3F7CD00B901BF /* AuthState.swift in Sources */,
+				87DAFA5027A3F7CD00B901BF /* AuthReducer.swift in Sources */,
+				87DAFA6627A3F7CD00B901BF /* RootState.swift in Sources */,
+				87DAFA6827A3F7CD00B901BF /* RootReducer.swift in Sources */,
+				87DAFA2C27A3F7CD00B901BF /* TodoApp.swift in Sources */,
+				87DAFA3C27A3F7CD00B901BF /* CounterView.swift in Sources */,
+				87DAFA4827A3F7CD00B901BF /* RegisterReducer.swift in Sources */,
+				87DAFA5627A3F7CD00B901BF /* LoginState.swift in Sources */,
+				87DAFA7027A3F7CD00B901BF /* SocketModel.swift in Sources */,
+				87DAFA5827A3F7CD00B901BF /* LoginEnvironment.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		879A25F327079C3600CCD1DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		879A25F427079C3600CCD1DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		879A25F627079C3600CCD1DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2H5PN3F9B6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mike.fullstackswift.Todo-RxSwift-SwiftUI";
+				PRODUCT_NAME = "Todo+RxSwift+SwiftUI";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		879A25F727079C3600CCD1DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2H5PN3F9B6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mike.fullstackswift.Todo-RxSwift-SwiftUI";
+				PRODUCT_NAME = "Todo+RxSwift+SwiftUI";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		879A25F927079C3600CCD1DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2H5PN3F9B6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mike.fullstackswift.Todo-RxSwift-SwiftUI";
+				PRODUCT_NAME = "Todo+RxSwift+SwiftUI";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		879A25FA27079C3600CCD1DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2H5PN3F9B6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mike.fullstackswift.Todo-RxSwift-SwiftUI";
+				PRODUCT_NAME = "Todo+RxSwift+SwiftUI";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		879A25DB27079C3500CCD1DD /* Build configuration list for PBXProject "Todo+RxSwift+SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				879A25F327079C3600CCD1DD /* Debug */,
+				879A25F427079C3600CCD1DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		879A25F527079C3600CCD1DD /* Build configuration list for PBXNativeTarget "Todo+RxSwift+SwiftUI (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				879A25F627079C3600CCD1DD /* Debug */,
+				879A25F727079C3600CCD1DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		879A25F827079C3600CCD1DD /* Build configuration list for PBXNativeTarget "Todo+RxSwift+SwiftUI (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				879A25F927079C3600CCD1DD /* Debug */,
+				879A25FA27079C3600CCD1DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		870541A027A496B4009B334C /* XCRemoteSwiftPackageReference "rxswift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FullStack-Swift/rxswift-composable-architecture";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.0;
+			};
+		};
+		870541A327A496DA009B334C /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.22.0;
+			};
+		};
+		872629B027A4979D00C435E2 /* XCRemoteSwiftPackageReference "Networking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FullStack-Swift/Networking";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.0;
+			};
+		};
+		872629B527A497B700C435E2 /* XCRemoteSwiftPackageReference "Json" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FullStack-Swift/Json";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.0;
+			};
+		};
+		872629B827A497CE00C435E2 /* XCRemoteSwiftPackageReference "SwiftExtension" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FullStack-Swift/SwiftExtension";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		870541A127A496B4009B334C /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 870541A027A496B4009B334C /* XCRemoteSwiftPackageReference "rxswift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		870541A427A496DA009B334C /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 870541A327A496DA009B334C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		870541A627A496DA009B334C /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 870541A327A496DA009B334C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		872629B127A4979D00C435E2 /* RxSwiftRequest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 872629B027A4979D00C435E2 /* XCRemoteSwiftPackageReference "Networking" */;
+			productName = RxSwiftRequest;
+		};
+		872629B327A4979D00C435E2 /* RxSwiftWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 872629B027A4979D00C435E2 /* XCRemoteSwiftPackageReference "Networking" */;
+			productName = RxSwiftWebSocket;
+		};
+		872629B627A497B700C435E2 /* Json */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 872629B527A497B700C435E2 /* XCRemoteSwiftPackageReference "Json" */;
+			productName = Json;
+		};
+		872629B927A497CE00C435E2 /* ConvertSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 872629B827A497CE00C435E2 /* XCRemoteSwiftPackageReference "SwiftExtension" */;
+			productName = ConvertSwift;
+		};
+		872629BB27A497E000C435E2 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 870541A027A496B4009B334C /* XCRemoteSwiftPackageReference "rxswift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		872629BD27A497E000C435E2 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 870541A327A496DA009B334C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		872629BF27A497E000C435E2 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 870541A327A496DA009B334C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		872629C127A497E000C435E2 /* RxSwiftRequest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 872629B027A4979D00C435E2 /* XCRemoteSwiftPackageReference "Networking" */;
+			productName = RxSwiftRequest;
+		};
+		872629C327A497E000C435E2 /* RxSwiftWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 872629B027A4979D00C435E2 /* XCRemoteSwiftPackageReference "Networking" */;
+			productName = RxSwiftWebSocket;
+		};
+		872629C527A497E000C435E2 /* Json */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 872629B527A497B700C435E2 /* XCRemoteSwiftPackageReference "Json" */;
+			productName = Json;
+		};
+		872629C727A497E000C435E2 /* ConvertSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 872629B827A497CE00C435E2 /* XCRemoteSwiftPackageReference "SwiftExtension" */;
+			productName = ConvertSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 879A25D827079C3500CCD1DD /* Project object */;
+}

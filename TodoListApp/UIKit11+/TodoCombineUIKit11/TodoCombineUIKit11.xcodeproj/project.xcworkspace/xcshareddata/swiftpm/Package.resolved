@@ -1,0 +1,79 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "combine-core-architecture",
+        "repositoryURL": "https://github.com/FullStack-Swift/combine-core-architecture",
+        "state": {
+          "branch": "main",
+          "revision": "243d27364416b7f94dc3fcb884867a26c45a81be",
+          "version": null
+        }
+      },
+      {
+        "package": "Json",
+        "repositoryURL": "https://github.com/FullStack-Swift/Json",
+        "state": {
+          "branch": null,
+          "revision": "b45da4388574b3dfadf7f166aaa962c561e34dd5",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "OpenCombine",
+        "repositoryURL": "https://github.com/FullStack-Swift/OpenCombine",
+        "state": {
+          "branch": "develop",
+          "revision": "5edf32f5b502bd0aea8ea14a0bea87735251cade",
+          "version": null
+        }
+      },
+      {
+        "package": "RealmDatabase",
+        "repositoryURL": "https://github.com/realm/realm-core",
+        "state": {
+          "branch": null,
+          "revision": "6b81f1a7a2d421f9e0b9e7f04e76bcf736a54409",
+          "version": "11.9.0"
+        }
+      },
+      {
+        "package": "Realm",
+        "repositoryURL": "https://github.com/realm/realm-swift.git",
+        "state": {
+          "branch": null,
+          "revision": "9dff9f2862240d521ad6ad599541269177ddb993",
+          "version": "10.22.0"
+        }
+      },
+      {
+        "package": "swift-case-paths",
+        "repositoryURL": "https://github.com/pointfreeco/swift-case-paths",
+        "state": {
+          "branch": null,
+          "revision": "241301b67d8551c26d8f09bd2c0e52cc49f18007",
+          "version": "0.8.0"
+        }
+      },
+      {
+        "package": "SwiftExtension",
+        "repositoryURL": "https://github.com/FullStack-Swift/SwiftExtension",
+        "state": {
+          "branch": null,
+          "revision": "cdbd56e6cf32fa0eb97a1fba445736cbe8b8e622",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "xctest-dynamic-overlay",
+        "repositoryURL": "https://github.com/pointfreeco/xctest-dynamic-overlay",
+        "state": {
+          "branch": null,
+          "revision": "50a70a9d3583fe228ce672e8923010c8df2deddd",
+          "version": "0.2.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
