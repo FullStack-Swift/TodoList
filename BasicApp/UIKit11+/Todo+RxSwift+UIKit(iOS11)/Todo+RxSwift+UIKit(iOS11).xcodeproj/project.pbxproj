@@ -11,6 +11,8 @@
 		87A9F07227A55F5C00D40BD1 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 87A9F07127A55F5C00D40BD1 /* ComposableArchitecture */; };
 		87A9F07E27A55FE200D40BD1 /* ConvertSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87A9F07D27A55FE200D40BD1 /* ConvertSwift */; };
 		87A9F08127A5601400D40BD1 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 87A9F08027A5601400D40BD1 /* RxCocoa */; };
+		87C4B73527A5E6DD008B6287 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C4B73427A5E6DD008B6287 /* BaseViewController.swift */; };
+		87C4B73727A5E6EE008B6287 /* BaseMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C4B73627A5E6EE008B6287 /* BaseMainTableViewCell.swift */; };
 		87C843D4270871F800AD27CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C843D3270871F800AD27CA /* AppDelegate.swift */; };
 		87C843D6270871F800AD27CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C843D5270871F800AD27CA /* SceneDelegate.swift */; };
 		87C843DD270871FA00AD27CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87C843DC270871FA00AD27CA /* Assets.xcassets */; };
@@ -20,7 +22,7 @@
 		87C844102708737900AD27CA /* MainEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C843F72708737800AD27CA /* MainEnvironment.swift */; };
 		87C844112708737900AD27CA /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C843F82708737800AD27CA /* MainState.swift */; };
 		87C844122708737900AD27CA /* MainAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C843F92708737800AD27CA /* MainAction.swift */; };
-		87C844132708737900AD27CA /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C843FB2708737900AD27CA /* Todo.swift */; };
+		87C844132708737900AD27CA /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C843FB2708737900AD27CA /* TodoModel.swift */; };
 		87C844142708737900AD27CA /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C843FD2708737900AD27CA /* View+.swift */; };
 		87C844152708737900AD27CA /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C843FF2708737900AD27CA /* AuthViewController.swift */; };
 		87C844162708737900AD27CA /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C844002708737900AD27CA /* AuthState.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87C4B73427A5E6DD008B6287 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		87C4B73627A5E6EE008B6287 /* BaseMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMainTableViewCell.swift; sourceTree = "<group>"; };
 		87C843D0270871F800AD27CA /* Todo+RxSwift+UIKit(iOS11).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo+RxSwift+UIKit(iOS11).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87C843D3270871F800AD27CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87C843D5270871F800AD27CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +53,7 @@
 		87C843F72708737800AD27CA /* MainEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainEnvironment.swift; sourceTree = "<group>"; };
 		87C843F82708737800AD27CA /* MainState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
 		87C843F92708737800AD27CA /* MainAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAction.swift; sourceTree = "<group>"; };
-		87C843FB2708737900AD27CA /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		87C843FB2708737900AD27CA /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		87C843FD2708737900AD27CA /* View+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		87C843FF2708737900AD27CA /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		87C844002708737900AD27CA /* AuthState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
@@ -84,9 +88,9 @@
 		87A9F08227A563F400D40BD1 /* AppScreens */ = {
 			isa = PBXGroup;
 			children = (
-				87C844042708737900AD27CA /* RootScreen */,
-				87C843FE2708737900AD27CA /* AuthScreen */,
 				87C843F42708737800AD27CA /* MainScreen */,
+				87C843FE2708737900AD27CA /* AuthScreen */,
+				87C844042708737900AD27CA /* RootScreen */,
 			);
 			path = AppScreens;
 			sourceTree = "<group>";
@@ -146,7 +150,7 @@
 		87C843FA2708737900AD27CA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				87C843FB2708737900AD27CA /* Todo.swift */,
+				87C843FB2708737900AD27CA /* TodoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +193,8 @@
 				87C8440B2708737900AD27CA /* ButtonReloadMainTableViewCell.swift */,
 				87C8440C2708737900AD27CA /* CreateTitleMainTableViewCell.swift */,
 				87C8440D2708737900AD27CA /* MainTableViewCell.swift */,
+				87C4B73427A5E6DD008B6287 /* BaseViewController.swift */,
+				87C4B73627A5E6EE008B6287 /* BaseMainTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -278,11 +284,13 @@
 				87C844152708737900AD27CA /* AuthViewController.swift in Sources */,
 				87C844182708737900AD27CA /* AuthAction.swift in Sources */,
 				87C8441E2708737900AD27CA /* RootReducer.swift in Sources */,
+				87C4B73527A5E6DD008B6287 /* BaseViewController.swift in Sources */,
 				87C8441C2708737900AD27CA /* RootViewController.swift in Sources */,
 				87C844192708737900AD27CA /* AuthEnvironment.swift in Sources */,
 				87C844162708737900AD27CA /* AuthState.swift in Sources */,
-				87C844132708737900AD27CA /* Todo.swift in Sources */,
+				87C844132708737900AD27CA /* TodoModel.swift in Sources */,
 				87C844212708737900AD27CA /* MainTableViewCell.swift in Sources */,
+				87C4B73727A5E6EE008B6287 /* BaseMainTableViewCell.swift in Sources */,
 				87C844202708737900AD27CA /* CreateTitleMainTableViewCell.swift in Sources */,
 				87C844112708737900AD27CA /* MainState.swift in Sources */,
 				87C843D4270871F800AD27CA /* AppDelegate.swift in Sources */,

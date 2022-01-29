@@ -2,25 +2,34 @@ import ComposableArchitecture
 import Foundation
 
 enum MainAction: Equatable {
-  
-  // view action
+    // MARK: -  View Action
+    /// lifecycle action
   case viewDidLoad
   case viewWillAppear
   case viewWillDisappear
-  case none
+  case viewDeinit
+    ///  navigation view
   case logout
   case changeRootScreen(RootScreen)
-  case changeText(String)
   
-  // network action
+    /// binding
+  case changeText(String)
+    /// event network
+  case viewCreateTodo
+  case viewReloadTodo
+  case viewToggleTodo(TodoModel)
+  case viewDeleteTodo(TodoModel)
+  // MARK: - Store Action
+  case resetText
+    /// network Action
   case getTodo
-  case toggleTodo(Todo)
-  case responseTodo(Data)
-  case createTodo
-  case responseCreateTodo(Data)
-  case updateTodo(Todo)
+  case responseGetTodo(Data)
+  case createOrUpdateTodo(TodoModel)
+  case responseCreateOrUpdateTodo(Data)
+  case updateTodo(TodoModel)
   case responseUpdateTodo(Data)
-  case deleteTodo(Todo)
+  case deleteTodo(TodoModel)
   case reponseDeleteTodo(Data)
-
+  // MARK: - none
+  case none
 }

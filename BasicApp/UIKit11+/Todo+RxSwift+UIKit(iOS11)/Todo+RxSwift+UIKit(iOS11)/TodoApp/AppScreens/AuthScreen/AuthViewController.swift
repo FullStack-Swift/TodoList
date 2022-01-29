@@ -1,14 +1,13 @@
 import ComposableArchitecture
+import SwiftUI
 import UIKit
 import RxCocoa
 
-final class AuthViewController: UIViewController {
+final class AuthViewController: BaseViewController {
   
   private let store: Store<AuthState, AuthAction>
   
   private let viewStore: ViewStore<AuthState, AuthAction>
-  
-  private let disposeBag = DisposeBag()
   
   init(store: Store<AuthState, AuthAction>? = nil) {
     let unwrapStore = store ?? Store(initialState: AuthState(), reducer: AuthReducer, environment: AuthEnvironment())
@@ -24,17 +23,20 @@ final class AuthViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     viewStore.send(.viewDidLoad)
-    let buttonLogin = UIButton(type: .system)
-    buttonLogin.setTitle("Login", for: .normal)
-    buttonLogin.translatesAutoresizingMaskIntoConstraints = false
-    view.addSubview(buttonLogin)
-    NSLayoutConstraint.activate([
-      buttonLogin.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-      buttonLogin.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
-    ])
+      // buttonLogin
+      let buttonLogin = UIButton(type: .system)
+      buttonLogin.setTitle("Login", for: .normal)
+      buttonLogin.translatesAutoresizingMaskIntoConstraints = false
+      view.addSubview(buttonLogin)
+      // contraint
+      NSLayoutConstraint.activate([
+        buttonLogin.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+        buttonLogin.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
+      ])
     
+      //bind view to viewstore
     buttonLogin.rx.tap
-      .map{_ in AuthAction.login}
+      .map { AuthAction.login }
       .bind(to: viewStore.action)
       .disposed(by: disposeBag)
   }

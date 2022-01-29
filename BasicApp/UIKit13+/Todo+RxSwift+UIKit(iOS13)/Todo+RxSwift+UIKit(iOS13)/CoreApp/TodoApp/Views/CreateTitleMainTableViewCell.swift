@@ -37,5 +37,3 @@ class CreateTitleMainTableViewCell: BaseMainTableViewCell {
     fatalError("init(coder:) has not been implemented")
   }
 }
-
-

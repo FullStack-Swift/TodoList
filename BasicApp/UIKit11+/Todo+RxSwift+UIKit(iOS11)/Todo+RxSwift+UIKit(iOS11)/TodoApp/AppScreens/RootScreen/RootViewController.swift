@@ -2,14 +2,12 @@ import ComposableArchitecture
 import SwiftUI
 import UIKit
 
-final class RootViewController: UIViewController {
+final class RootViewController: BaseViewController {
   
   private let store: Store<RootState, RootAction>
   
   private let viewStore: ViewStore<RootState, RootAction>
-  
-  private var disposeBag = DisposeBag()
-  
+
   private var viewController = UIViewController() {
     willSet {
       viewController.willMove(toParent: nil)
@@ -21,6 +19,7 @@ final class RootViewController: UIViewController {
       newValue.didMove(toParent: self)
     }
   }
+  
   
   init(store: Store<RootState, RootAction>? = nil) {
     let unwrapStore = store ?? Store(initialState: RootState(), reducer: RootReducer, environment: RootEnvironment())
@@ -35,25 +34,23 @@ final class RootViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .white
     viewStore.send(.viewDidLoad)
-    viewStore.publisher.rootScreen.subscribe { [weak self] event in
+    view.backgroundColor = .white
+      //bind view to viewstore
+    viewStore.publisher.rootScreen.subscribe(onNext: { [weak self] screen in
       guard let self = self else {return}
-      switch event {
-      case .next(let screen):
-        switch screen {
-        case .main:
-          let vc = MainViewController(store: self.store.scope(state: \.mainState, action: RootAction.mainAction))
-          let nav = UINavigationController(rootViewController: vc)
-          self.viewController = nav
-        case .auth:
-          let vc = AuthViewController(store: self.store.scope(state: \.authState, action: RootAction.authAction))
-          self.viewController = vc
-        }
-      default:
-        break
+      switch screen {
+      case .main:
+        let vc = MainViewController(store: self.store.scope(state: \.mainState, action: RootAction.mainAction))
+        let nav = UINavigationController(rootViewController: vc)
+        self.viewController = nav
+      case .auth:
+        let vc = AuthViewController(store: self.store.scope(state: \.authState, action: RootAction.authAction))
+        let nav = UINavigationController(rootViewController: vc)
+        self.viewController = nav
       }
-    }.disposed(by: disposeBag)
+    })
+    .disposed(by: disposeBag)
   }
   
   override func viewWillAppear(_ animated: Bool) {

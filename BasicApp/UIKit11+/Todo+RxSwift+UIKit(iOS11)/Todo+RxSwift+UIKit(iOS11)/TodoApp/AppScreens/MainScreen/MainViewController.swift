@@ -1,18 +1,16 @@
 import ComposableArchitecture
+import SwiftUI
 import UIKit
 import ConvertSwift
+import RxCocoa
 
-final class MainViewController: UIViewController {
+final class MainViewController: BaseViewController {
   
   private let store: Store<MainState, MainAction>
   
   private let viewStore: ViewStore<MainState, MainAction>
   
-  private let disposeBag = DisposeBag()
-  
   private let tableView: UITableView = UITableView()
-  
-  private var todos: [Todo] = []
   
   init(store: Store<MainState, MainAction>? = nil) {
     let unwrapStore = store ?? Store(initialState: MainState(), reducer: MainReducer, environment: MainEnvironment())
@@ -28,14 +26,16 @@ final class MainViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     viewStore.send(.viewDidLoad)
-    
-    //navigation
-    navigationController?.navigationBar.prefersLargeTitles = true
+      // navigationView
     let buttonLogout = UIButton(type: .system)
     buttonLogout.setTitle("Logout", for: .normal)
+    buttonLogout.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+    buttonLogout.setTitleColor(UIColor.blue, for: .normal)
     let rightBarButtonItem = UIBarButtonItem(customView: buttonLogout)
+    navigationController?.navigationBar.prefersLargeTitles = true
+    navigationItem.largeTitleDisplayMode = .always
     navigationItem.rightBarButtonItem = rightBarButtonItem
-    //table
+      // tableView
     view.addSubview(tableView)
     tableView.register(MainTableViewCell.self)
     tableView.register(ButtonReloadMainTableViewCell.self)
@@ -45,31 +45,37 @@ final class MainViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
     tableView.translatesAutoresizingMaskIntoConstraints = false
-    tableView.frame = view.frame.insetBy(dx: 10, dy: 10)
+    tableView.isUserInteractionEnabled = true
+      // contraint
+    NSLayoutConstraint.activate([
+      tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+      tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+      tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
+      tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -10)
+    ])
     
     //bind view to viewstore
     buttonLogout.rx.tap
-      .map{_ in MainAction.logout}
-      .bind(to: viewStore.action)
+      .map{MainAction.logout}
+      .subscribe(viewStore.action)
       .disposed(by: disposeBag)
-    
     
     //bind viewstore to view
     viewStore.publisher.todos
-      .subscribe { [weak self] event in
-        guard let self = self else {return}
-        if let element = event.element {
-          self.todos = element
-          self.tableView.reloadData()
-        }
-      }
+      .subscribe(onNext: { [weak self] _ in
+        guard let self = self else { return }
+        self.tableView.reloadData()
+      })
       .disposed(by: disposeBag)
-    
-    viewStore.publisher.todos.count
-      .map {$0.toString() + " Todos"}
-      .bind(to: self.rx.title)
+      
+    viewStore.publisher.todos
+      .map {$0.count.toString() + " Todos"}
+      .bind(to: navigationItem.rx.title)
       .disposed(by: disposeBag)
-    
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -80,6 +86,10 @@ final class MainViewController: UIViewController {
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
     viewStore.send(.viewWillDisappear)
+  }
+  
+  deinit {
+    viewStore.send(.viewDeinit)
   }
   
 }
@@ -95,7 +105,7 @@ extension MainViewController: UITableViewDataSource {
     case 1:
       return 1
     case 2:
-      return todos.count
+      return viewStore.todos.count
     default:
       return 0
     }
@@ -105,43 +115,56 @@ extension MainViewController: UITableViewDataSource {
     switch indexPath.section {
     case 0:
       let cell = tableView.dequeueReusableCell(ButtonReloadMainTableViewCell.self, for: indexPath)
+      cell.selectionStyle = .none
       viewStore.publisher.isLoading
-        .subscribe { value in
-          cell.buttonReload.setTitle(value ? "Loading" : "Reload" , for: .normal)
-        }
+        .subscribe(onNext: { value in
+          cell.buttonReload.isHidden = value
+          if value {
+            cell.activityIndicator.startAnimating()
+          } else {
+            cell.activityIndicator.stopAnimating()
+          }
+        })
         .disposed(by: cell.disposeBag)
       cell.buttonReload.rx.tap
-        .map {MainAction.getTodo}
+        .map{MainAction.viewReloadTodo}
         .bind(to: viewStore.action)
         .disposed(by: cell.disposeBag)
       return cell
     case 1:
       let cell = tableView.dequeueReusableCell(CreateTitleMainTableViewCell.self, for: indexPath)
       viewStore.publisher.title
-        .bind(to: cell.textFieldTitle.rx.text)
+        .bind(to: cell.titleTextField.rx.text)
         .disposed(by: cell.disposeBag)
       viewStore.publisher.title.isEmpty
-        .bind(to: cell.buttonCreate.rx.isHidden)
+        .subscribe(onNext: { value in
+          cell.createButton.setTitleColor(value ? UIColor.gray : UIColor.green, for: .normal)
+        })
         .disposed(by: cell.disposeBag)
-      cell.buttonCreate.rx.tap
-        .map {MainAction.createTodo}
+      cell.createButton
+        .rx.tap
+        .map {MainAction.viewCreateTodo}
         .bind(to: viewStore.action)
         .disposed(by: cell.disposeBag)
-      cell.textFieldTitle.rx.text.orEmpty
-        .map(MainAction.changeText)
+      cell.titleTextField
+        .rx.text.orEmpty
+        .compactMap{$0}
+        .map{MainAction.changeText($0)}
         .bind(to: viewStore.action)
         .disposed(by: cell.disposeBag)
       return cell
     case 2:
       let cell = tableView.dequeueReusableCell(MainTableViewCell.self, for: indexPath)
-      let todo = todos[indexPath.row]
+      let todo = viewStore.todos[indexPath.row]
       cell.bind(todo)
-      cell.deleteButton.rx.tap
-        .map{MainAction.deleteTodo(todo)}
+      cell.deleteButton
+        .rx.tap
+        .map{MainAction.viewDeleteTodo(todo)}
         .bind(to: viewStore.action)
         .disposed(by: cell.disposeBag)
-      cell.tapGesture.rx.event
-        .map {_ in MainAction.toggleTodo(todo)}
+      cell.tapGesture
+        .rx.event
+        .map {_ in MainAction.viewToggleTodo(todo)}
         .bind(to: viewStore.action)
         .disposed(by: cell.disposeBag)
       return cell

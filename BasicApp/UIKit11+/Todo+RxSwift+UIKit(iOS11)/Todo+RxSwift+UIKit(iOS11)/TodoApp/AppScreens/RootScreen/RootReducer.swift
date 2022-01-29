@@ -13,6 +13,7 @@ let RootReducer = Reducer<RootState, RootAction, RootEnvironment>.combine(
     case .authAction(.changeRootScreen(let screen)):
       state.rootScreen = screen
     case .mainAction(.changeRootScreen(let screen)):
+      state = RootState()
       state.rootScreen = screen
     case .viewDidLoad:
       break

@@ -3,14 +3,11 @@ import SwiftUI
 import UIKit
 import RxCocoa
 
-
-final class AuthViewController: UIViewController {
+final class AuthViewController: BaseViewController {
   
   private let store: Store<AuthState, AuthAction>
   
   private let viewStore: ViewStore<AuthState, AuthAction>
-  
-  private var disposeBag = DisposeBag()
   
   init(store: Store<AuthState, AuthAction>? = nil) {
     let unwrapStore = store ?? Store(initialState: AuthState(), reducer: AuthReducer, environment: AuthEnvironment())
