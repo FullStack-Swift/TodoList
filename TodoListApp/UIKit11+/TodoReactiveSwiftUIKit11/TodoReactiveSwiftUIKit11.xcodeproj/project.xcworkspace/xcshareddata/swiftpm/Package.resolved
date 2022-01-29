@@ -11,15 +11,6 @@
         }
       },
       {
-        "package": "CombineCocoa",
-        "repositoryURL": "https://github.com/CombineCommunity/CombineCocoa",
-        "state": {
-          "branch": null,
-          "revision": "4e262c2f9fb1cee1cb3be5717f7e6b55eb823971",
-          "version": "0.4.0"
-        }
-      },
-      {
         "package": "Json",
         "repositoryURL": "https://github.com/FullStack-Swift/Json",
         "state": {
@@ -38,8 +29,17 @@
         }
       },
       {
+        "package": "ReactiveCocoa",
+        "repositoryURL": "https://github.com/ReactiveCocoa/ReactiveCocoa",
+        "state": {
+          "branch": null,
+          "revision": "8a5b07b18c6abb8e12fb845bf742675dc4914ed8",
+          "version": "12.0.0"
+        }
+      },
+      {
         "package": "ReactiveSwift",
-        "repositoryURL": "https://github.com/ReactiveCocoa/ReactiveSwift.git",
+        "repositoryURL": "https://github.com/ReactiveCocoa/ReactiveSwift",
         "state": {
           "branch": null,
           "revision": "efb2f0a6f6c8739cce8fb14148a5bd3c83f2f91d",
