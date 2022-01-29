@@ -26,15 +26,18 @@ final class AuthViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     viewStore.send(.viewDidLoad)
-    let buttonLogin = UIButton(type: .system)
-    buttonLogin.setTitle("Login", for: .normal)
-    buttonLogin.translatesAutoresizingMaskIntoConstraints = false
-    view.addSubview(buttonLogin)
-    NSLayoutConstraint.activate([
-      buttonLogin.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-      buttonLogin.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
-    ])
+      // buttonLogin
+      let buttonLogin = UIButton(type: .system)
+      buttonLogin.setTitle("Login", for: .normal)
+      buttonLogin.translatesAutoresizingMaskIntoConstraints = false
+      view.addSubview(buttonLogin)
+      // contraint
+      NSLayoutConstraint.activate([
+        buttonLogin.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+        buttonLogin.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
+      ])
     
+      //bind view to viewstore
     buttonLogin.rx.tap
       .map { AuthAction.login }
       .bind(to: viewStore.action)

@@ -11,4 +11,3 @@ class BaseMainTableViewCell: UITableViewCell {
     disposables = CompositeDisposable()
   }
 }
-

@@ -1,25 +1,16 @@
 import UIKit
-import RxSwift
 
-class MainTableViewCell: UITableViewCell {
+class MainTableViewCell: BaseMainTableViewCell {
   
   let image = UIImageView(image: UIImage(systemName: "square"))
   let titleView = UILabel()
   let deleteButton = UIButton(type: .system)
   let tapGesture = UITapGestureRecognizer()
   
-  private(set) var disposeBag = DisposeBag()
-  
-  override func prepareForReuse() {
-    super.prepareForReuse()
-    disposeBag = DisposeBag()
-  }
-  
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     contentView.isUserInteractionEnabled = false
     addGestureRecognizer(tapGesture)
-    
       // deleteButton
     deleteButton.setTitle("Delete", for: .normal)
     deleteButton.setTitleColor(.gray, for: .normal)
@@ -28,7 +19,6 @@ class MainTableViewCell: UITableViewCell {
     image.translatesAutoresizingMaskIntoConstraints = false
     image.heightAnchor.constraint(equalToConstant: 20).isActive = true
     image.widthAnchor.constraint(equalToConstant: 20).isActive = true
-    
       // containerView
     let rootStackView = UIStackView(arrangedSubviews: [
       image,
@@ -45,7 +35,6 @@ class MainTableViewCell: UITableViewCell {
       rootStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
       rootStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
     ])
-    
   }
   
   required init?(coder: NSCoder) {
@@ -60,3 +49,4 @@ class MainTableViewCell: UITableViewCell {
     titleView.text = data.title
   }
 }
+

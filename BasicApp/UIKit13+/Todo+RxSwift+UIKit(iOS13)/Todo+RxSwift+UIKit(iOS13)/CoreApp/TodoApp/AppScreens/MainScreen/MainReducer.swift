@@ -7,7 +7,7 @@ let MainReducer = Reducer<MainState, MainAction, MainEnvironment>.combine(
     switch action {
         /// view action
     case .viewDidLoad:
-      return Effect<MainAction>(value: MainAction.getTodo)
+      return Effect<MainAction>(value: MainAction.viewReloadTodo)
     case .viewWillAppear:
       break
     case .viewWillDisappear:
@@ -21,8 +21,7 @@ let MainReducer = Reducer<MainState, MainAction, MainEnvironment>.combine(
       state.title = text
     case .resetText:
       state.title = ""
-      
-      /// event network
+        /// event network
     case .viewCreateTodo:
       if state.title.isEmpty {
         return .none
@@ -38,8 +37,14 @@ let MainReducer = Reducer<MainState, MainAction, MainEnvironment>.combine(
         Effect(value: MainAction.createOrUpdateTodo(todo))
       )
     case .viewReloadTodo:
+      if state.isLoading {
+        return .none
+      }
       state.todos.removeAll()
+      state.isLoading = true
       return Effect(value: MainAction.getTodo)
+        .delay(.microseconds(300), scheduler: MainScheduler.instance)
+        .eraseToEffect()
     case .viewToggleTodo(let todo):
       var todo = todo
       todo.isCompleted.toggle()
@@ -48,15 +53,15 @@ let MainReducer = Reducer<MainState, MainAction, MainEnvironment>.combine(
       return Effect(value: MainAction.deleteTodo(todo))
         /// network action
     case .getTodo:
-        let request = MRequest {
-          RMethod(.get)
-          RUrl(urlString: environment.urlString)
-        }
-        return request
-          .compactMap {$0.data}
-          .map(MainAction.responseTodo)
-          .eraseToEffect()
-    case .responseTodo(let data):
+      let request = MRequest {
+        RMethod(.get)
+        RUrl(urlString: environment.urlString)
+      }
+      return request
+        .compactMap {$0.data}
+        .map(MainAction.responseGetTodo)
+        .eraseToEffect()
+    case .responseGetTodo(let data):
       state.isLoading = false
       guard let todos = data.toModel([TodoModel].self) else {
         return .none
@@ -65,16 +70,16 @@ let MainReducer = Reducer<MainState, MainAction, MainEnvironment>.combine(
         state.todos.updateOrAppend(todo)
       }
     case .createOrUpdateTodo(let todo):
-    let request = MRequest {
-      RUrl(urlString: environment.urlString)
-      REncoding(.json)
-      RMethod(.post)
-      Rbody(todo.toData())
-    }
-    return request
-      .compactMap {$0.data}
-      .map(MainAction.responseCreateOrUpdateTodo)
-      .eraseToEffect()
+      let request = MRequest {
+        RUrl(urlString: environment.urlString)
+        REncoding(.json)
+        RMethod(.post)
+        Rbody(todo.toData())
+      }
+      return request
+        .compactMap {$0.data}
+        .map(MainAction.responseCreateOrUpdateTodo)
+        .eraseToEffect()
     case .responseCreateOrUpdateTodo(let data):
       guard let todo = data.toModel(TodoModel.self) else {
         return .none

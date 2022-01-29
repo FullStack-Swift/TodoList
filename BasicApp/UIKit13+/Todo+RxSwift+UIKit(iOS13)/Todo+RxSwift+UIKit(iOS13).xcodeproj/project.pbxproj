@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		876AF6D227A5E1D8009A0148 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876AF6D127A5E1D8009A0148 /* BaseViewController.swift */; };
+		876AF6D427A5E211009A0148 /* BaseMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876AF6D327A5E211009A0148 /* BaseMainTableViewCell.swift */; };
 		87767A4727A5B237002659D6 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 87767A4627A5B237002659D6 /* ComposableArchitecture */; };
 		87767A4D27A5B27A002659D6 /* ConvertSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87767A4C27A5B27A002659D6 /* ConvertSwift */; };
 		87767A6E27A5B2E8002659D6 /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A4F27A5B2E8002659D6 /* TodoApp.swift */; };
@@ -25,10 +27,9 @@
 		87767A7B27A5B2E9002659D6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6127A5B2E8002659D6 /* RootViewController.swift */; };
 		87767A7C27A5B2E9002659D6 /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6227A5B2E8002659D6 /* RootState.swift */; };
 		87767A7D27A5B2E9002659D6 /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6327A5B2E8002659D6 /* RootReducer.swift */; };
-		87767A7E27A5B2E9002659D6 /* ViewTodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6627A5B2E8002659D6 /* ViewTodoModel.swift */; };
+		87767A7E27A5B2E9002659D6 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6627A5B2E8002659D6 /* TodoModel.swift */; };
 		87767A7F27A5B2E9002659D6 /* ButtonReloadMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6827A5B2E8002659D6 /* ButtonReloadMainTableViewCell.swift */; };
 		87767A8027A5B2E9002659D6 /* CreateTitleMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6927A5B2E8002659D6 /* CreateTitleMainTableViewCell.swift */; };
-		87767A8127A5B2E9002659D6 /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6A27A5B2E8002659D6 /* ActivityIndicatorViewController.swift */; };
 		87767A8227A5B2E9002659D6 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6B27A5B2E8002659D6 /* MainTableViewCell.swift */; };
 		87767A8327A5B2E9002659D6 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87767A6D27A5B2E8002659D6 /* View+.swift */; };
 		87767A8627A5B324002659D6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 87767A8527A5B324002659D6 /* RxCocoa */; };
@@ -38,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		876AF6D127A5E1D8009A0148 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		876AF6D327A5E211009A0148 /* BaseMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMainTableViewCell.swift; sourceTree = "<group>"; };
 		87767A4F27A5B2E8002659D6 /* TodoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoApp.swift; sourceTree = "<group>"; };
 		87767A5327A5B2E8002659D6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		87767A5427A5B2E8002659D6 /* MainReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainReducer.swift; sourceTree = "<group>"; };
@@ -54,10 +57,9 @@
 		87767A6127A5B2E8002659D6 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		87767A6227A5B2E8002659D6 /* RootState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootState.swift; sourceTree = "<group>"; };
 		87767A6327A5B2E8002659D6 /* RootReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootReducer.swift; sourceTree = "<group>"; };
-		87767A6627A5B2E8002659D6 /* ViewTodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTodoModel.swift; sourceTree = "<group>"; };
+		87767A6627A5B2E8002659D6 /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		87767A6827A5B2E8002659D6 /* ButtonReloadMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonReloadMainTableViewCell.swift; sourceTree = "<group>"; };
 		87767A6927A5B2E8002659D6 /* CreateTitleMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTitleMainTableViewCell.swift; sourceTree = "<group>"; };
-		87767A6A27A5B2E8002659D6 /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
 		87767A6B27A5B2E8002659D6 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		87767A6D27A5B2E8002659D6 /* View+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		87BB892927A59499000B269B /* Todo+RxSwift+UIKit(iOS13).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo+RxSwift+UIKit(iOS13).app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,17 +151,9 @@
 		87767A6427A5B2E8002659D6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				87767A6527A5B2E8002659D6 /* ViewModels */,
+				87767A6627A5B2E8002659D6 /* TodoModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		87767A6527A5B2E8002659D6 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				87767A6627A5B2E8002659D6 /* ViewTodoModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		87767A6727A5B2E8002659D6 /* Views */ = {
@@ -167,8 +161,9 @@
 			children = (
 				87767A6827A5B2E8002659D6 /* ButtonReloadMainTableViewCell.swift */,
 				87767A6927A5B2E8002659D6 /* CreateTitleMainTableViewCell.swift */,
-				87767A6A27A5B2E8002659D6 /* ActivityIndicatorViewController.swift */,
 				87767A6B27A5B2E8002659D6 /* MainTableViewCell.swift */,
+				876AF6D127A5E1D8009A0148 /* BaseViewController.swift */,
+				876AF6D327A5E211009A0148 /* BaseMainTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -308,18 +303,19 @@
 				87767A6E27A5B2E8002659D6 /* TodoApp.swift in Sources */,
 				87767A7927A5B2E9002659D6 /* RootAction.swift in Sources */,
 				87767A7A27A5B2E9002659D6 /* RootEnvironment.swift in Sources */,
+				876AF6D227A5E1D8009A0148 /* BaseViewController.swift in Sources */,
 				87767A8027A5B2E9002659D6 /* CreateTitleMainTableViewCell.swift in Sources */,
 				87767A7F27A5B2E9002659D6 /* ButtonReloadMainTableViewCell.swift in Sources */,
 				87767A7227A5B2E9002659D6 /* MainState.swift in Sources */,
 				87767A7327A5B2E9002659D6 /* MainAction.swift in Sources */,
 				87767A7627A5B2E9002659D6 /* AuthReducer.swift in Sources */,
-				87767A7E27A5B2E9002659D6 /* ViewTodoModel.swift in Sources */,
+				876AF6D427A5E211009A0148 /* BaseMainTableViewCell.swift in Sources */,
+				87767A7E27A5B2E9002659D6 /* TodoModel.swift in Sources */,
 				87767A7427A5B2E9002659D6 /* AuthViewController.swift in Sources */,
 				87767A8227A5B2E9002659D6 /* MainTableViewCell.swift in Sources */,
 				87767A7027A5B2E9002659D6 /* MainReducer.swift in Sources */,
 				87767A7527A5B2E9002659D6 /* AuthState.swift in Sources */,
 				87767A7127A5B2E9002659D6 /* MainEnvironment.swift in Sources */,
-				87767A8127A5B2E9002659D6 /* ActivityIndicatorViewController.swift in Sources */,
 				87767A7D27A5B2E9002659D6 /* RootReducer.swift in Sources */,
 				87767A8327A5B2E9002659D6 /* View+.swift in Sources */,
 				87767A7C27A5B2E9002659D6 /* RootState.swift in Sources */,

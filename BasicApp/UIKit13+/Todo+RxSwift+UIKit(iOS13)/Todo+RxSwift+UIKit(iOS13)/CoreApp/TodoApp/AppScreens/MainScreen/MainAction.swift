@@ -3,7 +3,7 @@ import Foundation
 
 enum MainAction: Equatable {
     // MARK: -  View Action
-    /// lycycle action
+    /// lifecycle action
   case viewDidLoad
   case viewWillAppear
   case viewWillDisappear
@@ -23,7 +23,7 @@ enum MainAction: Equatable {
   case resetText
     /// network Action
   case getTodo
-  case responseTodo(Data)
+  case responseGetTodo(Data)
   case createOrUpdateTodo(TodoModel)
   case responseCreateOrUpdateTodo(Data)
   case updateTodo(TodoModel)
@@ -33,3 +33,4 @@ enum MainAction: Equatable {
   // MARK: - none
   case none
 }
+

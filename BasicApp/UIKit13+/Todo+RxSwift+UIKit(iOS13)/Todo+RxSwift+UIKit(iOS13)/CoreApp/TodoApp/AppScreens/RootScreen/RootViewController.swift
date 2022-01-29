@@ -2,13 +2,11 @@ import ComposableArchitecture
 import SwiftUI
 import UIKit
 
-final class RootViewController: UIViewController {
+final class RootViewController: BaseViewController {
   
   private let store: Store<RootState, RootAction>
   
   private let viewStore: ViewStore<RootState, RootAction>
-  
-  private var disposeBag = DisposeBag()
 
   private var viewController = UIViewController() {
     willSet {
@@ -37,6 +35,7 @@ final class RootViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     viewStore.send(.viewDidLoad)
+      //bind view to viewstore
     viewStore.publisher.rootScreen.subscribe(onNext: { [weak self] screen in
       guard let self = self else {return}
       switch screen {

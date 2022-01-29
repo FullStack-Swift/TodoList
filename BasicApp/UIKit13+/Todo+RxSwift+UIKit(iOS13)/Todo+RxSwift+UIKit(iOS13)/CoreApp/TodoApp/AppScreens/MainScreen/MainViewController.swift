@@ -4,13 +4,11 @@ import UIKit
 import ConvertSwift
 import RxCocoa
 
-final class MainViewController: UIViewController {
+final class MainViewController: BaseViewController {
   
   private let store: Store<MainState, MainAction>
   
   private let viewStore: ViewStore<MainState, MainAction>
-  
-  private var disposeBag = DisposeBag()
   
   private let tableView: UITableView = UITableView()
   
@@ -28,14 +26,16 @@ final class MainViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     viewStore.send(.viewDidLoad)
-    // navigationView
+      // navigationView
     let buttonLogout = UIButton(type: .system)
     buttonLogout.setTitle("Logout", for: .normal)
     buttonLogout.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
     buttonLogout.setTitleColor(UIColor(Color.blue), for: .normal)
     let rightBarButtonItem = UIBarButtonItem(customView: buttonLogout)
-        
-    // tableView
+    navigationController?.navigationBar.prefersLargeTitles = true
+    navigationItem.largeTitleDisplayMode = .always
+    navigationItem.rightBarButtonItem = rightBarButtonItem
+      // tableView
     view.addSubview(tableView)
     tableView.register(MainTableViewCell.self)
     tableView.register(ButtonReloadMainTableViewCell.self)
@@ -45,12 +45,14 @@ final class MainViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
     tableView.translatesAutoresizingMaskIntoConstraints = false
-    tableView.frame = view.frame.insetBy(dx: 10, dy: 10)
     tableView.isUserInteractionEnabled = true
-    
-    navigationController?.navigationBar.prefersLargeTitles = true
-    navigationItem.largeTitleDisplayMode = .always
-    navigationItem.rightBarButtonItem = rightBarButtonItem
+      // contraint
+    NSLayoutConstraint.activate([
+      tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+      tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+      tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
+      tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -10)
+    ])
     
     //bind view to viewstore
     buttonLogout.rx.tap
@@ -117,7 +119,11 @@ extension MainViewController: UITableViewDataSource {
       viewStore.publisher.isLoading
         .subscribe(onNext: { value in
           cell.buttonReload.isHidden = value
-          cell.activityIndicator.isHidden = !value
+          if value {
+            cell.activityIndicator.startAnimating()
+          } else {
+            cell.activityIndicator.stopAnimating()
+          }
         })
         .disposed(by: cell.disposeBag)
       cell.buttonReload.rx.tap
@@ -132,10 +138,10 @@ extension MainViewController: UITableViewDataSource {
         .disposed(by: cell.disposeBag)
       viewStore.publisher.title.isEmpty
         .subscribe(onNext: { value in
-          cell.buttonCreate.setTitleColor(value ? UIColor(Color.gray) : UIColor(Color.green), for: .normal)
+          cell.createButton.setTitleColor(value ? UIColor(Color.gray) : UIColor(Color.green), for: .normal)
         })
         .disposed(by: cell.disposeBag)
-      cell.buttonCreate
+      cell.createButton
         .rx.tap
         .map {MainAction.viewCreateTodo}
         .bind(to: viewStore.action)

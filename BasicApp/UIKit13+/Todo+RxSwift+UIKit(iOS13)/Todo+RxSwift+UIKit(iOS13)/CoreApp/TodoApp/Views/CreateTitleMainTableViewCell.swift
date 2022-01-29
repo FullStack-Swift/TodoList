@@ -1,39 +1,35 @@
 import UIKit
 import SwiftUI
-import RxSwift
 
-class CreateTitleMainTableViewCell: UITableViewCell {
+class CreateTitleMainTableViewCell: BaseMainTableViewCell {
   
-  let buttonCreate = UIButton(type: .system)
+  let createButton = UIButton(type: .system)
   let titleTextField = UITextField()
-  
-  private(set) var disposeBag = DisposeBag()
-  
-  override func prepareForReuse() {
-    super.prepareForReuse()
-    disposeBag = DisposeBag()
-  }
   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
+    // setup
     contentView.isUserInteractionEnabled = false
-    buttonCreate.setTitle("Create", for: .normal)
-    buttonCreate.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-    buttonCreate.setTitleColor(UIColor(Color.green), for: .normal)
-    buttonCreate.translatesAutoresizingMaskIntoConstraints = false
-    
+    // createButton
+    createButton.setTitle("Create", for: .normal)
+    createButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+    createButton.setTitleColor(UIColor(Color.green), for: .normal)
+    createButton.translatesAutoresizingMaskIntoConstraints = false
+    // titleTextField
     titleTextField.placeholder = "title"
-    let rootStackView = UIStackView(arrangedSubviews: [
+    // stackView
+    let stackView = UIStackView(arrangedSubviews: [
       titleTextField,
-      buttonCreate,
+      createButton,
     ])
-    rootStackView.translatesAutoresizingMaskIntoConstraints = false
-    addSubview(rootStackView)
+    stackView.translatesAutoresizingMaskIntoConstraints = false
+    addSubview(stackView)
+    // constraint
     NSLayoutConstraint.activate([
-      rootStackView.topAnchor.constraint(equalTo: topAnchor),
-      rootStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
-      rootStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-      rootStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+      stackView.topAnchor.constraint(equalTo: topAnchor),
+      stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+      stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+      stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
     ])
   }
   
@@ -41,4 +37,5 @@ class CreateTitleMainTableViewCell: UITableViewCell {
     fatalError("init(coder:) has not been implemented")
   }
 }
+
 

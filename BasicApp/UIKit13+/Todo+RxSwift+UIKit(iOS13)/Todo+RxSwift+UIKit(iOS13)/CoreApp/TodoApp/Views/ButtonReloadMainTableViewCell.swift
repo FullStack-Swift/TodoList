@@ -1,21 +1,13 @@
 import UIKit
-import RxSwift
 
-class ButtonReloadMainTableViewCell: UITableViewCell {
+class ButtonReloadMainTableViewCell: BaseMainTableViewCell {
   
   let buttonReload = UIButton(type: .system)
-  let networkStatus = UILabel()
   let activityIndicator = UIActivityIndicatorView()
-  private(set) var disposeBag = DisposeBag()
-  
-  override func prepareForReuse() {
-    super.prepareForReuse()
-    disposeBag = DisposeBag()
-  }
   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
-    
+    // setup view
     contentView.isUserInteractionEnabled = false
     // buttonReload
     buttonReload.setTitle("Reload", for: .normal)
@@ -23,26 +15,16 @@ class ButtonReloadMainTableViewCell: UITableViewCell {
     buttonReload.setTitleColor(.black, for: .normal)
     buttonReload.translatesAutoresizingMaskIntoConstraints = false
     addSubview(buttonReload)
-    NSLayoutConstraint.activate([
-      buttonReload.centerXAnchor.constraint(equalTo: centerXAnchor),
-      buttonReload.centerYAnchor.constraint(equalTo: centerYAnchor),
-    ])
-    // networkStatus
-    networkStatus.text = ""
-    networkStatus.translatesAutoresizingMaskIntoConstraints = false
-    networkStatus.font = UIFont.boldSystemFont(ofSize: 15)
-    addSubview(networkStatus)
-    NSLayoutConstraint.activate([
-      networkStatus.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-      networkStatus.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -20)
-    ])
     // activityIndicator
-    activityIndicator.startAnimating()
+    activityIndicator.hidesWhenStopped = true
     activityIndicator.translatesAutoresizingMaskIntoConstraints = false
     addSubview(activityIndicator)
+    // constraint
     NSLayoutConstraint.activate([
       activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
       activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor),
+      buttonReload.centerXAnchor.constraint(equalTo: centerXAnchor),
+      buttonReload.centerYAnchor.constraint(equalTo: centerYAnchor),
     ])
   }
   
@@ -50,3 +32,4 @@ class ButtonReloadMainTableViewCell: UITableViewCell {
     fatalError("init(coder:) has not been implemented")
   }
 }
+

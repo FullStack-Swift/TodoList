@@ -1,12 +1,12 @@
 import UIKit
-import Combine
+import RxSwift
 
 class BaseMainTableViewCell: UITableViewCell {
   
-  var cancellables: Set<AnyCancellable> = []
+  var disposeBag = DisposeBag()
   
   override func prepareForReuse() {
     super.prepareForReuse()
-    cancellables = []
+    disposeBag = DisposeBag()
   }
 }
