@@ -2,6 +2,6 @@
 
 Examples App TodoList for Composable Architecture
 
-Technology
+Technologies
 
 Architecture + Request
