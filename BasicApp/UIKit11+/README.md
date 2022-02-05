@@ -1,6 +1,7 @@
 
 # UIKit with ComposableArchitecture (iOS11+)
 
+Disclaimer: This is a toy project! Do not use for production. Use it to learn more about Combine and The Composable Architecture and its inner workings.
 
 ## Todo Combine UIKit
 
