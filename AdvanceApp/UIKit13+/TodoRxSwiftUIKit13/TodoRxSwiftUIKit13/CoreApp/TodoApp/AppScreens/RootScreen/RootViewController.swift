@@ -68,7 +68,7 @@ final class RootViewController: UIViewController {
 struct RootViewController_Previews: PreviewProvider {
   static var previews: some View {
     let vc = RootViewController()
-    UIViewRepresented(makeUIView: { _ in vc.view })
+    vc.toSwifUIView()
   }
 }
 

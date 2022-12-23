@@ -7,86 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8714CD30299CEA3A00F5B26C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8714CD2F299CEA3A00F5B26C /* SplashView.swift */; };
+		8714CD31299CEA3A00F5B26C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8714CD2F299CEA3A00F5B26C /* SplashView.swift */; };
 		879A266127079EC900CCD1DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879A264F27079EC900CCD1DD /* Assets.xcassets */; };
 		879A266227079EC900CCD1DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879A264F27079EC900CCD1DD /* Assets.xcassets */; };
 		879A267627079F1600CCD1DD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 879A267527079F1600CCD1DD /* ComposableArchitecture */; };
 		879A267F27079F2500CCD1DD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 879A267E27079F2500CCD1DD /* ComposableArchitecture */; };
+		87A6ECDF2955800B00F31985 /* DependencyValues+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6ECDE2955800B00F31985 /* DependencyValues+.swift */; };
+		87A6ECE02955819800F31985 /* DependencyValues+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6ECDE2955800B00F31985 /* DependencyValues+.swift */; };
 		87BB878727A57FB4000B269B /* CombineRequest in Frameworks */ = {isa = PBXBuildFile; productRef = 87BB878627A57FB4000B269B /* CombineRequest */; };
 		87BB878A27A58015000B269B /* ConvertSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87BB878927A58015000B269B /* ConvertSwift */; };
 		87BB878C27A5803A000B269B /* CombineRequest in Frameworks */ = {isa = PBXBuildFile; productRef = 87BB878B27A5803A000B269B /* CombineRequest */; };
 		87BB878E27A5803A000B269B /* ConvertSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87BB878D27A5803A000B269B /* ConvertSwift */; };
 		87BB87CE27A581A8000B269B /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879227A581A8000B269B /* TodoApp.swift */; };
 		87BB87CF27A581A8000B269B /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879227A581A8000B269B /* TodoApp.swift */; };
-		87BB87D027A581A8000B269B /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879627A581A8000B269B /* MainReducer.swift */; };
-		87BB87D127A581A8000B269B /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879627A581A8000B269B /* MainReducer.swift */; };
-		87BB87D227A581A8000B269B /* MainEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879727A581A8000B269B /* MainEnvironment.swift */; };
-		87BB87D327A581A8000B269B /* MainEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879727A581A8000B269B /* MainEnvironment.swift */; };
-		87BB87D427A581A8000B269B /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879827A581A8000B269B /* MainState.swift */; };
-		87BB87D527A581A8000B269B /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879827A581A8000B269B /* MainState.swift */; };
 		87BB87D627A581A8000B269B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879927A581A8000B269B /* MainView.swift */; };
 		87BB87D727A581A8000B269B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879927A581A8000B269B /* MainView.swift */; };
-		87BB87D827A581A8000B269B /* MainAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879A27A581A8000B269B /* MainAction.swift */; };
-		87BB87D927A581A8000B269B /* MainAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879A27A581A8000B269B /* MainAction.swift */; };
-		87BB87DA27A581A8000B269B /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879C27A581A8000B269B /* CounterReducer.swift */; };
-		87BB87DB27A581A8000B269B /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879C27A581A8000B269B /* CounterReducer.swift */; };
-		87BB87DC27A581A8000B269B /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879D27A581A8000B269B /* CounterState.swift */; };
-		87BB87DD27A581A8000B269B /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879D27A581A8000B269B /* CounterState.swift */; };
 		87BB87DE27A581A8000B269B /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879E27A581A8000B269B /* CounterView.swift */; };
 		87BB87DF27A581A8000B269B /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879E27A581A8000B269B /* CounterView.swift */; };
-		87BB87E027A581A8000B269B /* CounterEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879F27A581A8000B269B /* CounterEnvironment.swift */; };
-		87BB87E127A581A8000B269B /* CounterEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB879F27A581A8000B269B /* CounterEnvironment.swift */; };
-		87BB87E227A581A8000B269B /* CounterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87A027A581A8000B269B /* CounterAction.swift */; };
-		87BB87E327A581A8000B269B /* CounterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87A027A581A8000B269B /* CounterAction.swift */; };
-		87BB87E427A581A8000B269B /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87A227A581A8000B269B /* AuthState.swift */; };
-		87BB87E527A581A8000B269B /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87A227A581A8000B269B /* AuthState.swift */; };
 		87BB87E627A581A8000B269B /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87A327A581A8000B269B /* AuthView.swift */; };
 		87BB87E727A581A8000B269B /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87A327A581A8000B269B /* AuthView.swift */; };
-		87BB87F227A581A8000B269B /* AuthReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87AA27A581A8000B269B /* AuthReducer.swift */; };
-		87BB87F327A581A8000B269B /* AuthReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87AA27A581A8000B269B /* AuthReducer.swift */; };
-		87BB87F427A581A8000B269B /* AuthAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87AB27A581A8000B269B /* AuthAction.swift */; };
-		87BB87F527A581A8000B269B /* AuthAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87AB27A581A8000B269B /* AuthAction.swift */; };
-		87BB880027A581A8000B269B /* AuthEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87B227A581A8000B269B /* AuthEnvironment.swift */; };
-		87BB880127A581A8000B269B /* AuthEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87B227A581A8000B269B /* AuthEnvironment.swift */; };
-		87BB880227A581A8000B269B /* RootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87B427A581A8000B269B /* RootAction.swift */; };
-		87BB880327A581A8000B269B /* RootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87B427A581A8000B269B /* RootAction.swift */; };
-		87BB880427A581A8000B269B /* RootEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87B527A581A8000B269B /* RootEnvironment.swift */; };
-		87BB880527A581A8000B269B /* RootEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87B527A581A8000B269B /* RootEnvironment.swift */; };
 		87BB880627A581A8000B269B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87B627A581A8000B269B /* RootView.swift */; };
 		87BB880727A581A8000B269B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87B627A581A8000B269B /* RootView.swift */; };
-		87BB880827A581A8000B269B /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87B727A581A8000B269B /* RootState.swift */; };
-		87BB880927A581A8000B269B /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87B727A581A8000B269B /* RootState.swift */; };
-		87BB880A27A581A8000B269B /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87B827A581A8000B269B /* RootReducer.swift */; };
-		87BB880B27A581A8000B269B /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87B827A581A8000B269B /* RootReducer.swift */; };
 		87BB880E27A581A8000B269B /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87BD27A581A8000B269B /* TodoModel.swift */; };
 		87BB880F27A581A8000B269B /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB87BD27A581A8000B269B /* TodoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8714CD2F299CEA3A00F5B26C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		879A264F27079EC900CCD1DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		879A265427079EC900CCD1DD /* Todo+Combine+SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo+Combine+SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		879A265A27079EC900CCD1DD /* Todo+Combine+SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo+Combine+SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		879A265C27079EC900CCD1DD /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		87A6ECDE2955800B00F31985 /* DependencyValues+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DependencyValues+.swift"; sourceTree = "<group>"; };
 		87BB879227A581A8000B269B /* TodoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoApp.swift; sourceTree = "<group>"; };
-		87BB879627A581A8000B269B /* MainReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainReducer.swift; sourceTree = "<group>"; };
-		87BB879727A581A8000B269B /* MainEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainEnvironment.swift; sourceTree = "<group>"; };
-		87BB879827A581A8000B269B /* MainState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
 		87BB879927A581A8000B269B /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		87BB879A27A581A8000B269B /* MainAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAction.swift; sourceTree = "<group>"; };
-		87BB879C27A581A8000B269B /* CounterReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
-		87BB879D27A581A8000B269B /* CounterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
 		87BB879E27A581A8000B269B /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
-		87BB879F27A581A8000B269B /* CounterEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterEnvironment.swift; sourceTree = "<group>"; };
-		87BB87A027A581A8000B269B /* CounterAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterAction.swift; sourceTree = "<group>"; };
-		87BB87A227A581A8000B269B /* AuthState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		87BB87A327A581A8000B269B /* AuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
-		87BB87AA27A581A8000B269B /* AuthReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthReducer.swift; sourceTree = "<group>"; };
-		87BB87AB27A581A8000B269B /* AuthAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAction.swift; sourceTree = "<group>"; };
-		87BB87B227A581A8000B269B /* AuthEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthEnvironment.swift; sourceTree = "<group>"; };
-		87BB87B427A581A8000B269B /* RootAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootAction.swift; sourceTree = "<group>"; };
-		87BB87B527A581A8000B269B /* RootEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootEnvironment.swift; sourceTree = "<group>"; };
 		87BB87B627A581A8000B269B /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		87BB87B727A581A8000B269B /* RootState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootState.swift; sourceTree = "<group>"; };
-		87BB87B827A581A8000B269B /* RootReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootReducer.swift; sourceTree = "<group>"; };
 		87BB87BD27A581A8000B269B /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +115,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		87A6ECDD29557FFD00F31985 /* DependencyValues+ */ = {
+			isa = PBXGroup;
+			children = (
+				87A6ECDE2955800B00F31985 /* DependencyValues+.swift */,
+			);
+			path = "DependencyValues+";
+			sourceTree = "<group>";
+		};
 		87BB878F27A581A8000B269B /* CoreApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +135,7 @@
 		87BB879327A581A8000B269B /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				87A6ECDD29557FFD00F31985 /* DependencyValues+ */,
 				87BB879427A581A8000B269B /* AppScreens */,
 				87BB87BB27A581A8000B269B /* Models */,
 			);
@@ -178,60 +145,13 @@
 		87BB879427A581A8000B269B /* AppScreens */ = {
 			isa = PBXGroup;
 			children = (
-				87BB879527A581A8000B269B /* MainScreen */,
-				87BB879B27A581A8000B269B /* CounterScreen */,
-				87BB87A127A581A8000B269B /* AuthScreen */,
-				87BB87B327A581A8000B269B /* RootScreen */,
+				87BB87B627A581A8000B269B /* RootView.swift */,
+				87BB879927A581A8000B269B /* MainView.swift */,
+				87BB87A327A581A8000B269B /* AuthView.swift */,
+				87BB879E27A581A8000B269B /* CounterView.swift */,
+				8714CD2F299CEA3A00F5B26C /* SplashView.swift */,
 			);
 			path = AppScreens;
-			sourceTree = "<group>";
-		};
-		87BB879527A581A8000B269B /* MainScreen */ = {
-			isa = PBXGroup;
-			children = (
-				87BB879927A581A8000B269B /* MainView.swift */,
-				87BB879827A581A8000B269B /* MainState.swift */,
-				87BB879A27A581A8000B269B /* MainAction.swift */,
-				87BB879727A581A8000B269B /* MainEnvironment.swift */,
-				87BB879627A581A8000B269B /* MainReducer.swift */,
-			);
-			path = MainScreen;
-			sourceTree = "<group>";
-		};
-		87BB879B27A581A8000B269B /* CounterScreen */ = {
-			isa = PBXGroup;
-			children = (
-				87BB879E27A581A8000B269B /* CounterView.swift */,
-				87BB879D27A581A8000B269B /* CounterState.swift */,
-				87BB87A027A581A8000B269B /* CounterAction.swift */,
-				87BB879F27A581A8000B269B /* CounterEnvironment.swift */,
-				87BB879C27A581A8000B269B /* CounterReducer.swift */,
-			);
-			path = CounterScreen;
-			sourceTree = "<group>";
-		};
-		87BB87A127A581A8000B269B /* AuthScreen */ = {
-			isa = PBXGroup;
-			children = (
-				87BB87A327A581A8000B269B /* AuthView.swift */,
-				87BB87A227A581A8000B269B /* AuthState.swift */,
-				87BB87AB27A581A8000B269B /* AuthAction.swift */,
-				87BB87B227A581A8000B269B /* AuthEnvironment.swift */,
-				87BB87AA27A581A8000B269B /* AuthReducer.swift */,
-			);
-			path = AuthScreen;
-			sourceTree = "<group>";
-		};
-		87BB87B327A581A8000B269B /* RootScreen */ = {
-			isa = PBXGroup;
-			children = (
-				87BB87B627A581A8000B269B /* RootView.swift */,
-				87BB87B727A581A8000B269B /* RootState.swift */,
-				87BB87B427A581A8000B269B /* RootAction.swift */,
-				87BB87B527A581A8000B269B /* RootEnvironment.swift */,
-				87BB87B827A581A8000B269B /* RootReducer.swift */,
-			);
-			path = RootScreen;
 			sourceTree = "<group>";
 		};
 		87BB87BB27A581A8000B269B /* Models */ = {
@@ -356,25 +276,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				87BB87E627A581A8000B269B /* AuthView.swift in Sources */,
-				87BB87F427A581A8000B269B /* AuthAction.swift in Sources */,
-				87BB87E227A581A8000B269B /* CounterAction.swift in Sources */,
-				87BB87DC27A581A8000B269B /* CounterState.swift in Sources */,
+				8714CD30299CEA3A00F5B26C /* SplashView.swift in Sources */,
 				87BB880E27A581A8000B269B /* TodoModel.swift in Sources */,
-				87BB880227A581A8000B269B /* RootAction.swift in Sources */,
-				87BB87E027A581A8000B269B /* CounterEnvironment.swift in Sources */,
-				87BB87DA27A581A8000B269B /* CounterReducer.swift in Sources */,
 				87BB87D627A581A8000B269B /* MainView.swift in Sources */,
-				87BB87D827A581A8000B269B /* MainAction.swift in Sources */,
+				87A6ECDF2955800B00F31985 /* DependencyValues+.swift in Sources */,
 				87BB880627A581A8000B269B /* RootView.swift in Sources */,
-				87BB87D427A581A8000B269B /* MainState.swift in Sources */,
-				87BB880427A581A8000B269B /* RootEnvironment.swift in Sources */,
-				87BB87D027A581A8000B269B /* MainReducer.swift in Sources */,
-				87BB880027A581A8000B269B /* AuthEnvironment.swift in Sources */,
-				87BB87D227A581A8000B269B /* MainEnvironment.swift in Sources */,
-				87BB87E427A581A8000B269B /* AuthState.swift in Sources */,
-				87BB87F227A581A8000B269B /* AuthReducer.swift in Sources */,
-				87BB880827A581A8000B269B /* RootState.swift in Sources */,
-				87BB880A27A581A8000B269B /* RootReducer.swift in Sources */,
 				87BB87CE27A581A8000B269B /* TodoApp.swift in Sources */,
 				87BB87DE27A581A8000B269B /* CounterView.swift in Sources */,
 			);
@@ -385,25 +291,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				87BB87E727A581A8000B269B /* AuthView.swift in Sources */,
-				87BB87F527A581A8000B269B /* AuthAction.swift in Sources */,
-				87BB87E327A581A8000B269B /* CounterAction.swift in Sources */,
-				87BB87DD27A581A8000B269B /* CounterState.swift in Sources */,
+				8714CD31299CEA3A00F5B26C /* SplashView.swift in Sources */,
 				87BB880F27A581A8000B269B /* TodoModel.swift in Sources */,
-				87BB880327A581A8000B269B /* RootAction.swift in Sources */,
-				87BB87E127A581A8000B269B /* CounterEnvironment.swift in Sources */,
-				87BB87DB27A581A8000B269B /* CounterReducer.swift in Sources */,
 				87BB87D727A581A8000B269B /* MainView.swift in Sources */,
-				87BB87D927A581A8000B269B /* MainAction.swift in Sources */,
+				87A6ECE02955819800F31985 /* DependencyValues+.swift in Sources */,
 				87BB880727A581A8000B269B /* RootView.swift in Sources */,
-				87BB87D527A581A8000B269B /* MainState.swift in Sources */,
-				87BB880527A581A8000B269B /* RootEnvironment.swift in Sources */,
-				87BB87D127A581A8000B269B /* MainReducer.swift in Sources */,
-				87BB880127A581A8000B269B /* AuthEnvironment.swift in Sources */,
-				87BB87D327A581A8000B269B /* MainEnvironment.swift in Sources */,
-				87BB87E527A581A8000B269B /* AuthState.swift in Sources */,
-				87BB87F327A581A8000B269B /* AuthReducer.swift in Sources */,
-				87BB880927A581A8000B269B /* RootState.swift in Sources */,
-				87BB880B27A581A8000B269B /* RootReducer.swift in Sources */,
 				87BB87CF27A581A8000B269B /* TodoApp.swift in Sources */,
 				87BB87DF27A581A8000B269B /* CounterView.swift in Sources */,
 			);
@@ -463,6 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -516,6 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -528,6 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2H5PN3F9B6;
@@ -538,7 +433,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -546,6 +441,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "mike.fullstackswift.Todo-Combine-SwiftUI";
 				PRODUCT_NAME = "Todo+Combine+SwiftUI";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -558,6 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2H5PN3F9B6;
@@ -568,7 +465,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -576,6 +473,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "mike.fullstackswift.Todo-Combine-SwiftUI";
 				PRODUCT_NAME = "Todo+Combine+SwiftUI";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

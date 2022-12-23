@@ -3,7 +3,7 @@ import SwiftUI
 
 extension UITableViewCell {
   static var withIdentifier: String {
-    return String(describing: Self.self)
+    String(describing: Self.self)
   }
 }
 
@@ -34,7 +34,23 @@ public struct UIViewRepresented<UIViewType>: UIViewRepresentable where UIViewTyp
   }
 }
 
-class TextField: UITextField {
+extension UIView {
+  func toSwifUIView() -> UIViewRepresented<UIView> {
+    UIViewRepresented(
+      makeUIView: { _ in self }
+    )
+  }
+}
+
+extension UIViewController {
+  func toSwifUIView() -> UIViewRepresented<UIView> {
+    UIViewRepresented(
+      makeUIView: { _ in self.view }
+    )
+  }
+}
+
+open class PaddingTextField: UITextField {
   
   let padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
   

@@ -83,7 +83,7 @@ final class CounterViewController: UIViewController {
 struct CounterViewController_Previews: PreviewProvider {
   static var previews: some View {
     let vc = CounterViewController()
-    UIViewRepresented(makeUIView: { _ in vc.view })
+    vc.toSwifUIView()
   }
 }
 

@@ -34,11 +34,11 @@ final class RegisterViewController: UIViewController {
     titleRegister.textAlignment = .left
     titleRegister.translatesAutoresizingMaskIntoConstraints = false
       // emailTextField
-    let emailTextField = TextField()
+    let emailTextField = PaddingTextField()
     emailTextField.placeholder = "email"
     emailTextField.backgroundColor = UIColor(Color.gray.opacity(0.1))
       // passwordTextField
-    let passwordTextField = TextField()
+    let passwordTextField = PaddingTextField()
     passwordTextField.isSecureTextEntry = true
     passwordTextField.placeholder = "password"
     passwordTextField.backgroundColor = UIColor(Color.gray.opacity(0.1))
@@ -110,7 +110,7 @@ final class RegisterViewController: UIViewController {
 struct RegisterViewController_Previews: PreviewProvider {
   static var previews: some View {
     let vc = RegisterViewController()
-    UIViewRepresented(makeUIView: { _ in vc.view })
+    vc.toSwifUIView()
   }
 }
 
