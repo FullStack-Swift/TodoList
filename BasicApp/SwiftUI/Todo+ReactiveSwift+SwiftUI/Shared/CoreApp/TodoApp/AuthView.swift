@@ -1,7 +1,7 @@
 import ComposableArchitecture
 import SwiftUI
 
-struct Auth: ReducerProtocol {
+struct Auth: Reducer {
   
   // MARK: State
   struct State: Equatable {
@@ -14,21 +14,21 @@ struct Auth: ReducerProtocol {
     case viewOnDisappear
     case none
     case login
-    case changeRootScreen(RootScreen)
+    case changeRootScreen(Root.RootScreen)
   }
   
   // MARK: Reducer
-  var body: some ReducerProtocolOf<Self> {
+  var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
-      case .viewOnAppear:
-        break
-      case .viewOnDisappear:
-        break
-      case .login:
-        return EffectTask(value: .changeRootScreen(.main))
-      default:
-        break
+        case .viewOnAppear:
+          break
+        case .viewOnDisappear:
+          break
+        case .login:
+          return .send(.changeRootScreen(.main))
+        default:
+          break
       }
       return .none
     }
@@ -44,12 +44,11 @@ struct AuthView: View {
   private var viewStore: ViewStoreOf<Auth>
   
   init(store: StoreOf<Auth>? = nil) {
-    let unwrapStore = store ?? Store(
-      initialState: Auth.State(),
-      reducer: Auth()
-    )
+    let unwrapStore = store ?? Store(initialState: Auth.State()) {
+      Auth()
+    }
     self.store = unwrapStore
-    self.viewStore = ViewStore(unwrapStore)
+    self.viewStore = ViewStore(unwrapStore, observe: {$0})
   }
   
   var body: some View {
@@ -67,8 +66,6 @@ struct AuthView: View {
   }
 }
 
-struct AuthView_Previews: PreviewProvider {
-  static var previews: some View {
-    AuthView()
-  }
+#Preview {
+  AuthView()
 }

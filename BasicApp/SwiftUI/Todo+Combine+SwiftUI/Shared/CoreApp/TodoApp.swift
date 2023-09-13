@@ -1,6 +1,5 @@
 import SwiftUI
 
-@available(iOS 14.0, *)
 @main
 struct TodoApp: App {
   var body: some Scene {
@@ -9,3 +8,11 @@ struct TodoApp: App {
     }
   }
 }
+
+public extension DependencyValues {
+  var urlString: String {
+    "http://127.0.0.1:8080"
+  }
+}
+
+public var isUsingPublisher: Bool = true
