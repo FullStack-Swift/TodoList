@@ -1,7 +1,6 @@
 import UIKit
-import SwiftUI
 
-class CreateTitleMainTableViewCell: BaseMainTableViewCell {
+class CreateTitleMainTableViewCell: BaseTableViewCell {
   
   let createButton = UIButton(type: .system)
   let titleTextField = UITextField()
@@ -13,7 +12,7 @@ class CreateTitleMainTableViewCell: BaseMainTableViewCell {
     // createButton
     createButton.setTitle("Create", for: .normal)
     createButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-    createButton.setTitleColor(UIColor(Color.green), for: .normal)
+    createButton.setTitleColor(UIColor.green, for: .normal)
     createButton.translatesAutoresizingMaskIntoConstraints = false
     // titleTextField
     titleTextField.placeholder = "title"

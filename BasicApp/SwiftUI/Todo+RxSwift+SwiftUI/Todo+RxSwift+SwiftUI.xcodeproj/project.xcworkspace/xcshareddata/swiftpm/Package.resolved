@@ -24,7 +24,7 @@
       "location" : "https://github.com/FullStack-Swift/Networking",
       "state" : {
         "branch" : "main",
-        "revision" : "481eac1d78c7c8d8111788b4fdccc27ceabe5138"
+        "revision" : "23e446cfffd8a5f554fd564fc7568eeaa85843e4"
       }
     },
     {
@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ReactiveCocoa/ReactiveSwift.git",
       "state" : {
-        "revision" : "efb2f0a6f6c8739cce8fb14148a5bd3c83f2f91d",
-        "version" : "7.0.0"
+        "revision" : "40c465af19b993344e84355c00669ba2022ca3cd",
+        "version" : "7.1.1"
       }
     },
     {
@@ -51,7 +51,7 @@
       "location" : "https://github.com/FullStack-Swift/rxswift-composable-architecture",
       "state" : {
         "branch" : "main",
-        "revision" : "66960c573c70ae1ebf52772db8e2d7c85231d326"
+        "revision" : "61fe1aba2012b6a35c9cce6fc7924767873a231b"
       }
     },
     {
@@ -59,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/socketio/socket.io-client-swift",
       "state" : {
-        "revision" : "af5ce97b755d964235348d96f6db5cbdcbe334a5",
-        "version" : "16.0.1"
+        "revision" : "175da8b5156f6b132436f0676cc84c2f6a766b6e",
+        "version" : "16.1.0"
       }
     },
     {
@@ -68,8 +68,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/daltoniam/Starscream.git",
       "state" : {
-        "revision" : "df8d82047f6654d8e4b655d1b1525c64e1059d21",
-        "version" : "4.0.4"
+        "revision" : "ac6c0fc9da221873e01bd1a0d4818498a71eef33",
+        "version" : "4.0.6"
       }
     },
     {
@@ -104,8 +104,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-collections",
       "state" : {
-        "revision" : "937e904258d22af6e447a0b72c0bc67583ef64a2",
-        "version" : "1.0.4"
+        "revision" : "a902f1823a7ff3c9ab2fba0f992396b948eda307",
+        "version" : "1.0.5"
       }
     },
     {
@@ -122,8 +122,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-custom-dump",
       "state" : {
-        "revision" : "edd66cace818e1b1c6f1b3349bb1d8e00d6f8b01",
-        "version" : "1.0.0"
+        "revision" : "3efbfba0e4e56c7187cc19137ee16b7c95346b79",
+        "version" : "1.1.0"
       }
     },
     {
@@ -142,6 +142,24 @@
       "state" : {
         "revision" : "d1e45f3e1eee2c9193f5369fa9d70a6ddad635e8",
         "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swift-json",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FullStack-Swift/swift-json",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ac54806fd7e10587755ac5cfd802ae15ef6907d4"
+      }
+    },
+    {
+      "identity" : "swift-logger",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FullStack-Swift/swift-logger",
+      "state" : {
+        "branch" : "main",
+        "revision" : "12fda88a83ce0c373381e6eaa5db1c27b4dc2eaa"
       }
     },
     {

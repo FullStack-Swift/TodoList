@@ -9,20 +9,8 @@
 /* Begin PBXBuildFile section */
 		87320BDA27A5AD2100360667 /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BBB27A5AD2100360667 /* TodoApp.swift */; };
 		87320BDB27A5AD2100360667 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BBF27A5AD2100360667 /* MainViewController.swift */; };
-		87320BDC27A5AD2100360667 /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC027A5AD2100360667 /* MainReducer.swift */; };
-		87320BDD27A5AD2100360667 /* MainEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC127A5AD2100360667 /* MainEnvironment.swift */; };
-		87320BDE27A5AD2100360667 /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC227A5AD2100360667 /* MainState.swift */; };
-		87320BDF27A5AD2100360667 /* MainAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC327A5AD2100360667 /* MainAction.swift */; };
 		87320BE027A5AD2100360667 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC527A5AD2100360667 /* AuthViewController.swift */; };
-		87320BE127A5AD2100360667 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC627A5AD2100360667 /* AuthState.swift */; };
-		87320BE227A5AD2100360667 /* AuthReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC727A5AD2100360667 /* AuthReducer.swift */; };
-		87320BE327A5AD2100360667 /* AuthAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC827A5AD2100360667 /* AuthAction.swift */; };
-		87320BE427A5AD2100360667 /* AuthEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BC927A5AD2100360667 /* AuthEnvironment.swift */; };
-		87320BE527A5AD2100360667 /* RootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BCB27A5AD2100360667 /* RootAction.swift */; };
-		87320BE627A5AD2100360667 /* RootEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BCC27A5AD2100360667 /* RootEnvironment.swift */; };
 		87320BE727A5AD2100360667 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BCD27A5AD2100360667 /* RootViewController.swift */; };
-		87320BE827A5AD2100360667 /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BCE27A5AD2100360667 /* RootState.swift */; };
-		87320BE927A5AD2100360667 /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BCF27A5AD2100360667 /* RootReducer.swift */; };
 		87320BEA27A5AD2100360667 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BD227A5AD2100360667 /* TodoModel.swift */; };
 		87320BEB27A5AD2100360667 /* ButtonReloadMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BD427A5AD2100360667 /* ButtonReloadMainTableViewCell.swift */; };
 		87320BEC27A5AD2100360667 /* CreateTitleMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BD527A5AD2100360667 /* CreateTitleMainTableViewCell.swift */; };
@@ -30,38 +18,28 @@
 		87320BEF27A5AD2100360667 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320BD927A5AD2100360667 /* View+.swift */; };
 		87320BF227A5AD6800360667 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 87320BF127A5AD6800360667 /* ComposableArchitecture */; };
 		87320BF527A5AD8500360667 /* ReactiveSwiftRequest in Frameworks */ = {isa = PBXBuildFile; productRef = 87320BF427A5AD8500360667 /* ReactiveSwiftRequest */; };
-		87320BF827A5ADA200360667 /* ConvertSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87320BF727A5ADA200360667 /* ConvertSwift */; };
 		87320BFB27A5ADE100360667 /* ReactiveCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 87320BFA27A5ADE100360667 /* ReactiveCocoa */; };
 		876AF6CE27A5DCE6009A0148 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876AF6CD27A5DCE6009A0148 /* BaseViewController.swift */; };
-		876AF6D027A5DD1B009A0148 /* BaseMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876AF6CF27A5DD1B009A0148 /* BaseMainTableViewCell.swift */; };
+		876AF6D027A5DD1B009A0148 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876AF6CF27A5DD1B009A0148 /* BaseTableViewCell.swift */; };
 		87BB88FD27A59475000B269B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB88FC27A59475000B269B /* Assets.xcassets */; };
 		87BB890027A59475000B269B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB88FF27A59475000B269B /* Preview Assets.xcassets */; };
+		EBA4699F2ACFAE7B0060376F /* SwiftLogger in Frameworks */ = {isa = PBXBuildFile; productRef = EBA4699E2ACFAE7B0060376F /* SwiftLogger */; };
+		EBA469A22ACFAE950060376F /* Json in Frameworks */ = {isa = PBXBuildFile; productRef = EBA469A12ACFAE950060376F /* Json */; };
+		EBA469A62ACFAF980060376F /* Transform in Frameworks */ = {isa = PBXBuildFile; productRef = EBA469A52ACFAF980060376F /* Transform */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		87320BBB27A5AD2100360667 /* TodoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoApp.swift; sourceTree = "<group>"; };
 		87320BBF27A5AD2100360667 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		87320BC027A5AD2100360667 /* MainReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainReducer.swift; sourceTree = "<group>"; };
-		87320BC127A5AD2100360667 /* MainEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainEnvironment.swift; sourceTree = "<group>"; };
-		87320BC227A5AD2100360667 /* MainState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
-		87320BC327A5AD2100360667 /* MainAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAction.swift; sourceTree = "<group>"; };
 		87320BC527A5AD2100360667 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		87320BC627A5AD2100360667 /* AuthState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
-		87320BC727A5AD2100360667 /* AuthReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthReducer.swift; sourceTree = "<group>"; };
-		87320BC827A5AD2100360667 /* AuthAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAction.swift; sourceTree = "<group>"; };
-		87320BC927A5AD2100360667 /* AuthEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthEnvironment.swift; sourceTree = "<group>"; };
-		87320BCB27A5AD2100360667 /* RootAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootAction.swift; sourceTree = "<group>"; };
-		87320BCC27A5AD2100360667 /* RootEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootEnvironment.swift; sourceTree = "<group>"; };
 		87320BCD27A5AD2100360667 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		87320BCE27A5AD2100360667 /* RootState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootState.swift; sourceTree = "<group>"; };
-		87320BCF27A5AD2100360667 /* RootReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootReducer.swift; sourceTree = "<group>"; };
 		87320BD227A5AD2100360667 /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		87320BD427A5AD2100360667 /* ButtonReloadMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonReloadMainTableViewCell.swift; sourceTree = "<group>"; };
 		87320BD527A5AD2100360667 /* CreateTitleMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTitleMainTableViewCell.swift; sourceTree = "<group>"; };
 		87320BD727A5AD2100360667 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		87320BD927A5AD2100360667 /* View+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		876AF6CD27A5DCE6009A0148 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		876AF6CF27A5DD1B009A0148 /* BaseMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMainTableViewCell.swift; sourceTree = "<group>"; };
+		876AF6CF27A5DD1B009A0148 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		87BB88F527A59474000B269B /* Todo+ReactiveSwift+UIKit(iOS13).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo+ReactiveSwift+UIKit(iOS13).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BB88FC27A59475000B269B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87BB88FF27A59475000B269B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -74,8 +52,10 @@
 			files = (
 				87320BF227A5AD6800360667 /* ComposableArchitecture in Frameworks */,
 				87320BFB27A5ADE100360667 /* ReactiveCocoa in Frameworks */,
+				EBA469A22ACFAE950060376F /* Json in Frameworks */,
+				EBA469A62ACFAF980060376F /* Transform in Frameworks */,
+				EBA4699F2ACFAE7B0060376F /* SwiftLogger in Frameworks */,
 				87320BF527A5AD8500360667 /* ReactiveSwiftRequest in Frameworks */,
-				87320BF827A5ADA200360667 /* ConvertSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,58 +74,23 @@
 		87320BBC27A5AD2100360667 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
-				87320BBD27A5AD2100360667 /* AppScreens */,
+				EBA469A32ACFAEC10060376F /* Bases */,
+				87320BBD27A5AD2100360667 /* ViewControllers */,
 				87320BD027A5AD2100360667 /* Models */,
 				87320BD327A5AD2100360667 /* Views */,
-				87320BD827A5AD2100360667 /* View+ */,
+				87320BD827A5AD2100360667 /* ViewExt */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
 		};
-		87320BBD27A5AD2100360667 /* AppScreens */ = {
-			isa = PBXGroup;
-			children = (
-				87320BBE27A5AD2100360667 /* MainScreen */,
-				87320BC427A5AD2100360667 /* AuthScreen */,
-				87320BCA27A5AD2100360667 /* RootScreen */,
-			);
-			path = AppScreens;
-			sourceTree = "<group>";
-		};
-		87320BBE27A5AD2100360667 /* MainScreen */ = {
-			isa = PBXGroup;
-			children = (
-				87320BBF27A5AD2100360667 /* MainViewController.swift */,
-				87320BC227A5AD2100360667 /* MainState.swift */,
-				87320BC327A5AD2100360667 /* MainAction.swift */,
-				87320BC127A5AD2100360667 /* MainEnvironment.swift */,
-				87320BC027A5AD2100360667 /* MainReducer.swift */,
-			);
-			path = MainScreen;
-			sourceTree = "<group>";
-		};
-		87320BC427A5AD2100360667 /* AuthScreen */ = {
+		87320BBD27A5AD2100360667 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				87320BC527A5AD2100360667 /* AuthViewController.swift */,
-				87320BC627A5AD2100360667 /* AuthState.swift */,
-				87320BC827A5AD2100360667 /* AuthAction.swift */,
-				87320BC927A5AD2100360667 /* AuthEnvironment.swift */,
-				87320BC727A5AD2100360667 /* AuthReducer.swift */,
-			);
-			path = AuthScreen;
-			sourceTree = "<group>";
-		};
-		87320BCA27A5AD2100360667 /* RootScreen */ = {
-			isa = PBXGroup;
-			children = (
 				87320BCD27A5AD2100360667 /* RootViewController.swift */,
-				87320BCE27A5AD2100360667 /* RootState.swift */,
-				87320BCB27A5AD2100360667 /* RootAction.swift */,
-				87320BCC27A5AD2100360667 /* RootEnvironment.swift */,
-				87320BCF27A5AD2100360667 /* RootReducer.swift */,
+				87320BBF27A5AD2100360667 /* MainViewController.swift */,
 			);
-			path = RootScreen;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		87320BD027A5AD2100360667 /* Models */ = {
@@ -162,18 +107,16 @@
 				87320BD427A5AD2100360667 /* ButtonReloadMainTableViewCell.swift */,
 				87320BD527A5AD2100360667 /* CreateTitleMainTableViewCell.swift */,
 				87320BD727A5AD2100360667 /* MainTableViewCell.swift */,
-				876AF6CD27A5DCE6009A0148 /* BaseViewController.swift */,
-				876AF6CF27A5DD1B009A0148 /* BaseMainTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		87320BD827A5AD2100360667 /* View+ */ = {
+		87320BD827A5AD2100360667 /* ViewExt */ = {
 			isa = PBXGroup;
 			children = (
 				87320BD927A5AD2100360667 /* View+.swift */,
 			);
-			path = "View+";
+			path = ViewExt;
 			sourceTree = "<group>";
 		};
 		87BB88EC27A59474000B269B = {
@@ -181,6 +124,7 @@
 			children = (
 				87BB88F727A59474000B269B /* Todo+ReactiveSwift+UIKit(iOS13) */,
 				87BB88F627A59474000B269B /* Products */,
+				EBA469A42ACFAF980060376F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,6 +154,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EBA469A32ACFAEC10060376F /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				876AF6CD27A5DCE6009A0148 /* BaseViewController.swift */,
+				876AF6CF27A5DD1B009A0148 /* BaseTableViewCell.swift */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
+		EBA469A42ACFAF980060376F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -229,8 +189,10 @@
 			packageProductDependencies = (
 				87320BF127A5AD6800360667 /* ComposableArchitecture */,
 				87320BF427A5AD8500360667 /* ReactiveSwiftRequest */,
-				87320BF727A5ADA200360667 /* ConvertSwift */,
 				87320BFA27A5ADE100360667 /* ReactiveCocoa */,
+				EBA4699E2ACFAE7B0060376F /* SwiftLogger */,
+				EBA469A12ACFAE950060376F /* Json */,
+				EBA469A52ACFAF980060376F /* Transform */,
 			);
 			productName = "Todo+ReactiveSwift+UIKit(iOS13)";
 			productReference = 87BB88F527A59474000B269B /* Todo+ReactiveSwift+UIKit(iOS13).app */;
@@ -265,6 +227,8 @@
 				87320BF327A5AD8500360667 /* XCRemoteSwiftPackageReference "Networking" */,
 				87320BF627A5ADA200360667 /* XCRemoteSwiftPackageReference "SwiftExtension" */,
 				87320BF927A5ADE100360667 /* XCRemoteSwiftPackageReference "ReactiveCocoa" */,
+				EBA4699D2ACFAE7B0060376F /* XCRemoteSwiftPackageReference "swift-logger" */,
+				EBA469A02ACFAE950060376F /* XCRemoteSwiftPackageReference "swift-json" */,
 			);
 			productRefGroup = 87BB88F627A59474000B269B /* Products */;
 			projectDirPath = "";
@@ -293,28 +257,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				87320BDA27A5AD2100360667 /* TodoApp.swift in Sources */,
-				87320BE527A5AD2100360667 /* RootAction.swift in Sources */,
-				87320BE627A5AD2100360667 /* RootEnvironment.swift in Sources */,
 				876AF6CE27A5DCE6009A0148 /* BaseViewController.swift in Sources */,
 				87320BEC27A5AD2100360667 /* CreateTitleMainTableViewCell.swift in Sources */,
 				87320BEB27A5AD2100360667 /* ButtonReloadMainTableViewCell.swift in Sources */,
-				87320BDE27A5AD2100360667 /* MainState.swift in Sources */,
-				87320BDF27A5AD2100360667 /* MainAction.swift in Sources */,
-				87320BE227A5AD2100360667 /* AuthReducer.swift in Sources */,
-				876AF6D027A5DD1B009A0148 /* BaseMainTableViewCell.swift in Sources */,
+				876AF6D027A5DD1B009A0148 /* BaseTableViewCell.swift in Sources */,
 				87320BEA27A5AD2100360667 /* TodoModel.swift in Sources */,
 				87320BE027A5AD2100360667 /* AuthViewController.swift in Sources */,
 				87320BEE27A5AD2100360667 /* MainTableViewCell.swift in Sources */,
-				87320BDC27A5AD2100360667 /* MainReducer.swift in Sources */,
-				87320BE127A5AD2100360667 /* AuthState.swift in Sources */,
-				87320BDD27A5AD2100360667 /* MainEnvironment.swift in Sources */,
-				87320BE927A5AD2100360667 /* RootReducer.swift in Sources */,
 				87320BEF27A5AD2100360667 /* View+.swift in Sources */,
-				87320BE827A5AD2100360667 /* RootState.swift in Sources */,
 				87320BE727A5AD2100360667 /* RootViewController.swift in Sources */,
 				87320BDB27A5AD2100360667 /* MainViewController.swift in Sources */,
-				87320BE427A5AD2100360667 /* AuthEnvironment.swift in Sources */,
-				87320BE327A5AD2100360667 /* AuthAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,24 +475,24 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FullStack-Swift/reactiveswift-composable-architecture";
 			requirement = {
-				kind = exactVersion;
-				version = 1.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 		87320BF327A5AD8500360667 /* XCRemoteSwiftPackageReference "Networking" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FullStack-Swift/Networking";
 			requirement = {
-				kind = exactVersion;
-				version = 1.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 		87320BF627A5ADA200360667 /* XCRemoteSwiftPackageReference "SwiftExtension" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FullStack-Swift/SwiftExtension";
 			requirement = {
-				kind = exactVersion;
-				version = 1.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 		87320BF927A5ADE100360667 /* XCRemoteSwiftPackageReference "ReactiveCocoa" */ = {
@@ -549,6 +501,22 @@
 			requirement = {
 				kind = exactVersion;
 				version = 12.0.0;
+			};
+		};
+		EBA4699D2ACFAE7B0060376F /* XCRemoteSwiftPackageReference "swift-logger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FullStack-Swift/swift-logger";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		EBA469A02ACFAE950060376F /* XCRemoteSwiftPackageReference "swift-json" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FullStack-Swift/swift-json";
+			requirement = {
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -564,15 +532,25 @@
 			package = 87320BF327A5AD8500360667 /* XCRemoteSwiftPackageReference "Networking" */;
 			productName = ReactiveSwiftRequest;
 		};
-		87320BF727A5ADA200360667 /* ConvertSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 87320BF627A5ADA200360667 /* XCRemoteSwiftPackageReference "SwiftExtension" */;
-			productName = ConvertSwift;
-		};
 		87320BFA27A5ADE100360667 /* ReactiveCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 87320BF927A5ADE100360667 /* XCRemoteSwiftPackageReference "ReactiveCocoa" */;
 			productName = ReactiveCocoa;
+		};
+		EBA4699E2ACFAE7B0060376F /* SwiftLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBA4699D2ACFAE7B0060376F /* XCRemoteSwiftPackageReference "swift-logger" */;
+			productName = SwiftLogger;
+		};
+		EBA469A12ACFAE950060376F /* Json */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBA469A02ACFAE950060376F /* XCRemoteSwiftPackageReference "swift-json" */;
+			productName = Json;
+		};
+		EBA469A52ACFAF980060376F /* Transform */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87320BF627A5ADA200360667 /* XCRemoteSwiftPackageReference "SwiftExtension" */;
+			productName = Transform;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

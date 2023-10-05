@@ -1,6 +1,6 @@
 import UIKit
 
-class ButtonReloadMainTableViewCell: BaseMainTableViewCell {
+class ButtonReloadMainTableViewCell: BaseTableViewCell {
   
   let buttonReload = UIButton(type: .system)
   let activityIndicator = UIActivityIndicatorView()

@@ -1,7 +1,7 @@
 import UIKit
 import SwiftUI
 
-class CreateTitleMainTableViewCell: BaseMainTableViewCell {
+class CreateTitleMainTableViewCell: BaseTableViewCell {
   
   let createButton = UIButton(type: .system)
   let titleTextField = UITextField()

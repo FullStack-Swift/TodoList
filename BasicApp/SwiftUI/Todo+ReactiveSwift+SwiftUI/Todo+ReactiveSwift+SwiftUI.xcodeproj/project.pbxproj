@@ -8,33 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		879A26CF2707A01A00CCD1DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879A26BD2707A01A00CCD1DD /* Assets.xcassets */; };
-		879A26D02707A01A00CCD1DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879A26BD2707A01A00CCD1DD /* Assets.xcassets */; };
 		87BB883E27A588AE000B269B /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB882127A588AE000B269B /* TodoApp.swift */; };
-		87BB883F27A588AE000B269B /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB882127A588AE000B269B /* TodoApp.swift */; };
 		87BB884627A588AE000B269B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB882827A588AE000B269B /* MainView.swift */; };
-		87BB884727A588AE000B269B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB882827A588AE000B269B /* MainView.swift */; };
 		87BB884E27A588AE000B269B /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB882D27A588AE000B269B /* CounterView.swift */; };
-		87BB884F27A588AE000B269B /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB882D27A588AE000B269B /* CounterView.swift */; };
 		87BB885627A588AE000B269B /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB883227A588AE000B269B /* AuthView.swift */; };
-		87BB885727A588AE000B269B /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB883227A588AE000B269B /* AuthView.swift */; };
 		87BB886227A588AE000B269B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB883927A588AE000B269B /* RootView.swift */; };
-		87BB886327A588AE000B269B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB883927A588AE000B269B /* RootView.swift */; };
 		87BB886827A588AE000B269B /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB883D27A588AE000B269B /* TodoModel.swift */; };
-		87BB886927A588AE000B269B /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB883D27A588AE000B269B /* TodoModel.swift */; };
 		87BB886C27A58910000B269B /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 87BB886B27A58910000B269B /* ComposableArchitecture */; };
-		87BB887427A58A30000B269B /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 87BB887327A58A30000B269B /* ComposableArchitecture */; };
 		EB5C216D2AB1AFDB004F53C7 /* ReactiveSwiftRequest in Frameworks */ = {isa = PBXBuildFile; productRef = EB5C216C2AB1AFDB004F53C7 /* ReactiveSwiftRequest */; };
 		EB5C216F2AB1AFDB004F53C7 /* Transform in Frameworks */ = {isa = PBXBuildFile; productRef = EB5C216E2AB1AFDB004F53C7 /* Transform */; };
-		EB5C21712AB1AFE5004F53C7 /* ReactiveSwiftRequest in Frameworks */ = {isa = PBXBuildFile; productRef = EB5C21702AB1AFE5004F53C7 /* ReactiveSwiftRequest */; };
-		EB5C21732AB1AFE5004F53C7 /* Transform in Frameworks */ = {isa = PBXBuildFile; productRef = EB5C21722AB1AFE5004F53C7 /* Transform */; };
 		EB5C21752AB1B05A004F53C7 /* Exports.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5C21742AB1B05A004F53C7 /* Exports.swift */; };
-		EB5C21762AB1B05A004F53C7 /* Exports.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5C21742AB1B05A004F53C7 /* Exports.swift */; };
+		EBA469882ACEC1420060376F /* Json in Frameworks */ = {isa = PBXBuildFile; productRef = EBA469872ACEC1420060376F /* Json */; };
+		EBA4698A2ACEC1420060376F /* SwiftLogger in Frameworks */ = {isa = PBXBuildFile; productRef = EBA469892ACEC1420060376F /* SwiftLogger */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		879A26BD2707A01A00CCD1DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		879A26C22707A01A00CCD1DD /* Todo+ReactiveSwift+SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo+ReactiveSwift+SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		879A26C82707A01A00CCD1DD /* Todo+ReactiveSwift+SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo+ReactiveSwift+SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		879A26CA2707A01A00CCD1DD /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		87BB882127A588AE000B269B /* TodoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoApp.swift; sourceTree = "<group>"; };
 		87BB882827A588AE000B269B /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -52,17 +42,9 @@
 			files = (
 				EB5C216F2AB1AFDB004F53C7 /* Transform in Frameworks */,
 				87BB886C27A58910000B269B /* ComposableArchitecture in Frameworks */,
+				EBA4698A2ACEC1420060376F /* SwiftLogger in Frameworks */,
+				EBA469882ACEC1420060376F /* Json in Frameworks */,
 				EB5C216D2AB1AFDB004F53C7 /* ReactiveSwiftRequest in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		879A26C52707A01A00CCD1DD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EB5C21732AB1AFE5004F53C7 /* Transform in Frameworks */,
-				87BB887427A58A30000B269B /* ComposableArchitecture in Frameworks */,
-				EB5C21712AB1AFE5004F53C7 /* ReactiveSwiftRequest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				879A26C22707A01A00CCD1DD /* Todo+ReactiveSwift+SwiftUI.app */,
-				879A26C82707A01A00CCD1DD /* Todo+ReactiveSwift+SwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,10 +106,10 @@
 		87BB882227A588AE000B269B /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
-				87BB882827A588AE000B269B /* MainView.swift */,
-				87BB882D27A588AE000B269B /* CounterView.swift */,
-				87BB883227A588AE000B269B /* AuthView.swift */,
 				87BB883927A588AE000B269B /* RootView.swift */,
+				87BB882827A588AE000B269B /* MainView.swift */,
+				87BB883227A588AE000B269B /* AuthView.swift */,
+				87BB882D27A588AE000B269B /* CounterView.swift */,
 				87BB883C27A588AE000B269B /* Models */,
 			);
 			path = TodoApp;
@@ -162,31 +143,11 @@
 				87BB886B27A58910000B269B /* ComposableArchitecture */,
 				EB5C216C2AB1AFDB004F53C7 /* ReactiveSwiftRequest */,
 				EB5C216E2AB1AFDB004F53C7 /* Transform */,
+				EBA469872ACEC1420060376F /* Json */,
+				EBA469892ACEC1420060376F /* SwiftLogger */,
 			);
 			productName = "Todo+ReactiveSwift+SwiftUI (iOS)";
 			productReference = 879A26C22707A01A00CCD1DD /* Todo+ReactiveSwift+SwiftUI.app */;
-			productType = "com.apple.product-type.application";
-		};
-		879A26C72707A01A00CCD1DD /* Todo+ReactiveSwift+SwiftUI (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 879A26D62707A01A00CCD1DD /* Build configuration list for PBXNativeTarget "Todo+ReactiveSwift+SwiftUI (macOS)" */;
-			buildPhases = (
-				879A26C42707A01A00CCD1DD /* Sources */,
-				879A26C52707A01A00CCD1DD /* Frameworks */,
-				879A26C62707A01A00CCD1DD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Todo+ReactiveSwift+SwiftUI (macOS)";
-			packageProductDependencies = (
-				87BB887327A58A30000B269B /* ComposableArchitecture */,
-				EB5C21702AB1AFE5004F53C7 /* ReactiveSwiftRequest */,
-				EB5C21722AB1AFE5004F53C7 /* Transform */,
-			);
-			productName = "Todo+ReactiveSwift+SwiftUI (macOS)";
-			productReference = 879A26C82707A01A00CCD1DD /* Todo+ReactiveSwift+SwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -197,12 +158,9 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					879A26C12707A01A00CCD1DD = {
-						CreatedOnToolsVersion = 13.0;
-					};
-					879A26C72707A01A00CCD1DD = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
@@ -220,13 +178,14 @@
 				87BB886A27A58910000B269B /* XCRemoteSwiftPackageReference "reactiveswift-composable-architecture" */,
 				87BB886D27A5892E000B269B /* XCRemoteSwiftPackageReference "Networking" */,
 				87BB887027A5894B000B269B /* XCRemoteSwiftPackageReference "SwiftExtension" */,
+				EBA469852ACEC0D80060376F /* XCRemoteSwiftPackageReference "swift-json" */,
+				EBA469862ACEC0EE0060376F /* XCRemoteSwiftPackageReference "swift-logger" */,
 			);
 			productRefGroup = 879A26C32707A01A00CCD1DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				879A26C12707A01A00CCD1DD /* Todo+ReactiveSwift+SwiftUI (iOS) */,
-				879A26C72707A01A00CCD1DD /* Todo+ReactiveSwift+SwiftUI (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -237,14 +196,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				879A26CF2707A01A00CCD1DD /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		879A26C62707A01A00CCD1DD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				879A26D02707A01A00CCD1DD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,20 +216,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		879A26C42707A01A00CCD1DD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EB5C21762AB1B05A004F53C7 /* Exports.swift in Sources */,
-				87BB886927A588AE000B269B /* TodoModel.swift in Sources */,
-				87BB886327A588AE000B269B /* RootView.swift in Sources */,
-				87BB885727A588AE000B269B /* AuthView.swift in Sources */,
-				87BB883F27A588AE000B269B /* TodoApp.swift in Sources */,
-				87BB884727A588AE000B269B /* MainView.swift in Sources */,
-				87BB884F27A588AE000B269B /* CounterView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -286,6 +223,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -316,9 +254,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -345,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -375,9 +316,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -454,64 +397,6 @@
 			};
 			name = Release;
 		};
-		879A26D72707A01A00CCD1DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2H5PN3F9B6;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mike.fullstackswift.Todo-ReactiveSwift-SwiftUI";
-				PRODUCT_NAME = "Todo+ReactiveSwift+SwiftUI";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		879A26D82707A01A00CCD1DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2H5PN3F9B6;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mike.fullstackswift.Todo-ReactiveSwift-SwiftUI";
-				PRODUCT_NAME = "Todo+ReactiveSwift+SwiftUI";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -529,15 +414,6 @@
 			buildConfigurations = (
 				879A26D42707A01A00CCD1DD /* Debug */,
 				879A26D52707A01A00CCD1DD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		879A26D62707A01A00CCD1DD /* Build configuration list for PBXNativeTarget "Todo+ReactiveSwift+SwiftUI (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				879A26D72707A01A00CCD1DD /* Debug */,
-				879A26D82707A01A00CCD1DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -569,15 +445,26 @@
 				kind = branch;
 			};
 		};
+		EBA469852ACEC0D80060376F /* XCRemoteSwiftPackageReference "swift-json" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FullStack-Swift/swift-json";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		EBA469862ACEC0EE0060376F /* XCRemoteSwiftPackageReference "swift-logger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FullStack-Swift/swift-logger";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		87BB886B27A58910000B269B /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 87BB886A27A58910000B269B /* XCRemoteSwiftPackageReference "reactiveswift-composable-architecture" */;
-			productName = ComposableArchitecture;
-		};
-		87BB887327A58A30000B269B /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 87BB886A27A58910000B269B /* XCRemoteSwiftPackageReference "reactiveswift-composable-architecture" */;
 			productName = ComposableArchitecture;
@@ -592,15 +479,15 @@
 			package = 87BB887027A5894B000B269B /* XCRemoteSwiftPackageReference "SwiftExtension" */;
 			productName = Transform;
 		};
-		EB5C21702AB1AFE5004F53C7 /* ReactiveSwiftRequest */ = {
+		EBA469872ACEC1420060376F /* Json */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 87BB886D27A5892E000B269B /* XCRemoteSwiftPackageReference "Networking" */;
-			productName = ReactiveSwiftRequest;
+			package = EBA469852ACEC0D80060376F /* XCRemoteSwiftPackageReference "swift-json" */;
+			productName = Json;
 		};
-		EB5C21722AB1AFE5004F53C7 /* Transform */ = {
+		EBA469892ACEC1420060376F /* SwiftLogger */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 87BB887027A5894B000B269B /* XCRemoteSwiftPackageReference "SwiftExtension" */;
-			productName = Transform;
+			package = EBA469862ACEC0EE0060376F /* XCRemoteSwiftPackageReference "swift-logger" */;
+			productName = SwiftLogger;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

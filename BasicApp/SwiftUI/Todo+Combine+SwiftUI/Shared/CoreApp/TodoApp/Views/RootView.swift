@@ -1,4 +1,3 @@
-import ComposableArchitecture
 import SwiftUI
 
 struct Root: Reducer {
@@ -55,8 +54,6 @@ struct Root: Reducer {
   }
 }
 
-
-
 struct RootView: View {
   
   private let store: StoreOf<Root>
@@ -99,9 +96,6 @@ struct RootView: View {
     .onDisappear {
       viewStore.send(.viewOnDisappear)
     }
-#if os(macOS)
-    .frame(minWidth: 700, idealWidth: 700, maxWidth: .infinity, minHeight: 500, idealHeight: 500, maxHeight: .infinity, alignment: .center)
-#endif
   }
 }
 

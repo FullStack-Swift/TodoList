@@ -5,7 +5,7 @@ struct Main: Reducer {
   // MARK: State
   struct State: Equatable {
     var counterState = Counter.State()
-    @BindingState var title: String = ""
+    @BindingState var text: String = ""
     var todos: IdentifiedArrayOf<TodoModel> = []
     var isLoading: Bool = false
   }
@@ -62,13 +62,13 @@ struct Main: Reducer {
         case .logout:
           return .send(.changeRootScreen(.auth))
         case .viewCreateTodo:
-          if state.title.isEmpty {
+          if state.text.isEmpty {
             return .none
           }
-          let title = state.title
-          state.title = ""
+          let text = state.text
+          state.text = ""
           let id = uuid()
-          let todo = TodoModel(id: id, title: title, isCompleted: false)
+          let todo = TodoModel(id: id, text: text, isCompleted: false)
           return .send(.createOrUpdateTodo(todo))
           // MARK: - Networking
           /// GET TODO
@@ -79,12 +79,13 @@ struct Main: Reducer {
           state.isLoading = true
           state.todos.removeAll()
           let request = MRequest {
-            RUrl(urlString: urlString)
+            RUrl(urlString)
             RMethod(.get)
           }
           if isUsingPublisher {
             return .publisher {
-              request.producer
+              request
+                .producer
                 .compactMap{$0.data}
                 .map(Main.Action.responseTodo)
                 .eraseToAnyPublisher()
@@ -95,23 +96,29 @@ struct Main: Reducer {
               await send(.responseTodo(data))
             }
           }
-        case .responseTodo(let json):
-          if let items = json.toModel([TodoModel].self) {
+        case .responseTodo(let data):
+          log.info(Json(data))
+          state.isLoading = false
+          if let items = data.toModel([TodoModel].self) {
             for item in items {
               state.todos.updateOrAppend(item)
             }
           }
           /// CREATE OR UPDATE TODO
         case .createOrUpdateTodo(let todo):
+          log.info(todo.toJson())
           let request = MRequest {
-            RUrl(urlString: urlString)
-            REncoding(JSONEncoding.default)
+            RUrl(urlString)
             RMethod(.post)
             Rbody(todo.toData())
+            REncoding(JSONEncoding.default)
+            
           }
           if isUsingPublisher {
             return .publisher {
-              request.producer
+              request
+                .printCURLRequest()
+                .producer
                 .compactMap{$0.data}
                 .map(Main.Action.responseCreateOrUpdateTodo)
                 .eraseToAnyPublisher()
@@ -122,21 +129,25 @@ struct Main: Reducer {
               await send(.responseCreateOrUpdateTodo(data))
             }
           }
-        case .responseCreateOrUpdateTodo(let json):
-          if let item = json.toModel(TodoModel.self) {
+        case .responseCreateOrUpdateTodo(let data):
+          log.info(Json(data))
+          if let item = data.toModel(TodoModel.self) {
             state.todos.updateOrAppend(item)
           }
           /// UPDATE TODO
         case .updateTodo(let todo):
           let request = MRequest {
-            RUrl(urlString: urlString)
+            RUrl(urlString)
               .withPath(todo.id.toString())
-            RMethod(.post)
             Rbody(todo.toData())
+            RMethod(.post)
+            REncoding(JSONEncoding.default)
           }
           if isUsingPublisher {
             return .publisher {
-              request.producer
+              request
+                .printCURLRequest()
+                .producer
                 .compactMap{$0.data}
                 .map(Main.Action.responseUpdateTodo)
                 .eraseToAnyPublisher()
@@ -147,20 +158,23 @@ struct Main: Reducer {
               await send(.responseUpdateTodo(data))
             }
           }
-        case .responseUpdateTodo(let json):
-          if let item = json.toModel(TodoModel.self) {
+        case .responseUpdateTodo(let data):
+          log.info(data.toJson())
+          if let item = data.toModel(TodoModel.self) {
             state.todos.updateOrAppend(item)
           }
           /// DELETE TODO
         case .deleteTodo(let todo):
           let request = MRequest {
-            RUrl(urlString: urlString)
+            RUrl(urlString)
               .withPath(todo.id.toString())
             RMethod(.delete)
           }
           if isUsingPublisher {
             return .publisher {
-              request.producer
+              request
+                .printCURLRequest()
+                .producer
                 .compactMap{$0.data}
                 .map(Main.Action.responseDeleteTodo)
                 .eraseToAnyPublisher()
@@ -201,38 +215,12 @@ struct MainView: View {
   
   var body: some View {
     ZStack {
-#if os(macOS)
-      content
-        .toolbar {
-          ToolbarItem(placement: .status) {
-            HStack {
-              CounterView(
-                store: store
-                  .scope(
-                    state: \.counterState,
-                    action: Main.Action.counterAction
-                  )
-              )
-              Spacer()
-              Button(action: {
-                viewStore.send(.logout)
-              }, label: {
-                Text("Logout")
-                  .foregroundColor(Color.blue)
-              })
-            }
-          }
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-#endif
-#if os(iOS)
       NavigationView {
         content
           .navigationTitle("Todos")
           .navigationBarItems(leading: leadingBarItems, trailing: trailingBarItems)
       }
       .navigationViewStyle(.stack)
-#endif
     }
     .onAppear {
       viewStore.send(.viewOnAppear)
@@ -243,47 +231,18 @@ struct MainView: View {
   }
 }
 
-
 extension MainView {
   /// create content view in screen
   private var content: some View {
     List {
-      Section {
-        ZStack {
-          HStack {
-            Spacer()
-            if viewStore.isLoading {
-              ProgressView()
-            } else {
-              Text("Reload")
-                .bold()
-                .onTapGesture {
-                  viewStore.send(.getTodo)
-                }
-            }
-            Spacer()
-          }
-          .frame(height: 60)
-        }
-      }
-      HStack {
-        TextField("title", text: viewStore.$title)
-        Button(action: {
-          viewStore.send(.viewCreateTodo)
-        }, label: {
-          Text("Create")
-            .bold()
-            .foregroundColor(viewStore.title.isEmpty ? Color.gray : Color.green)
-        })
-        .disabled(viewStore.title.isEmpty)
-      }
-      
+      topview
+      inputview
       ForEach(viewStore.todos) { todo in
         HStack {
           HStack {
             Image(systemName: todo.isCompleted ? "checkmark.square" : "square")
               .frame(width: 40, height: 40, alignment: .center)
-            Text(todo.title)
+            Text(todo.text)
               .underline(todo.isCompleted, color: Color.black)
             Spacer()
           }
@@ -291,17 +250,48 @@ extension MainView {
           .onTapGesture {
             viewStore.send(.toggleTodo(todo))
           }
-          Button(action: {
+          Button {
             viewStore.send(.deleteTodo(todo))
-          }, label: {
+          } label: {
             Text("Delete")
               .foregroundColor(Color.gray)
-          })
+          }
         }
       }
-      .padding(.all, 0)
     }
     .padding(.all, 0)
+  }
+  
+  private var topview: some View {
+    Section {
+      ZStack(alignment: .center) {
+        if viewStore.isLoading {
+          ProgressView()
+        } else {
+          Text("Reload")
+            .bold()
+            .onTapGesture {
+              viewStore.send(.getTodo)
+            }
+        }
+      }
+      .frame(height: 60)
+      .frame(maxWidth: .infinity)
+    }
+  }
+  
+  private var inputview: some View {
+    HStack {
+      TextField("text", text: viewStore.$text)
+      Button(action: {
+        viewStore.send(.viewCreateTodo)
+      }, label: {
+        Text("Create")
+          .bold()
+          .foregroundColor(viewStore.text.isEmpty ? Color.gray : Color.green)
+      })
+      .disabled(viewStore.text.isEmpty)
+    }
   }
   
   private var leadingBarItems: some View {

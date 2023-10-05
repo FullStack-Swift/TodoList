@@ -7,17 +7,17 @@ final class Todo: Model, Content {
   @ID(key: .id)
   var id: UUID?
   
-  @Field(key: "title")
-  var title: String
+  @Field(key: "text")
+  var text: String
   
   @Field(key: "isCompleted")
   var isCompleted: Bool
   
   init() { }
   
-  init(id: UUID? = nil, title: String, isCompleted: Bool) {
+  init(id: UUID? = nil, text: String, isCompleted: Bool) {
     self.id = id
-    self.title = title
+    self.text = text
     self.isCompleted = isCompleted
   }
 }
