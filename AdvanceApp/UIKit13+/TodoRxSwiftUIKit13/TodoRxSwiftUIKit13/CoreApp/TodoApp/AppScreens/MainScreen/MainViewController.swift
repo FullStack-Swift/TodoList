@@ -3,6 +3,70 @@ import SwiftUI
 import UIKit
 import ConvertSwift
 import RxCocoa
+import RxDataSources
+
+public extension IdentifiedArray {
+  func toArray() -> [Element] {
+    var array: [Element] = []
+    for value in self {
+      array.append(value)
+    }
+    return array
+  }
+}
+
+enum MultipleSectionModel: SectionModelType {
+  
+  typealias Item = SectionItem
+  
+  case buttonReloadSection
+  case createTitleSection
+  case itemSection(items: [Item])
+  
+  init(original: MultipleSectionModel, items: [Item]) {
+    switch original {
+    case .buttonReloadSection:
+      self = .buttonReloadSection
+    case .createTitleSection:
+      self = .createTitleSection
+    case .itemSection(_):
+      self = .itemSection(items: items)
+    }
+    self = original
+  }
+  
+  var items: [Item] {
+    switch self {
+    case .buttonReloadSection:
+      return [.buttonReloadSection]
+    case .createTitleSection:
+      return [.createTitleSection]
+    case .itemSection(let items):
+      return items
+    }
+  }
+  
+  var headerTitle: String? {
+    return nil
+  }
+}
+
+enum SectionItem {
+  case buttonReloadSection
+  case createTitleSection
+  case itemSection(item: TodoModel)
+  
+  var todoModel: TodoModel? {
+    switch self {
+    case .buttonReloadSection:
+      return nil
+    case .createTitleSection:
+      return nil
+    case .itemSection(let item):
+      return item
+    }
+  }
+}
 
 final class MainViewController: UIViewController {
   
@@ -10,12 +74,12 @@ final class MainViewController: UIViewController {
   
   private let viewStore: ViewStore<ViewState, ViewAction>
   
-    /// Properties
+  /// Properties
   private let disposeBag = DisposeBag()
   
   private let tableView: UITableView = UITableView()
   
-  private var todos: IdentifiedArrayOf<TodoModel> = []
+  private var dataSource: RxTableViewSectionedReloadDataSource<MultipleSectionModel>?
   
   init(store: Store<MainState, MainAction>? = nil) {
     let unwrapStore = store ?? Store(initialState: MainState(), reducer: MainReducer, environment: MainEnvironment())
@@ -31,7 +95,7 @@ final class MainViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     viewStore.send(.viewDidLoad)
-      // navigationView
+    // navigationView
     let buttonLogout = UIButton(type: .system)
     buttonLogout.setTitle("Logout", for: .normal)
     buttonLogout.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
@@ -39,28 +103,16 @@ final class MainViewController: UIViewController {
     let rightBarButtonItem = UIBarButtonItem(customView: buttonLogout)
     
     let buttonCount = UIButton(type: .system)
-    buttonCount.setTitle("+ 0 -", for: .normal)
+    buttonCount.setTitle(" +0- ", for: .normal)
     let leftBarButtonItem = UIBarButtonItem(customView: buttonCount)
-    
-      // tableView
-    view.addSubview(tableView)
-    tableView.register(MainTableViewCell.self)
-    tableView.register(ButtonReloadMainTableViewCell.self)
-    tableView.register(CreateTitleMainTableViewCell.self)
-    tableView.showsVerticalScrollIndicator = false
-    tableView.showsHorizontalScrollIndicator = false
-    tableView.delegate = self
-    tableView.dataSource = self
-    tableView.translatesAutoresizingMaskIntoConstraints = false
-    tableView.frame = view.frame.insetBy(dx: 10, dy: 10)
-    tableView.isUserInteractionEnabled = true
-    
+  
+    configureTableView()
     navigationController?.navigationBar.prefersLargeTitles = true
     navigationItem.largeTitleDisplayMode = .always
     navigationItem.rightBarButtonItem = rightBarButtonItem
     navigationItem.leftBarButtonItem = leftBarButtonItem
     
-      //bind view to viewstore
+    // bind view to viewstore
     buttonLogout.rx.tap
       .map{ViewAction.logout}
       .subscribe(viewStore.action)
@@ -71,21 +123,13 @@ final class MainViewController: UIViewController {
       .subscribe(viewStore.action)
       .disposed(by: disposeBag)
     
-      //bind viewstore to view
-    viewStore.publisher.todos
-      .subscribe(onNext: { [weak self] todos in
-        guard let self = self else { return }
-        self.todos = todos
-        self.tableView.reloadData()
-      })
-      .disposed(by: disposeBag)
-    
+    // bind viewstore to view
     viewStore.publisher.todos
       .map {$0.count.toString() + " Todos"}
-      .bind(to: navigationItem.rx.title)
+      .bind(to: navigationItem.rx[keyPath: \.title])
       .disposed(by: disposeBag)
     
-    self.store
+    store
       .scope(state: \.optionalCounterState, action: MainAction.counterAction)
       .ifLet(
         then: { [weak self] store in
@@ -97,6 +141,20 @@ final class MainViewController: UIViewController {
           self.navigationController?.popToViewController(self, animated: true)
         }
       )
+      .disposed(by: disposeBag)
+
+    
+    viewStore.publisher.todos
+      .map{$0.toArray()}
+      .flatMap { items in
+        return Observable.just([
+          MultipleSectionModel(original: MultipleSectionModel.buttonReloadSection, items: [.buttonReloadSection]),
+          MultipleSectionModel(original: MultipleSectionModel.createTitleSection, items: [.createTitleSection]),
+          MultipleSectionModel(original: MultipleSectionModel.itemSection(items: items.map({ item in SectionItem.itemSection(item: item)})), items: items.map({ item in SectionItem.itemSection(item: item)}))
+        ])
+      }
+      .asObservable()
+      .bind(to: tableView.rx.items(dataSource: self.dataSource!))
       .disposed(by: disposeBag)
   }
   
@@ -123,99 +181,97 @@ final class MainViewController: UIViewController {
   
 }
 
-extension MainViewController: UITableViewDataSource {
-  func numberOfSections(in tableView: UITableView) -> Int {
-    return 3
-  }
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    switch section {
-    case 0:
-      return 1
-    case 1:
-      return 1
-    case 2:
-      return todos.count
-    default:
-      return 0
+// - MARK: UI
+private extension MainViewController {
+  
+  func configureTableView() {
+    view.addSubview(tableView)
+    tableView.showsVerticalScrollIndicator = false
+    tableView.showsHorizontalScrollIndicator = false
+    tableView.translatesAutoresizingMaskIntoConstraints = false
+    tableView.frame = view.frame.insetBy(dx: 10, dy: 10)
+    tableView.isUserInteractionEnabled = true
+    tableViewRegisterCells()
+    let dataSource = RxTableViewSectionedReloadDataSource<MultipleSectionModel> { [viewStore] dataSource, tableView, indexPath, _ in
+      switch dataSource[indexPath.section] {
+      case .buttonReloadSection:
+        let cell = tableView.dequeueReusableCell(ButtonReloadMainTableViewCell.self, for: indexPath)
+        cell.selectionStyle = .none
+        viewStore.publisher.isLoading
+          .bind(to: cell.buttonReload.rx[keyPath: \.isHidden])
+          .disposed(by: cell.disposeBag)
+        viewStore.publisher.isLoading
+          .map({!$0})
+          .bind(to: cell.activityIndicator.rx[keyPath: \.isHidden])
+          .disposed(by: cell.disposeBag)
+        return cell
+      case .createTitleSection:
+        let cell = tableView.dequeueReusableCell(CreateTitleMainTableViewCell.self, for: indexPath)
+        viewStore.publisher.title
+          .bind(to: cell.titleTextField.rx[keyPath: \.text])
+          .disposed(by: cell.disposeBag)
+        viewStore.publisher.title.isEmpty
+          .map { $0 ? UIColor(Color.gray) : UIColor(Color.green) }
+          .subscribe(onNext: {
+            cell.buttonCreate.setTitleColor($0, for: .normal)
+          })
+          .disposed(by: cell.disposeBag)
+        cell.buttonCreate.rx.tap
+          .map({ViewAction.createTodo})
+          .bind(to: viewStore.action)
+          .disposed(by: cell.disposeBag)
+        cell.titleTextField.rx.text.orEmpty
+          .compactMap({$0})
+          .map(ViewAction.changeTextFieldTitle)
+          .bind(to: viewStore.action)
+          .disposed(by: cell.disposeBag)
+        return cell
+      case let .itemSection(item):
+        let cell = tableView.dequeueReusableCell(MainTableViewCell.self, for: indexPath)
+        guard let todo = item[indexPath.row].todoModel else {
+          return cell
+        }
+        cell.bind(todo)
+        cell.deleteButton
+          .rx.tap
+          .map{ViewAction.deleteTodo(todo)}
+          .bind(to: viewStore.action)
+          .disposed(by: cell.disposeBag)
+        cell.tapGesture
+          .rx.event
+          .map {_ in ViewAction.toggleTodo(todo)}
+          .bind(to: viewStore.action)
+          .disposed(by: cell.disposeBag)
+        return cell
+      }
+    } titleForHeaderInSection: { dataSource, index in
+      return dataSource[index].headerTitle
     }
+    self.dataSource = dataSource
+    tableView.rx.setDelegate(self)
+      .disposed(by: disposeBag)
   }
   
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    switch indexPath.section {
-    case 0:
-      let cell = tableView.dequeueReusableCell(ButtonReloadMainTableViewCell.self, for: indexPath)
-      cell.selectionStyle = .none
-      viewStore.publisher.isLoading
-        .subscribe(onNext: { value in
-          cell.buttonReload.isHidden = value
-          cell.activityIndicator.isHidden = !value
-        })
-        .disposed(by: cell.disposeBag)
-      viewStore.publisher.networkStatus
-        .subscribe(onNext: { value in
-          cell.networkStatus.text = value.description
-          cell.networkStatus.textColor = value == .online ? UIColor(Color.green) : UIColor(Color.gray)
-        })
-        .disposed(by: cell.disposeBag)
-      cell.buttonReload.rx.tap
-        .map{ViewAction.getTodo}
-        .bind(to: viewStore.action)
-        .disposed(by: cell.disposeBag)
-      return cell
-    case 1:
-      let cell = tableView.dequeueReusableCell(CreateTitleMainTableViewCell.self, for: indexPath)
-      viewStore.publisher.title
-        .bind(to: cell.titleTextField.rx.text)
-        .disposed(by: cell.disposeBag)
-      viewStore.publisher.title.isEmpty
-        .subscribe(onNext: { value in
-          cell.buttonCreate.setTitleColor(value ? UIColor(Color.gray) : UIColor(Color.green), for: .normal)
-        })
-        .disposed(by: cell.disposeBag)
-      cell.buttonCreate
-        .rx.tap
-        .map {ViewAction.createTodo}
-        .bind(to: viewStore.action)
-        .disposed(by: cell.disposeBag)
-      cell.titleTextField
-        .rx.text.orEmpty
-        .compactMap{$0}
-        .map(ViewAction.changeTextFieldTitle)
-        .bind(to: viewStore.action)
-        .disposed(by: cell.disposeBag)
-      return cell
-    case 2:
-      let cell = tableView.dequeueReusableCell(MainTableViewCell.self, for: indexPath)
-      let todo = todos[indexPath.row]
-      cell.bind(todo)
-      cell.deleteButton
-        .rx.tap
-        .map{ViewAction.deleteTodo(todo)}
-        .bind(to: viewStore.action)
-        .disposed(by: cell.disposeBag)
-      cell.tapGesture
-        .rx.event
-        .map {_ in ViewAction.toggleTodo(todo)}
-        .bind(to: viewStore.action)
-        .disposed(by: cell.disposeBag)
-      return cell
-    default:
-      let cell = tableView.dequeueReusableCell(MainTableViewCell.self, for: indexPath)
-      return cell
-    }
+  /// tableViewRegisterCells
+  func tableViewRegisterCells() {
+    tableView.register(MainTableViewCell.self)
+    tableView.register(ButtonReloadMainTableViewCell.self)
+    tableView.register(CreateTitleMainTableViewCell.self)
   }
 }
 
+// - MARK: UITableViewDelegate
 extension MainViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 60
   }
 }
 
+// - MARK: PreviewProvider
 struct MainViewController_Previews: PreviewProvider {
   static var previews: some View {
     let vc = MainViewController()
-    UIViewRepresented(makeUIView: { _ in vc.view })
+    vc.toSwifUIView()
   }
 }
 
@@ -250,8 +306,8 @@ fileprivate enum ViewAction: Equatable {
   case logout
   case changeTextFieldTitle(String)
   case setNavigation(isActive: Bool)
-    /// init ViewAction
-    /// - Parameter action: MainAction
+  /// init ViewAction
+  /// - Parameter action: MainAction
   init(action: MainAction) {
     self = .none
   }

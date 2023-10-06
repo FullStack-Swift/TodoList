@@ -146,7 +146,7 @@ final class AuthViewController: UIViewController {
 struct AuthViewController_Previews: PreviewProvider {
   static var previews: some View {
     let vc = AuthViewController()
-    UIViewRepresented(makeUIView: { _ in vc.view })
+    vc.toSwifUIView()
   }
 }
 

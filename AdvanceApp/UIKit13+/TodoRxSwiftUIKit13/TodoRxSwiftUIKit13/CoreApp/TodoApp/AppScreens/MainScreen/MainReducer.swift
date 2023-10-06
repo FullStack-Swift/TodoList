@@ -3,6 +3,7 @@ import RxSwiftRequest
 import RxSwiftWebSocket
 import ConvertSwift
 import RealmSwift
+import Foundation
 
   // cannot using Enviroment because Enviroment reinit when reducer running, so we cannot keep reference
 var socket: MSocket?

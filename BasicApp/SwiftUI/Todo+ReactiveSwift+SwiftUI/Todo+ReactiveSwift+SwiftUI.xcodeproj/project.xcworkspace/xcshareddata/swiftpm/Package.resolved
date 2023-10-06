@@ -1,124 +1,194 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Alamofire",
-        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
-        "state": {
-          "branch": null,
-          "revision": "f82c23a8a7ef8dc1a49a8bfc6a96883e79121864",
-          "version": "5.5.0"
-        }
-      },
-      {
-        "package": "combine-schedulers",
-        "repositoryURL": "https://github.com/pointfreeco/combine-schedulers",
-        "state": {
-          "branch": null,
-          "revision": "4cf088c29a20f52be0f2ca54992b492c54e0076b",
-          "version": "0.5.3"
-        }
-      },
-      {
-        "package": "Networking",
-        "repositoryURL": "https://github.com/FullStack-Swift/Networking",
-        "state": {
-          "branch": null,
-          "revision": "fdbb1c94caf8ead0a26c622e8c08cbd6f6ebb8ac",
-          "version": "1.0.0"
-        }
-      },
-      {
-        "package": "ReactiveSwift",
-        "repositoryURL": "https://github.com/ReactiveCocoa/ReactiveSwift.git",
-        "state": {
-          "branch": null,
-          "revision": "efb2f0a6f6c8739cce8fb14148a5bd3c83f2f91d",
-          "version": "7.0.0"
-        }
-      },
-      {
-        "package": "reactiveswift-composable-architecture",
-        "repositoryURL": "https://github.com/FullStack-Swift/reactiveswift-composable-architecture",
-        "state": {
-          "branch": null,
-          "revision": "b7123f667c6ad50a6445badcc4e62293ec00c6e9",
-          "version": "1.0.0"
-        }
-      },
-      {
-        "package": "RxSwift",
-        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
-        "state": {
-          "branch": null,
-          "revision": "b4307ba0b6425c0ba4178e138799946c3da594f8",
-          "version": "6.5.0"
-        }
-      },
-      {
-        "package": "Starscream",
-        "repositoryURL": "https://github.com/daltoniam/Starscream.git",
-        "state": {
-          "branch": null,
-          "revision": "df8d82047f6654d8e4b655d1b1525c64e1059d21",
-          "version": "4.0.4"
-        }
-      },
-      {
-        "package": "swift-case-paths",
-        "repositoryURL": "https://github.com/pointfreeco/swift-case-paths",
-        "state": {
-          "branch": null,
-          "revision": "241301b67d8551c26d8f09bd2c0e52cc49f18007",
-          "version": "0.8.0"
-        }
-      },
-      {
-        "package": "swift-collections",
-        "repositoryURL": "https://github.com/apple/swift-collections",
-        "state": {
-          "branch": null,
-          "revision": "48254824bb4248676bf7ce56014ff57b142b77eb",
-          "version": "1.0.2"
-        }
-      },
-      {
-        "package": "swift-custom-dump",
-        "repositoryURL": "https://github.com/pointfreeco/swift-custom-dump",
-        "state": {
-          "branch": null,
-          "revision": "51698ece74ecf31959d3fa81733f0a5363ef1b4e",
-          "version": "0.3.0"
-        }
-      },
-      {
-        "package": "swift-identified-collections",
-        "repositoryURL": "https://github.com/pointfreeco/swift-identified-collections",
-        "state": {
-          "branch": null,
-          "revision": "680bf440178a78a627b1c2c64c0855f6523ad5b9",
-          "version": "0.3.2"
-        }
-      },
-      {
-        "package": "SwiftExtension",
-        "repositoryURL": "https://github.com/FullStack-Swift/SwiftExtension",
-        "state": {
-          "branch": null,
-          "revision": "cdbd56e6cf32fa0eb97a1fba445736cbe8b8e622",
-          "version": "1.0.0"
-        }
-      },
-      {
-        "package": "xctest-dynamic-overlay",
-        "repositoryURL": "https://github.com/pointfreeco/xctest-dynamic-overlay",
-        "state": {
-          "branch": null,
-          "revision": "50a70a9d3583fe228ce672e8923010c8df2deddd",
-          "version": "0.2.1"
-        }
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "b2fa556e4e48cbf06cf8c63def138c98f4b811fa",
+        "version" : "5.8.0"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "combine-schedulers",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/combine-schedulers",
+      "state" : {
+        "revision" : "9dc9cbe4bc45c65164fa653a563d8d8db61b09bb",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "networking",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FullStack-Swift/Networking",
+      "state" : {
+        "branch" : "main",
+        "revision" : "23e446cfffd8a5f554fd564fc7568eeaa85843e4"
+      }
+    },
+    {
+      "identity" : "reactiveswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveCocoa/ReactiveSwift.git",
+      "state" : {
+        "revision" : "40c465af19b993344e84355c00669ba2022ca3cd",
+        "version" : "7.1.1"
+      }
+    },
+    {
+      "identity" : "reactiveswift-composable-architecture",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FullStack-Swift/reactiveswift-composable-architecture",
+      "state" : {
+        "branch" : "main",
+        "revision" : "f0463f0b8cde504d625f755ce61dd70cbb76d61c"
+      }
+    },
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift.git",
+      "state" : {
+        "revision" : "9dcaa4b333db437b0fbfaf453fad29069044a8b4",
+        "version" : "6.6.0"
+      }
+    },
+    {
+      "identity" : "socket.io-client-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/socketio/socket.io-client-swift",
+      "state" : {
+        "revision" : "175da8b5156f6b132436f0676cc84c2f6a766b6e",
+        "version" : "16.1.0"
+      }
+    },
+    {
+      "identity" : "starscream",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/daltoniam/Starscream.git",
+      "state" : {
+        "revision" : "ac6c0fc9da221873e01bd1a0d4818498a71eef33",
+        "version" : "4.0.6"
+      }
+    },
+    {
+      "identity" : "swift-async-algorithms",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-async-algorithms",
+      "state" : {
+        "revision" : "9cfed92b026c524674ed869a4ff2dcfdeedf8a2a",
+        "version" : "0.1.0"
+      }
+    },
+    {
+      "identity" : "swift-case-paths",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-case-paths",
+      "state" : {
+        "revision" : "5da6989aae464f324eef5c5b52bdb7974725ab81",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swift-clocks",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-clocks",
+      "state" : {
+        "revision" : "d1fd837326aa719bee979bdde1f53cd5797443eb",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections",
+      "state" : {
+        "revision" : "a902f1823a7ff3c9ab2fba0f992396b948eda307",
+        "version" : "1.0.5"
+      }
+    },
+    {
+      "identity" : "swift-concurrency-extras",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-concurrency-extras",
+      "state" : {
+        "revision" : "ea631ce892687f5432a833312292b80db238186a",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swift-custom-dump",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-custom-dump",
+      "state" : {
+        "revision" : "3efbfba0e4e56c7187cc19137ee16b7c95346b79",
+        "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "swift-dependencies",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-dependencies",
+      "state" : {
+        "revision" : "4e1eb6e28afe723286d8cc60611237ffbddba7c5",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swift-identified-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-identified-collections",
+      "state" : {
+        "revision" : "d1e45f3e1eee2c9193f5369fa9d70a6ddad635e8",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swift-json",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FullStack-Swift/swift-json",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ac54806fd7e10587755ac5cfd802ae15ef6907d4"
+      }
+    },
+    {
+      "identity" : "swift-logger",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FullStack-Swift/swift-logger",
+      "state" : {
+        "branch" : "main",
+        "revision" : "12fda88a83ce0c373381e6eaa5db1c27b4dc2eaa"
+      }
+    },
+    {
+      "identity" : "swiftextension",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FullStack-Swift/SwiftExtension",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ccbf2fddb982267be28705b3dd8b29ee3c4d149e"
+      }
+    },
+    {
+      "identity" : "swiftui-navigation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swiftui-navigation",
+      "state" : {
+        "revision" : "6eb293c49505d86e9e24232cb6af6be7fff93bd5",
+        "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "xctest-dynamic-overlay",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/xctest-dynamic-overlay",
+      "state" : {
+        "revision" : "23cbf2294e350076ea4dbd7d5d047c1e76b03631",
+        "version" : "1.0.2"
+      }
+    }
+  ],
+  "version" : 2
 }

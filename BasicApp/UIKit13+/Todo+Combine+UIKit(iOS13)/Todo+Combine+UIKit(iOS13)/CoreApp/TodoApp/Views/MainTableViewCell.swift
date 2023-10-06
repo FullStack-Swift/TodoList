@@ -1,6 +1,6 @@
 import UIKit
 
-class MainTableViewCell: BaseMainTableViewCell {
+class MainTableViewCell: BaseTableViewCell {
   
   let image = UIImageView(image: UIImage(systemName: "square"))
   let titleView = UILabel()
@@ -46,6 +46,6 @@ class MainTableViewCell: BaseMainTableViewCell {
       return
     }
     image.image = data.isCompleted ? UIImage(systemName: "checkmark.square") : UIImage(systemName: "square")
-    titleView.text = data.title
+    titleView.text = data.text
   }
 }

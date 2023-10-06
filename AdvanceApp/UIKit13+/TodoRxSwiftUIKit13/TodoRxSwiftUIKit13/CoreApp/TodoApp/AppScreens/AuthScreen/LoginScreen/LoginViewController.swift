@@ -33,11 +33,11 @@ final class LoginViewController: UIViewController {
     titleLogin.textAlignment = .left
     titleLogin.translatesAutoresizingMaskIntoConstraints = false
       // emailTextField
-    let emailTextField = TextField()
+    let emailTextField = PaddingTextField()
     emailTextField.placeholder = "email"
     emailTextField.backgroundColor = UIColor(Color.gray.opacity(0.1))
       // passwordTextField
-    let passwordTextField = TextField()
+    let passwordTextField = PaddingTextField()
     passwordTextField.isSecureTextEntry = true
     passwordTextField.placeholder = "password"
     passwordTextField.backgroundColor = UIColor(Color.gray.opacity(0.1))
@@ -108,7 +108,7 @@ final class LoginViewController: UIViewController {
 struct LoginViewController_Previews: PreviewProvider {
   static var previews: some View {
     let vc = LoginViewController()
-    UIViewRepresented(makeUIView: { _ in vc.view })
+    vc.toSwifUIView()
   }
 }
 

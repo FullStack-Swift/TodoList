@@ -1,12 +1,23 @@
 import SwiftUI
-import ComposableArchitecture
+@_exported import ComposableArchitecture
+@_exported import MCombineRequest
+@_exported import Combine
+@_exported import CombineCocoa
+@_exported import Transform
 
 @main
 struct TodoApp: App {
   var body: some Scene {
     WindowGroup {
-      let vc = RootViewController()
-      UIViewRepresented(makeUIView: { _ in vc.view })
+      RootViewController().toSwiftUI()
     }
   }
 }
+
+public extension DependencyValues {
+  var urlString: String {
+    "http://127.0.0.1:8080/todos"
+  }
+}
+
+public var isUsingPublisher: Bool = true

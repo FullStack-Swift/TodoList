@@ -9,59 +9,37 @@
 /* Begin PBXBuildFile section */
 		87320B8D27A59D9700360667 /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B5327A59D9700360667 /* TodoApp.swift */; };
 		87320B8E27A59D9700360667 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B5727A59D9700360667 /* MainViewController.swift */; };
-		87320B8F27A59D9700360667 /* MainReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B5827A59D9700360667 /* MainReducer.swift */; };
-		87320B9027A59D9700360667 /* MainEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B5927A59D9700360667 /* MainEnvironment.swift */; };
-		87320B9127A59D9700360667 /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B5A27A59D9700360667 /* MainState.swift */; };
-		87320B9227A59D9700360667 /* MainAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B5B27A59D9700360667 /* MainAction.swift */; };
 		87320B9827A59D9700360667 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B6327A59D9700360667 /* AuthViewController.swift */; };
-		87320B9927A59D9700360667 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B6427A59D9700360667 /* AuthState.swift */; };
-		87320B9F27A59D9700360667 /* AuthReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B6B27A59D9700360667 /* AuthReducer.swift */; };
-		87320BA027A59D9700360667 /* AuthAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B6C27A59D9700360667 /* AuthAction.swift */; };
-		87320BA627A59D9700360667 /* AuthEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B7327A59D9700360667 /* AuthEnvironment.swift */; };
-		87320BA727A59D9700360667 /* RootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B7527A59D9700360667 /* RootAction.swift */; };
-		87320BA827A59D9700360667 /* RootEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B7627A59D9700360667 /* RootEnvironment.swift */; };
 		87320BA927A59D9700360667 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B7727A59D9700360667 /* RootViewController.swift */; };
-		87320BAA27A59D9700360667 /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B7827A59D9700360667 /* RootState.swift */; };
-		87320BAB27A59D9700360667 /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B7927A59D9700360667 /* RootReducer.swift */; };
 		87320BAD27A59D9700360667 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B7E27A59D9700360667 /* TodoModel.swift */; };
 		87320BB027A59D9700360667 /* ButtonReloadMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B8427A59D9700360667 /* ButtonReloadMainTableViewCell.swift */; };
 		87320BB127A59D9700360667 /* CreateTitleMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B8527A59D9700360667 /* CreateTitleMainTableViewCell.swift */; };
 		87320BB327A59D9700360667 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B8727A59D9700360667 /* MainTableViewCell.swift */; };
 		87320BB627A59D9700360667 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87320B8C27A59D9700360667 /* View+.swift */; };
 		87320BB927A59EAC00360667 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 87320BB827A59EAC00360667 /* CombineCocoa */; };
-		876AF6CA27A5D18B009A0148 /* BaseMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876AF6C927A5D18B009A0148 /* BaseMainTableViewCell.swift */; };
+		876AF6CA27A5D18B009A0148 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876AF6C927A5D18B009A0148 /* BaseTableViewCell.swift */; };
 		876AF6CC27A5D7ED009A0148 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876AF6CB27A5D7ED009A0148 /* BaseViewController.swift */; };
 		87BB891727A59489000B269B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB891627A59489000B269B /* Assets.xcassets */; };
 		87BB891A27A59489000B269B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB891927A59489000B269B /* Preview Assets.xcassets */; };
-		87BB893C27A59514000B269B /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 87BB893B27A59514000B269B /* ComposableArchitecture */; };
 		87BB893F27A5953B000B269B /* CombineRequest in Frameworks */ = {isa = PBXBuildFile; productRef = 87BB893E27A5953B000B269B /* CombineRequest */; };
 		87BB894127A5953B000B269B /* CombineWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 87BB894027A5953B000B269B /* CombineWebSocket */; };
-		87BB894427A59557000B269B /* ConvertSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87BB894327A59557000B269B /* ConvertSwift */; };
+		EBA4698D2ACEC4D70060376F /* Transform in Frameworks */ = {isa = PBXBuildFile; productRef = EBA4698C2ACEC4D70060376F /* Transform */; };
+		EBA469902ACEC4F00060376F /* SwiftLogger in Frameworks */ = {isa = PBXBuildFile; productRef = EBA4698F2ACEC4F00060376F /* SwiftLogger */; };
+		EBA469932ACEC5070060376F /* Json in Frameworks */ = {isa = PBXBuildFile; productRef = EBA469922ACEC5070060376F /* Json */; };
+		EBA469962ACEC55D0060376F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EBA469952ACEC55D0060376F /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		87320B5327A59D9700360667 /* TodoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoApp.swift; sourceTree = "<group>"; };
 		87320B5727A59D9700360667 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		87320B5827A59D9700360667 /* MainReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainReducer.swift; sourceTree = "<group>"; };
-		87320B5927A59D9700360667 /* MainEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainEnvironment.swift; sourceTree = "<group>"; };
-		87320B5A27A59D9700360667 /* MainState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
-		87320B5B27A59D9700360667 /* MainAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAction.swift; sourceTree = "<group>"; };
 		87320B6327A59D9700360667 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		87320B6427A59D9700360667 /* AuthState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
-		87320B6B27A59D9700360667 /* AuthReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthReducer.swift; sourceTree = "<group>"; };
-		87320B6C27A59D9700360667 /* AuthAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAction.swift; sourceTree = "<group>"; };
-		87320B7327A59D9700360667 /* AuthEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthEnvironment.swift; sourceTree = "<group>"; };
-		87320B7527A59D9700360667 /* RootAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootAction.swift; sourceTree = "<group>"; };
-		87320B7627A59D9700360667 /* RootEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootEnvironment.swift; sourceTree = "<group>"; };
 		87320B7727A59D9700360667 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		87320B7827A59D9700360667 /* RootState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootState.swift; sourceTree = "<group>"; };
-		87320B7927A59D9700360667 /* RootReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootReducer.swift; sourceTree = "<group>"; };
 		87320B7E27A59D9700360667 /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		87320B8427A59D9700360667 /* ButtonReloadMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonReloadMainTableViewCell.swift; sourceTree = "<group>"; };
 		87320B8527A59D9700360667 /* CreateTitleMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTitleMainTableViewCell.swift; sourceTree = "<group>"; };
 		87320B8727A59D9700360667 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		87320B8C27A59D9700360667 /* View+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
-		876AF6C927A5D18B009A0148 /* BaseMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMainTableViewCell.swift; sourceTree = "<group>"; };
+		876AF6C927A5D18B009A0148 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		876AF6CB27A5D7ED009A0148 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		87BB890F27A59488000B269B /* Todo+Combine+UIKit(iOS13).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo+Combine+UIKit(iOS13).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BB891627A59489000B269B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,11 +51,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBA469932ACEC5070060376F /* Json in Frameworks */,
 				87BB893F27A5953B000B269B /* CombineRequest in Frameworks */,
+				EBA469962ACEC55D0060376F /* ComposableArchitecture in Frameworks */,
 				87BB894127A5953B000B269B /* CombineWebSocket in Frameworks */,
-				87BB894427A59557000B269B /* ConvertSwift in Frameworks */,
+				EBA4698D2ACEC4D70060376F /* Transform in Frameworks */,
 				87320BB927A59EAC00360667 /* CombineCocoa in Frameworks */,
-				87BB893C27A59514000B269B /* ComposableArchitecture in Frameworks */,
+				EBA469902ACEC4F00060376F /* SwiftLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,58 +76,23 @@
 		87320B5427A59D9700360667 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
-				87320B5527A59D9700360667 /* AppScreens */,
-				87320B7C27A59D9700360667 /* Models */,
+				87320B8B27A59D9700360667 /* ViewExt */,
 				87320B8327A59D9700360667 /* Views */,
-				87320B8B27A59D9700360667 /* View+ */,
+				87320B5527A59D9700360667 /* ViewControllers */,
+				EBA469972ACFA4FC0060376F /* Bases */,
+				87320B7C27A59D9700360667 /* Models */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
 		};
-		87320B5527A59D9700360667 /* AppScreens */ = {
-			isa = PBXGroup;
-			children = (
-				87320B5627A59D9700360667 /* MainScreen */,
-				87320B6227A59D9700360667 /* AuthScreen */,
-				87320B7427A59D9700360667 /* RootScreen */,
-			);
-			path = AppScreens;
-			sourceTree = "<group>";
-		};
-		87320B5627A59D9700360667 /* MainScreen */ = {
+		87320B5527A59D9700360667 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				87320B5727A59D9700360667 /* MainViewController.swift */,
-				87320B5A27A59D9700360667 /* MainState.swift */,
-				87320B5B27A59D9700360667 /* MainAction.swift */,
-				87320B5927A59D9700360667 /* MainEnvironment.swift */,
-				87320B5827A59D9700360667 /* MainReducer.swift */,
-			);
-			path = MainScreen;
-			sourceTree = "<group>";
-		};
-		87320B6227A59D9700360667 /* AuthScreen */ = {
-			isa = PBXGroup;
-			children = (
 				87320B6327A59D9700360667 /* AuthViewController.swift */,
-				87320B6427A59D9700360667 /* AuthState.swift */,
-				87320B6C27A59D9700360667 /* AuthAction.swift */,
-				87320B7327A59D9700360667 /* AuthEnvironment.swift */,
-				87320B6B27A59D9700360667 /* AuthReducer.swift */,
-			);
-			path = AuthScreen;
-			sourceTree = "<group>";
-		};
-		87320B7427A59D9700360667 /* RootScreen */ = {
-			isa = PBXGroup;
-			children = (
 				87320B7727A59D9700360667 /* RootViewController.swift */,
-				87320B7827A59D9700360667 /* RootState.swift */,
-				87320B7527A59D9700360667 /* RootAction.swift */,
-				87320B7627A59D9700360667 /* RootEnvironment.swift */,
-				87320B7927A59D9700360667 /* RootReducer.swift */,
 			);
-			path = RootScreen;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		87320B7C27A59D9700360667 /* Models */ = {
@@ -164,18 +109,16 @@
 				87320B8427A59D9700360667 /* ButtonReloadMainTableViewCell.swift */,
 				87320B8527A59D9700360667 /* CreateTitleMainTableViewCell.swift */,
 				87320B8727A59D9700360667 /* MainTableViewCell.swift */,
-				876AF6C927A5D18B009A0148 /* BaseMainTableViewCell.swift */,
-				876AF6CB27A5D7ED009A0148 /* BaseViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		87320B8B27A59D9700360667 /* View+ */ = {
+		87320B8B27A59D9700360667 /* ViewExt */ = {
 			isa = PBXGroup;
 			children = (
 				87320B8C27A59D9700360667 /* View+.swift */,
 			);
-			path = "View+";
+			path = ViewExt;
 			sourceTree = "<group>";
 		};
 		87BB890627A59488000B269B = {
@@ -183,6 +126,7 @@
 			children = (
 				87BB891127A59488000B269B /* Todo+Combine+UIKit(iOS13) */,
 				87BB891027A59488000B269B /* Products */,
+				EBA4698B2ACEC4D70060376F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +156,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EBA4698B2ACEC4D70060376F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBA469972ACFA4FC0060376F /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				876AF6CB27A5D7ED009A0148 /* BaseViewController.swift */,
+				876AF6C927A5D18B009A0148 /* BaseTableViewCell.swift */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -229,11 +189,13 @@
 			);
 			name = "Todo+Combine+UIKit(iOS13)";
 			packageProductDependencies = (
-				87BB893B27A59514000B269B /* ComposableArchitecture */,
 				87BB893E27A5953B000B269B /* CombineRequest */,
 				87BB894027A5953B000B269B /* CombineWebSocket */,
-				87BB894327A59557000B269B /* ConvertSwift */,
 				87320BB827A59EAC00360667 /* CombineCocoa */,
+				EBA4698C2ACEC4D70060376F /* Transform */,
+				EBA4698F2ACEC4F00060376F /* SwiftLogger */,
+				EBA469922ACEC5070060376F /* Json */,
+				EBA469952ACEC55D0060376F /* ComposableArchitecture */,
 			);
 			productName = "Todo+Combine+UIKit(iOS13)";
 			productReference = 87BB890F27A59488000B269B /* Todo+Combine+UIKit(iOS13).app */;
@@ -264,10 +226,12 @@
 			);
 			mainGroup = 87BB890627A59488000B269B;
 			packageReferences = (
-				87BB893A27A59514000B269B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				87BB893D27A5953B000B269B /* XCRemoteSwiftPackageReference "Networking" */,
 				87BB894227A59557000B269B /* XCRemoteSwiftPackageReference "SwiftExtension" */,
 				87320BB727A59EAC00360667 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+				EBA4698E2ACEC4F00060376F /* XCRemoteSwiftPackageReference "swift-logger" */,
+				EBA469912ACEC5070060376F /* XCRemoteSwiftPackageReference "swift-json" */,
+				EBA469942ACEC55C0060376F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = 87BB891027A59488000B269B /* Products */;
 			projectDirPath = "";
@@ -295,29 +259,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87320BA827A59D9700360667 /* RootEnvironment.swift in Sources */,
 				87320BB627A59D9700360667 /* View+.swift in Sources */,
 				87320B8D27A59D9700360667 /* TodoApp.swift in Sources */,
 				876AF6CC27A5D7ED009A0148 /* BaseViewController.swift in Sources */,
-				87320B9127A59D9700360667 /* MainState.swift in Sources */,
 				87320BA927A59D9700360667 /* RootViewController.swift in Sources */,
-				87320B9F27A59D9700360667 /* AuthReducer.swift in Sources */,
-				87320B9227A59D9700360667 /* MainAction.swift in Sources */,
-				87320BA727A59D9700360667 /* RootAction.swift in Sources */,
 				87320BB327A59D9700360667 /* MainTableViewCell.swift in Sources */,
-				87320BA627A59D9700360667 /* AuthEnvironment.swift in Sources */,
 				87320B9827A59D9700360667 /* AuthViewController.swift in Sources */,
 				87320BB127A59D9700360667 /* CreateTitleMainTableViewCell.swift in Sources */,
-				87320B8F27A59D9700360667 /* MainReducer.swift in Sources */,
 				87320BAD27A59D9700360667 /* TodoModel.swift in Sources */,
-				876AF6CA27A5D18B009A0148 /* BaseMainTableViewCell.swift in Sources */,
+				876AF6CA27A5D18B009A0148 /* BaseTableViewCell.swift in Sources */,
 				87320BB027A59D9700360667 /* ButtonReloadMainTableViewCell.swift in Sources */,
-				87320B9027A59D9700360667 /* MainEnvironment.swift in Sources */,
-				87320B9927A59D9700360667 /* AuthState.swift in Sources */,
-				87320BAA27A59D9700360667 /* RootState.swift in Sources */,
 				87320B8E27A59D9700360667 /* MainViewController.swift in Sources */,
-				87320BAB27A59D9700360667 /* RootReducer.swift in Sources */,
-				87320BA027A59D9700360667 /* AuthAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,28 +484,44 @@
 				version = 0.4.0;
 			};
 		};
-		87BB893A27A59514000B269B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/FullStack-Swift/swift-composable-architecture";
-			requirement = {
-				branch = develop;
-				kind = branch;
-			};
-		};
 		87BB893D27A5953B000B269B /* XCRemoteSwiftPackageReference "Networking" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FullStack-Swift/Networking";
 			requirement = {
-				kind = exactVersion;
-				version = 1.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 		87BB894227A59557000B269B /* XCRemoteSwiftPackageReference "SwiftExtension" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FullStack-Swift/SwiftExtension";
 			requirement = {
-				kind = exactVersion;
-				version = 1.0.0;
+				branch = main;
+				kind = branch;
+			};
+		};
+		EBA4698E2ACEC4F00060376F /* XCRemoteSwiftPackageReference "swift-logger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FullStack-Swift/swift-logger";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		EBA469912ACEC5070060376F /* XCRemoteSwiftPackageReference "swift-json" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FullStack-Swift/swift-json";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		EBA469942ACEC55C0060376F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -563,11 +531,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 87320BB727A59EAC00360667 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
 			productName = CombineCocoa;
-		};
-		87BB893B27A59514000B269B /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 87BB893A27A59514000B269B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
 		};
 		87BB893E27A5953B000B269B /* CombineRequest */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -579,10 +542,25 @@
 			package = 87BB893D27A5953B000B269B /* XCRemoteSwiftPackageReference "Networking" */;
 			productName = CombineWebSocket;
 		};
-		87BB894327A59557000B269B /* ConvertSwift */ = {
+		EBA4698C2ACEC4D70060376F /* Transform */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 87BB894227A59557000B269B /* XCRemoteSwiftPackageReference "SwiftExtension" */;
-			productName = ConvertSwift;
+			productName = Transform;
+		};
+		EBA4698F2ACEC4F00060376F /* SwiftLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBA4698E2ACEC4F00060376F /* XCRemoteSwiftPackageReference "swift-logger" */;
+			productName = SwiftLogger;
+		};
+		EBA469922ACEC5070060376F /* Json */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBA469912ACEC5070060376F /* XCRemoteSwiftPackageReference "swift-json" */;
+			productName = Json;
+		};
+		EBA469952ACEC55D0060376F /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBA469942ACEC55C0060376F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
